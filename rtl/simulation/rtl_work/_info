@@ -1,0 +1,157 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+!s11f vlog 2025.3 2025.09, Sep 15 2025
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 dD:/FPGA/DE23Lite/MyProjects/UnnamedComputer/rtl/simulation
+T_opt
+!i145 1
+!i144 0
+!s110 1788467024
+V:`TmY;=RjSPn937EBA3T13
+04 12 4 work uart_rx_test fast 0
+=1-9cb150b6a8b4-6a99d74f-16e-1395c
+R1
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U3 
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work +acc
+tCvgOpt 0 defaultOptions 1108163524
+n@_opt
+OL;O;2025.3;82
+vreset_sync
+2../utils/reset_sync.sv
+Z3 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
+!s110 1788467021
+!i10b 1
+!s100 5`PHen^Yld0ZX1QgG5Uo=1
+I_J]iTP8cEi9^C`Ah2mPM11
+S1
+R2
+w1788463467
+8../utils/reset_sync.sv
+F../utils/reset_sync.sv
+!i122 71
+L0 1 17
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2025.3;82
+r1
+!s85 0
+31
+!s108 1788467021.000000
+!s107 ../utils/reset_sync.sv|
+!s90 -reportprogress|300|../utils/reset_sync.sv|
+!i113 0
+Z6 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z7 tCvgOpt 0 defaultOptions 1085729624
+vuart_rx
+2../peripheral/uart.sv
+R3
+Z8 !s110 1788467022
+!i10b 1
+!s100 z<5m`M`OH5Kk4WSE`=1PS3
+INk3efo[>_b2WQef9590YZ3
+S1
+R2
+w1788466585
+8../peripheral/uart.sv
+F../peripheral/uart.sv
+!i122 72
+L0 1 198
+R4
+R5
+r1
+!s85 0
+31
+Z9 !s108 1788467022.000000
+!s107 ../peripheral/uart.sv|
+!s90 -reportprogress|300|../peripheral/uart.sv|
+!i113 0
+R6
+R7
+vuart_rx_test
+2../peripheral/testbench/uart_test.sv
+R3
+R8
+!i10b 1
+!s100 P5]a2GE1dL4KG;T=i8DV_2
+INhUSABJYNW6i50JHMdd;L2
+S1
+R2
+w1788466995
+8../peripheral/testbench/uart_test.sv
+F../peripheral/testbench/uart_test.sv
+!i122 73
+L0 2 148
+R4
+R5
+r1
+!s85 0
+31
+R9
+!s107 ../peripheral/testbench/uart_test.sv|
+!s90 -reportprogress|300|../peripheral/testbench/uart_test.sv|
+!i113 0
+R6
+R7

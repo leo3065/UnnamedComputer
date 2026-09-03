@@ -1,0 +1,65 @@
+module golden_top(
+      ///////// CLOCK /////////
+      input              CLOCK0_50,
+      input              CLOCK1_50,
+
+      ///////// KEY /////////
+      input    [ 3: 0]   KEY, //BUTTON is Low-Active
+
+      ///////// SW /////////
+      input    [ 9: 0]   SW,
+
+      ///////// LED /////////
+      output   [ 9: 0]   LEDR, //LED is Low-Active
+
+      ///////// Seg7 /////////
+      output   [ 6: 0]   HEX0,
+      output   [ 6: 0]   HEX1,
+      output   [ 6: 0]   HEX2,
+      output   [ 6: 0]   HEX3,
+      output   [ 6: 0]   HEX4,
+      output   [ 6: 0]   HEX5,
+
+      ///////// SDRAM /////////
+      output             DRAM_CLK,
+      output             DRAM_CKE,
+      output   [12: 0]   DRAM_ADDR,
+      output   [ 1: 0]   DRAM_BA,
+      inout    [31: 0]   DRAM_DQ,
+      output             DRAM_CS_n,
+      output             DRAM_WE_n,
+      output             DRAM_CAS_n,
+      output             DRAM_RAS_n,
+      output   [ 3: 0]   DRAM_DQM,
+
+      ///////// HDMI /////////
+      output             HDMI_TX_CLK,
+      output             HDMI_TX_HS,
+      output             HDMI_TX_VS,
+      output   [23: 0]   HDMI_TX_D,
+      output             HDMI_TX_DE,
+      input              HDMI_TX_INT,
+      inout              HDMI_LRCLK,
+      inout              HDMI_MCLK,
+      inout              HDMI_SCLK,
+      inout              HDMI_I2S0,
+
+      ///////// UART /////////
+      output             UART_TX,
+      input              UART_RX,
+
+      ///////// I2C for HDMI and ADC /////////
+      inout              I2C_SCL,
+      inout              I2C_SDA,
+
+      ///////// GPIO /////////
+      inout    [35: 0]   GPIO_D
+);
+
+logic INIT_DONE_n;
+
+reset_release reset_release_inst (
+    .ninit_done(INIT_DONE_n)
+);
+
+endmodule

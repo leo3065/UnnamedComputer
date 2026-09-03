@@ -1,0 +1,10 @@
+***/.*
+***/*.bak
+***/.*/***
+
+rtl/dni
+rtl/output_files
+rtl/qdb
+rtl/simulation/*
+
+!.gitignore

@@ -1,0 +1,5 @@
+# TCL commands history
+# Thu Sep 3 22:03:59 2026
+dni::trigger_gui -command gui_command::rtl_analyzer::unfold -options {"checkpoint":"user_runs/default_run/elaborated","object":"button @hier_unfold inst reset_release_inst reset_release_inst {}"}
+dni::trigger_gui -command gui_command::rtl_analyzer::unfold -options {"checkpoint":"user_runs/default_run/elaborated","object":"button @hier_unfold inst reset_release_inst|s10_user_rst_clkgate_0 reset_release_inst|s10_user_rst_clkgate_0 {}"}
+dni::trigger_gui -command gui_command::rtl_analyzer::unfold -options {"checkpoint":"user_runs/default_run/elaborated","object":"button @hier_unfold inst reset_release_inst|s10_user_rst_clkgate_0|config_reset_release_endpoint reset_release_inst|s10_user_rst_clkgate_0|config_reset_release_endpoint {}"}

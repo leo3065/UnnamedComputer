@@ -1,0 +1,53 @@
+module uart_rx_test();
+timeunit 10ns/1ns;
+
+logic CLK_uart;
+logic RST_n;
+logic uart_RX;
+logic [7:0] data;
+logic recv;
+
+parameter CLK_HALF_DURATION = 5;
+
+task uart_send_to
+#(parameter int bit_duration)(input [7:0] send_val, output uart_rx);
+begin
+    uart_rx <= 0; #(bit_duration) // Start bit
+    for (int b=0; b<7, b++) 
+        // LSB first
+        uart_rx <= send_val[b]; #(bit_duration)
+    end
+    uart_rx <= 1; #(bit_duration) // Stop bit
+end
+endtask
+
+initial begin
+    CLK_uart <= 1'b0;
+    RST_n <= 1'b1;
+    uart_RX <= 1'b1;
+    #5
+    
+    RST_n <= 1'b0; #5
+    RST_n <= 1'b1; #5
+    
+    repeat () begin
+        uart_send_to #(CLK_HALF_DURATION*2*8) (
+            .send_val($urandom_range(8'0, 8'hff)),
+            .uart_rx(uart_RX)
+        );
+        #($urandom_range(0, CLK_HALF_DURATION*2*8*2))
+    end
+    $stop;
+end
+
+always #(CLK_HALF_DURATION) CLK_uart <= ~CLK_uart;
+
+uart_rx uart_rx_inst(
+    .CLK_uart,
+    .RST_n,
+    .uart_RX,
+    .data_o(data),
+    .recv_o(recv)
+);
+
+endmodule
