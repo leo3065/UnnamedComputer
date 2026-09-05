@@ -1,0 +1,109 @@
+<session jtag_chain="DE23-Lite [USB-1]" jtag_device="@1: A3CY135BB18A(.|R0)/.. (0x436DB0DD)" sof_file="../output_files/golden_top.sof">
+  <display_tree gui_logging_enabled="0">
+    <display_branch instance="auto_signaltap_0" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
+  </display_tree>
+  <instance enabled="false" entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
+    <signal_set global_temp="1" is_expanded="true" name="signal_set: 2026-09-05 01:50:32  #0">
+      <clock name="CLK_sys" polarity="posedge" tap_mode="classic"/>
+      <config is_hps_trigger_out_selected="false" pipeline_level="1" ram_type="AUTO" reserved_data_nodes="0" reserved_storage_qualifier_nodes="0" reserved_trigger_nodes="0" sample_depth="128" trigger_in_enable="yes" trigger_in_node="" trigger_in_tap_mode="classic" trigger_out_enable="no"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire name="err" tap_mode="classic" type="unknown"/>
+          <wire name="uart_rx_inst|err_clr_i" tap_mode="classic" type="unknown"/>
+          <wire name="uart_rx_inst|err_o" tap_mode="classic" type="unknown"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire name="err" tap_mode="classic" type="unknown"/>
+          <wire name="uart_rx_inst|err_clr_i" tap_mode="classic" type="unknown"/>
+          <wire name="uart_rx_inst|err_o" tap_mode="classic" type="unknown"/>
+        </data_input_vec>
+        <storage_qualifier_input_vec>
+          <wire name="err" tap_mode="classic" type="unknown"/>
+          <wire name="uart_rx_inst|err_clr_i" tap_mode="classic" type="unknown"/>
+          <wire name="uart_rx_inst|err_o" tap_mode="classic" type="unknown"/>
+        </storage_qualifier_input_vec>
+      </signal_vec>
+      <presentation>
+        <unified_setup_data_view>
+          <node async_clock_name="CLK_sys" data_index="0" dni_checkpoint="elaborated" dni_object_type="net" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="either edge" name="err" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="0" tap_mode="classic" trigger_index="0" type="unknown"/>
+          <node async_clock_name="" data_index="1" dni_checkpoint="elaborated" dni_object_type="port" duplicate_name_allowed="false" is_async="true" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="either edge" name="uart_rx_inst|err_clr_i" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="1" tap_mode="classic" trigger_index="1" type="unknown"/>
+          <node async_clock_name="CLK_sys" data_index="2" dni_checkpoint="elaborated" dni_object_type="port" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="either edge" name="uart_rx_inst|err_o" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="2" tap_mode="classic" trigger_index="2" type="unknown"/>
+        </unified_setup_data_view>
+        <data_view>
+          <net async_clock_name="CLK_sys" data_index="0" dni_checkpoint="elaborated" dni_object_type="net" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="either edge" name="err" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="0" tap_mode="classic" trigger_index="0" type="unknown"/>
+          <net async_clock_name="" data_index="1" dni_checkpoint="elaborated" dni_object_type="port" duplicate_name_allowed="false" is_async="true" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="either edge" name="uart_rx_inst|err_clr_i" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="1" tap_mode="classic" trigger_index="1" type="unknown"/>
+          <net async_clock_name="CLK_sys" data_index="2" dni_checkpoint="elaborated" dni_object_type="port" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="either edge" name="uart_rx_inst|err_o" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="2" tap_mode="classic" trigger_index="2" type="unknown"/>
+        </data_view>
+        <setup_view>
+          <net async_clock_name="CLK_sys" data_index="0" dni_checkpoint="elaborated" dni_object_type="net" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="either edge" name="err" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="0" tap_mode="classic" trigger_index="0" type="unknown"/>
+          <net async_clock_name="" data_index="1" dni_checkpoint="elaborated" dni_object_type="port" duplicate_name_allowed="false" is_async="true" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="either edge" name="uart_rx_inst|err_clr_i" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="1" tap_mode="classic" trigger_index="1" type="unknown"/>
+          <net async_clock_name="CLK_sys" data_index="2" dni_checkpoint="elaborated" dni_object_type="port" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_selected="false" is_storage_input="true" is_trigger_input="true" level-0="either edge" name="uart_rx_inst|err_o" pwr_storage-0="dont_care" pwr_storage-1="dont_care" pwr_storage-2="dont_care" storage-0="dont_care" storage-1="dont_care" storage-2="dont_care" storage_index="2" tap_mode="classic" trigger_index="2" type="unknown"/>
+        </setup_view>
+        <trigger_in_editor is_enabled="true" is_hps_event_selected="false" is_hps_trigger_in_selected="false" is_node_selected="true" is_pin_selected="false" pin_name="auto_stp_trigger_in_auto_signaltap_0"/>
+        <trigger_out_editor/>
+      </presentation>
+      <trigger CRC="DCB04A16" attribute_mem_mode="false" gap_record="true" global_temp="1" is_expanded="true" name="trigger: 2026-09-05 01:50:32  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="1" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="true" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="high" trigger_type="circular">
+        <power_up_trigger position="pre" storage_qualifier_disabled="no" trigger_in="high"/>
+        <events use_custom_flow_control="no">
+          <level editor="basic_or" enabled="yes" name="condition1" type="advanced"><power_up enabled="yes">
+              <power_up_expression><![CDATA[(mbpm('X',{'err'}) && variable(1)) || (mbpm('X',{'uart_rx_inst|err_clr_i'}) && variable(1)) || (mbpm('X',{'uart_rx_inst|err_o'}) && variable(1))#1]]>
+              </power_up_expression>
+            </power_up><expression><![CDATA[(mbpm('E',{'err'}) && variable(1)) || (mbpm('E',{'uart_rx_inst|err_clr_i'}) && variable(1)) || (mbpm('E',{'uart_rx_inst|err_o'}) && variable(1))#1]]>
+            </expression>
+            <op_node/>
+          </level>
+        </events>
+        <storage_qualifier_events>
+          <transitional>111
+            <pwr_up_transitional>111</pwr_up_transitional>
+          </transitional>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+        </storage_qualifier_events>
+      </trigger>
+    </signal_set>
+    <position_info>
+      <single attribute="active tab" value="1"/>
+      <single attribute="data hierarchy golden_top" value="3"/>
+      <single attribute="data hierarchy uart_rx_inst" value="3"/>
+      <single attribute="data horizontal scroll position" value="0"/>
+      <single attribute="data vertical scroll position" value="0"/>
+      <single attribute="setup horizontal scroll position" value="0"/>
+      <single attribute="setup vertical scroll position" value="0"/>
+      <single attribute="zoom level denominator" value="1"/>
+      <single attribute="zoom level numerator" value="1"/>
+      <single attribute="zoom offset denominator" value="1"/>
+      <single attribute="zoom offset numerator" value="130944"/>
+    </position_info>
+  </instance>
+  <mnemonics/>
+  <global_info>
+    <single attribute="active instance" value="0"/>
+    <single attribute="config widget visible" value="1"/>
+    <single attribute="connection widget visible" value="1"/>
+    <single attribute="data log widget visible" value="1"/>
+    <single attribute="hierarchy widget height" value="100"/>
+    <single attribute="hierarchy widget visible" value="1"/>
+    <single attribute="instance widget visible" value="1"/>
+    <single attribute="lock mode" value="0"/>
+    <single attribute="sof manager visible" value="0"/>
+    <multi attribute="column width" size="25" value="50,50,70,50,202,74,68,95,120,120,150,150,140,140,141,160,160,160,160,160,160,160,160,160,98"/>
+    <multi attribute="connection widget size" size="2" value="398,225"/>
+    <multi attribute="frame size" size="2" value="1707,996"/>
+  </global_info>
+</session>

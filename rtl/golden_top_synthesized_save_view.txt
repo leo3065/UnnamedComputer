@@ -1,0 +1,537 @@
+# File saved with Nlview 7.9.1 2025-07-03 36fdeb9b55 VDI=45 GEI=38 GUI=QT:6.8.6
+#  -curmodule
+# non-default properties - (restore without -noprops)
+property -colorscheme classic
+property attrcolor #7fffff
+property autobundle 129
+property boxcolor0 #ffff7f
+property boxhierpins 3
+property boxinstcolor #ff7fff
+property boxpincolor #7fffff
+property buscolor #ffff7f
+property buswidthlimit 0
+property createnetattrdsp 1024
+property createvconn 65
+property decorate 1
+property elidetext 1
+property fillcolor1 #5a90ff
+property fillcolor2 #00c000
+property fillcolor3 #c0c0c0
+property fillcolor4 #ffff7f
+property fillcolor5 #c0c0c0
+property fillcolor6 #432fdb
+property fillcolor7 #ff7fff
+property fillcolor8 #c0c0c0
+property fillcolor9 #a9feff
+property fillcolor10 #e5ffff
+property instattrmax -1
+property netcolor #ffff7f
+property netindicators 15
+property netindicatorsize 3
+property nohiernegpins 0
+property overlaycolor #ffff7f
+property pbuscolor #7fffff
+property pbusnamecolor #ff7fff
+property pinattrmax -1
+property portcolor #7fffff
+property portnamecolor #ff7fff
+property ripattrmax -1
+property rippercolor #7fffff
+property rubberbandcolor #00aaff
+property selectionappearance 6
+property selectioncolor #ff7f7f
+property shadowstyle 1
+property sheetheight 34
+property sheetwidth 44
+property showpagenumbers 1
+property showripindex 1
+property showvconn 1
+#
+module new _1 {}
+load symbol auto_fab_0_2 {} HIERBOX fillcolor 2 fillregion 3
+load symbol [0].lut_7seg_inst_7 {} HIERBOX pinBus SW[0..3]_611 input.left 4 SW[0]_585 SW[1]_586 SW[2]_587 SW[3]_588 pin Mux_0~1_595 output.right pin Mux_1~0_594 output.right pin Mux_2~0_593 output.right pin Mux_3~0_592 output.right pin Mux_4~0_591 output.right pin Mux_5~0_590 output.right pin Mux_6~0_589 output.right fillcolor 2 fillregion 3
+load symbol DRAM_DQ[0]~output_137 {} BOX pin I_139 input.left pin OE_140 input.left pin O_141 output.right fillcolor 6
+load symbol DRAM_DQ[1]~output_143 {} BOX pin I_145 input.left pin OE_146 input.left pin O_147 output.right fillcolor 6
+load symbol DRAM_DQ[2]~output_149 {} BOX pin I_151 input.left pin OE_152 input.left pin O_153 output.right fillcolor 6
+load symbol DRAM_DQ[3]~output_155 {} BOX pin I_157 input.left pin OE_158 input.left pin O_159 output.right fillcolor 6
+load symbol DRAM_DQ[4]~output_161 {} BOX pin I_163 input.left pin OE_164 input.left pin O_165 output.right fillcolor 6
+load symbol DRAM_DQ[5]~output_167 {} BOX pin I_169 input.left pin OE_170 input.left pin O_171 output.right fillcolor 6
+load symbol DRAM_DQ[6]~output_173 {} BOX pin I_175 input.left pin OE_176 input.left pin O_177 output.right fillcolor 6
+load symbol DRAM_DQ[7]~output_179 {} BOX pin I_181 input.left pin OE_182 input.left pin O_183 output.right fillcolor 6
+load symbol DRAM_DQ[8]~output_185 {} BOX pin I_187 input.left pin OE_188 input.left pin O_189 output.right fillcolor 6
+load symbol DRAM_DQ[9]~output_191 {} BOX pin I_193 input.left pin OE_194 input.left pin O_195 output.right fillcolor 6
+load symbol DRAM_DQ[10]~output_197 {} BOX pin I_199 input.left pin OE_200 input.left pin O_201 output.right fillcolor 6
+load symbol DRAM_DQ[11]~output_203 {} BOX pin I_205 input.left pin OE_206 input.left pin O_207 output.right fillcolor 6
+load symbol DRAM_DQ[12]~output_209 {} BOX pin I_211 input.left pin OE_212 input.left pin O_213 output.right fillcolor 6
+load symbol DRAM_DQ[13]~output_215 {} BOX pin I_217 input.left pin OE_218 input.left pin O_219 output.right fillcolor 6
+load symbol DRAM_DQ[14]~output_221 {} BOX pin I_223 input.left pin OE_224 input.left pin O_225 output.right fillcolor 6
+load symbol DRAM_DQ[15]~output_227 {} BOX pin I_229 input.left pin OE_230 input.left pin O_231 output.right fillcolor 6
+load symbol DRAM_DQ[16]~output_233 {} BOX pin I_235 input.left pin OE_236 input.left pin O_237 output.right fillcolor 6
+load symbol DRAM_DQ[17]~output_239 {} BOX pin I_241 input.left pin OE_242 input.left pin O_243 output.right fillcolor 6
+load symbol DRAM_DQ[18]~output_245 {} BOX pin I_247 input.left pin OE_248 input.left pin O_249 output.right fillcolor 6
+load symbol DRAM_DQ[19]~output_251 {} BOX pin I_253 input.left pin OE_254 input.left pin O_255 output.right fillcolor 6
+load symbol DRAM_DQ[20]~output_257 {} BOX pin I_259 input.left pin OE_260 input.left pin O_261 output.right fillcolor 6
+load symbol DRAM_DQ[21]~output_263 {} BOX pin I_265 input.left pin OE_266 input.left pin O_267 output.right fillcolor 6
+load symbol DRAM_DQ[22]~output_269 {} BOX pin I_271 input.left pin OE_272 input.left pin O_273 output.right fillcolor 6
+load symbol DRAM_DQ[23]~output_275 {} BOX pin I_277 input.left pin OE_278 input.left pin O_279 output.right fillcolor 6
+load symbol DRAM_DQ[24]~output_281 {} BOX pin I_283 input.left pin OE_284 input.left pin O_285 output.right fillcolor 6
+load symbol DRAM_DQ[25]~output_287 {} BOX pin I_289 input.left pin OE_290 input.left pin O_291 output.right fillcolor 6
+load symbol DRAM_DQ[26]~output_293 {} BOX pin I_295 input.left pin OE_296 input.left pin O_297 output.right fillcolor 6
+load symbol DRAM_DQ[27]~output_299 {} BOX pin I_301 input.left pin OE_302 input.left pin O_303 output.right fillcolor 6
+load symbol DRAM_DQ[28]~output_305 {} BOX pin I_307 input.left pin OE_308 input.left pin O_309 output.right fillcolor 6
+load symbol DRAM_DQ[29]~output_311 {} BOX pin I_313 input.left pin OE_314 input.left pin O_315 output.right fillcolor 6
+load symbol DRAM_DQ[30]~output_317 {} BOX pin I_319 input.left pin OE_320 input.left pin O_321 output.right fillcolor 6
+load symbol DRAM_DQ[31]~output_323 {} BOX pin I_325 input.left pin OE_326 input.left pin O_327 output.right fillcolor 6
+load symbol HDMI_LRCLK~output_329 {} BOX pin I_331 input.left pin OE_332 input.left pin O_333 output.right fillcolor 6
+load symbol HDMI_MCLK~output_335 {} BOX pin I_337 input.left pin OE_338 input.left pin O_339 output.right fillcolor 6
+load symbol HDMI_SCLK~output_341 {} BOX pin I_343 input.left pin OE_344 input.left pin O_345 output.right fillcolor 6
+load symbol HDMI_I2S0~output_347 {} BOX pin I_349 input.left pin OE_350 input.left pin O_351 output.right fillcolor 6
+load symbol I2C_SCL~output_353 {} BOX pin I_355 input.left pin OE_356 input.left pin O_357 output.right fillcolor 6
+load symbol I2C_SDA~output_359 {} BOX pin I_361 input.left pin OE_362 input.left pin O_363 output.right fillcolor 6
+load symbol GPIO_D[0]~output_365 {} BOX pin I_367 input.left pin OE_368 input.left pin O_369 output.right fillcolor 6
+load symbol GPIO_D[1]~output_371 {} BOX pin I_373 input.left pin OE_374 input.left pin O_375 output.right fillcolor 6
+load symbol GPIO_D[2]~output_377 {} BOX pin I_379 input.left pin OE_380 input.left pin O_381 output.right fillcolor 6
+load symbol GPIO_D[3]~output_383 {} BOX pin I_385 input.left pin OE_386 input.left pin O_387 output.right fillcolor 6
+load symbol GPIO_D[4]~output_389 {} BOX pin I_391 input.left pin OE_392 input.left pin O_393 output.right fillcolor 6
+load symbol GPIO_D[5]~output_395 {} BOX pin I_397 input.left pin OE_398 input.left pin O_399 output.right fillcolor 6
+load symbol GPIO_D[6]~output_401 {} BOX pin I_403 input.left pin OE_404 input.left pin O_405 output.right fillcolor 6
+load symbol GPIO_D[7]~output_407 {} BOX pin I_409 input.left pin OE_410 input.left pin O_411 output.right fillcolor 6
+load symbol GPIO_D[8]~output_413 {} BOX pin I_415 input.left pin OE_416 input.left pin O_417 output.right fillcolor 6
+load symbol GPIO_D[9]~output_419 {} BOX pin I_421 input.left pin OE_422 input.left pin O_423 output.right fillcolor 6
+load symbol GPIO_D[10]~output_425 {} BOX pin I_427 input.left pin OE_428 input.left pin O_429 output.right fillcolor 6
+load symbol GPIO_D[11]~output_431 {} BOX pin I_433 input.left pin OE_434 input.left pin O_435 output.right fillcolor 6
+load symbol GPIO_D[12]~output_437 {} BOX pin I_439 input.left pin OE_440 input.left pin O_441 output.right fillcolor 6
+load symbol GPIO_D[13]~output_443 {} BOX pin I_445 input.left pin OE_446 input.left pin O_447 output.right fillcolor 6
+load symbol GPIO_D[14]~output_449 {} BOX pin I_451 input.left pin OE_452 input.left pin O_453 output.right fillcolor 6
+load symbol GPIO_D[15]~output_455 {} BOX pin I_457 input.left pin OE_458 input.left pin O_459 output.right fillcolor 6
+load symbol GPIO_D[16]~output_461 {} BOX pin I_463 input.left pin OE_464 input.left pin O_465 output.right fillcolor 6
+load symbol GPIO_D[17]~output_467 {} BOX pin I_469 input.left pin OE_470 input.left pin O_471 output.right fillcolor 6
+load symbol GPIO_D[18]~output_473 {} BOX pin I_475 input.left pin OE_476 input.left pin O_477 output.right fillcolor 6
+load symbol GPIO_D[19]~output_479 {} BOX pin I_481 input.left pin OE_482 input.left pin O_483 output.right fillcolor 6
+load symbol GPIO_D[20]~output_485 {} BOX pin I_487 input.left pin OE_488 input.left pin O_489 output.right fillcolor 6
+load symbol GPIO_D[21]~output_491 {} BOX pin I_493 input.left pin OE_494 input.left pin O_495 output.right fillcolor 6
+load symbol GPIO_D[22]~output_497 {} BOX pin I_499 input.left pin OE_500 input.left pin O_501 output.right fillcolor 6
+load symbol GPIO_D[23]~output_503 {} BOX pin I_505 input.left pin OE_506 input.left pin O_507 output.right fillcolor 6
+load symbol GPIO_D[24]~output_509 {} BOX pin I_511 input.left pin OE_512 input.left pin O_513 output.right fillcolor 6
+load symbol GPIO_D[25]~output_515 {} BOX pin I_517 input.left pin OE_518 input.left pin O_519 output.right fillcolor 6
+load symbol GPIO_D[26]~output_521 {} BOX pin I_523 input.left pin OE_524 input.left pin O_525 output.right fillcolor 6
+load symbol GPIO_D[27]~output_527 {} BOX pin I_529 input.left pin OE_530 input.left pin O_531 output.right fillcolor 6
+load symbol GPIO_D[28]~output_533 {} BOX pin I_535 input.left pin OE_536 input.left pin O_537 output.right fillcolor 6
+load symbol GPIO_D[29]~output_539 {} BOX pin I_541 input.left pin OE_542 input.left pin O_543 output.right fillcolor 6
+load symbol GPIO_D[30]~output_545 {} BOX pin I_547 input.left pin OE_548 input.left pin O_549 output.right fillcolor 6
+load symbol GPIO_D[31]~output_551 {} BOX pin I_553 input.left pin OE_554 input.left pin O_555 output.right fillcolor 6
+load symbol GPIO_D[32]~output_557 {} BOX pin I_559 input.left pin OE_560 input.left pin O_561 output.right fillcolor 6
+load symbol GPIO_D[33]~output_563 {} BOX pin I_565 input.left pin OE_566 input.left pin O_567 output.right fillcolor 6
+load symbol GPIO_D[34]~output_569 {} BOX pin I_571 input.left pin OE_572 input.left pin O_573 output.right fillcolor 6
+load symbol GPIO_D[35]~output_575 {} BOX pin I_577 input.left pin OE_578 input.left pin O_579 output.right fillcolor 6
+load symbol ~GND_584 {} BOX pin COMBOUT_308 output.right fillcolor 6
+load symbol Mux_6~0_9 {} BOX pin DATAA_1 input.left pin DATAB_2 input.left pin DATAC_3 input.left pin DATAD_4 input.left pin COMBOUT_1 output.right fillcolor 6
+load symbol Mux_5~0_10 {} BOX pin DATAA_5 input.left pin DATAB_6 input.left pin DATAC_7 input.left pin DATAD_8 input.left pin COMBOUT_2 output.right fillcolor 6
+load symbol Mux_4~0_11 {} BOX pin DATAA_9 input.left pin DATAB_10 input.left pin DATAC_11 input.left pin DATAD_12 input.left pin COMBOUT_3 output.right fillcolor 6
+load symbol Mux_3~0_12 {} BOX pin DATAA_13 input.left pin DATAB_14 input.left pin DATAC_15 input.left pin DATAD_16 input.left pin COMBOUT_4 output.right fillcolor 6
+load symbol Mux_2~0_13 {} BOX pin DATAA_17 input.left pin DATAB_18 input.left pin DATAC_19 input.left pin DATAD_20 input.left pin COMBOUT_5 output.right fillcolor 6
+load symbol Mux_1~0_14 {} BOX pin DATAA_21 input.left pin DATAB_22 input.left pin DATAC_23 input.left pin DATAD_24 input.left pin COMBOUT_6 output.right fillcolor 6
+load symbol Mux_0~1_15 {} BOX pin DATAA_25 input.left pin DATAB_26 input.left pin DATAC_27 input.left pin DATAD_28 input.left pin COMBOUT_7 output.right fillcolor 6
+load port CLOCK0_50_16 input -attr @name CLOCK0_50 -pg 1 -lvl 0 -x -20 -y 20
+load port CLOCK1_50_17 input -attr @name CLOCK1_50 -pg 1 -lvl 0 -x -20 -y 40
+load port DRAM_CAS_n_99 output -attr @name DRAM_CAS_n -pg 1 -lvl 2 -x 440 -y 3140
+load port DRAM_CKE_81 output -attr @name DRAM_CKE -pg 1 -lvl 2 -x 440 -y 3160
+load port DRAM_CLK_80 output -attr @name DRAM_CLK -pg 1 -lvl 2 -x 440 -y 3180
+load port DRAM_CS_n_97 output -attr @name DRAM_CS_n -pg 1 -lvl 2 -x 440 -y 3200
+load port DRAM_RAS_n_100 output -attr @name DRAM_RAS_n -pg 1 -lvl 2 -x 440 -y 3240
+load port DRAM_WE_n_98 output -attr @name DRAM_WE_n -pg 1 -lvl 2 -x 440 -y 3260
+load port HDMI_I2S0_346 inout -attr @name HDMI_I2S0 -pg 1 -lvl 2 -x 440 -y 2590
+load port HDMI_LRCLK_328 inout -attr @name HDMI_LRCLK -pg 1 -lvl 2 -x 440 -y 2670
+load port HDMI_MCLK_334 inout -attr @name HDMI_MCLK -pg 1 -lvl 2 -x 440 -y 2750
+load port HDMI_SCLK_340 inout -attr @name HDMI_SCLK -pg 1 -lvl 2 -x 440 -y 2830
+load port HDMI_TX_CLK_105 output -attr @name HDMI_TX_CLK -pg 1 -lvl 2 -x 440 -y 3280
+load port HDMI_TX_DE_132 output -attr @name HDMI_TX_DE -pg 1 -lvl 2 -x 440 -y 3300
+load port HDMI_TX_HS_106 output -attr @name HDMI_TX_HS -pg 1 -lvl 2 -x 440 -y 3340
+load port HDMI_TX_INT_133 input -attr @name HDMI_TX_INT -pg 1 -lvl 0 -x -20 -y 60
+load port HDMI_TX_VS_107 output -attr @name HDMI_TX_VS -pg 1 -lvl 2 -x 440 -y 3360
+load port I2C_SCL_352 inout -attr @name I2C_SCL -pg 1 -lvl 2 -x 440 -y 6090
+load port I2C_SDA_358 inout -attr @name I2C_SDA -pg 1 -lvl 2 -x 440 -y 6170
+load port UART_RX_135 input -attr @name UART_RX -pg 1 -lvl 0 -x -20 -y 100
+load port UART_TX_134 output -attr @name UART_TX -pg 1 -lvl 2 -x 440 -y 3400
+load portBus DRAM_ADDR[0..12]_596 output 13 DRAM_ADDR[0]_82 DRAM_ADDR[1]_83 DRAM_ADDR[2]_84 DRAM_ADDR[3]_85 DRAM_ADDR[4]_86 DRAM_ADDR[5]_87 DRAM_ADDR[6]_88 DRAM_ADDR[7]_89 DRAM_ADDR[8]_90 DRAM_ADDR[9]_91 DRAM_ADDR[10]_92 DRAM_ADDR[11]_93 DRAM_ADDR[12]_94 -attr @name DRAM_ADDR[0..12] -portAttr DRAM_ADDR[0]_82 @name DRAM_ADDR[0] -portAttr DRAM_ADDR[1]_83 @name DRAM_ADDR[1] -portAttr DRAM_ADDR[2]_84 @name DRAM_ADDR[2] -portAttr DRAM_ADDR[3]_85 @name DRAM_ADDR[3] -portAttr DRAM_ADDR[4]_86 @name DRAM_ADDR[4] -portAttr DRAM_ADDR[5]_87 @name DRAM_ADDR[5] -portAttr DRAM_ADDR[6]_88 @name DRAM_ADDR[6] -portAttr DRAM_ADDR[7]_89 @name DRAM_ADDR[7] -portAttr DRAM_ADDR[8]_90 @name DRAM_ADDR[8] -portAttr DRAM_ADDR[9]_91 @name DRAM_ADDR[9] -portAttr DRAM_ADDR[10]_92 @name DRAM_ADDR[10] -portAttr DRAM_ADDR[11]_93 @name DRAM_ADDR[11] -portAttr DRAM_ADDR[12]_94 @name DRAM_ADDR[12] -pg 1 -lvl 2 -x 440 -y 3100
+load portBus DRAM_BA[0..1]_597 output 2 DRAM_BA[0]_95 DRAM_BA[1]_96 -attr @name DRAM_BA[0..1] -portAttr DRAM_BA[0]_95 @name DRAM_BA[0] -portAttr DRAM_BA[1]_96 @name DRAM_BA[1] -pg 1 -lvl 2 -x 440 -y 3120
+load portBus DRAM_DQ[0..31]_598 inout 32 DRAM_DQ[0]_136 DRAM_DQ[1]_142 DRAM_DQ[2]_148 DRAM_DQ[3]_154 DRAM_DQ[4]_160 DRAM_DQ[5]_166 DRAM_DQ[6]_172 DRAM_DQ[7]_178 DRAM_DQ[8]_184 DRAM_DQ[9]_190 DRAM_DQ[10]_196 DRAM_DQ[11]_202 DRAM_DQ[12]_208 DRAM_DQ[13]_214 DRAM_DQ[14]_220 DRAM_DQ[15]_226 DRAM_DQ[16]_232 DRAM_DQ[17]_238 DRAM_DQ[18]_244 DRAM_DQ[19]_250 DRAM_DQ[20]_256 DRAM_DQ[21]_262 DRAM_DQ[22]_268 DRAM_DQ[23]_274 DRAM_DQ[24]_280 DRAM_DQ[25]_286 DRAM_DQ[26]_292 DRAM_DQ[27]_298 DRAM_DQ[28]_304 DRAM_DQ[29]_310 DRAM_DQ[30]_316 DRAM_DQ[31]_322 -attr @name DRAM_DQ[0..31] -portAttr DRAM_DQ[0]_136 @name DRAM_DQ[0] -portAttr DRAM_DQ[1]_142 @name DRAM_DQ[1] -portAttr DRAM_DQ[2]_148 @name DRAM_DQ[2] -portAttr DRAM_DQ[3]_154 @name DRAM_DQ[3] -portAttr DRAM_DQ[4]_160 @name DRAM_DQ[4] -portAttr DRAM_DQ[5]_166 @name DRAM_DQ[5] -portAttr DRAM_DQ[6]_172 @name DRAM_DQ[6] -portAttr DRAM_DQ[7]_178 @name DRAM_DQ[7] -portAttr DRAM_DQ[8]_184 @name DRAM_DQ[8] -portAttr DRAM_DQ[9]_190 @name DRAM_DQ[9] -portAttr DRAM_DQ[10]_196 @name DRAM_DQ[10] -portAttr DRAM_DQ[11]_202 @name DRAM_DQ[11] -portAttr DRAM_DQ[12]_208 @name DRAM_DQ[12] -portAttr DRAM_DQ[13]_214 @name DRAM_DQ[13] -portAttr DRAM_DQ[14]_220 @name DRAM_DQ[14] -portAttr DRAM_DQ[15]_226 @name DRAM_DQ[15] -portAttr DRAM_DQ[16]_232 @name DRAM_DQ[16] -portAttr DRAM_DQ[17]_238 @name DRAM_DQ[17] -portAttr DRAM_DQ[18]_244 @name DRAM_DQ[18] -portAttr DRAM_DQ[19]_250 @name DRAM_DQ[19] -portAttr DRAM_DQ[20]_256 @name DRAM_DQ[20] -portAttr DRAM_DQ[21]_262 @name DRAM_DQ[21] -portAttr DRAM_DQ[22]_268 @name DRAM_DQ[22] -portAttr DRAM_DQ[23]_274 @name DRAM_DQ[23] -portAttr DRAM_DQ[24]_280 @name DRAM_DQ[24] -portAttr DRAM_DQ[25]_286 @name DRAM_DQ[25] -portAttr DRAM_DQ[26]_292 @name DRAM_DQ[26] -portAttr DRAM_DQ[27]_298 @name DRAM_DQ[27] -portAttr DRAM_DQ[28]_304 @name DRAM_DQ[28] -portAttr DRAM_DQ[29]_310 @name DRAM_DQ[29] -portAttr DRAM_DQ[30]_316 @name DRAM_DQ[30] -portAttr DRAM_DQ[31]_322 @name DRAM_DQ[31] -pg 1 -lvl 2 -x 440 -y 30
+load portBus DRAM_DQM[0..3]_599 output 4 DRAM_DQM[0]_101 DRAM_DQM[1]_102 DRAM_DQM[2]_103 DRAM_DQM[3]_104 -attr @name DRAM_DQM[0..3] -portAttr DRAM_DQM[0]_101 @name DRAM_DQM[0] -portAttr DRAM_DQM[1]_102 @name DRAM_DQM[1] -portAttr DRAM_DQM[2]_103 @name DRAM_DQM[2] -portAttr DRAM_DQM[3]_104 @name DRAM_DQM[3] -pg 1 -lvl 2 -x 440 -y 3220
+load portBus GPIO_D[0..35]_600 inout 36 GPIO_D[0]_364 GPIO_D[1]_370 GPIO_D[2]_376 GPIO_D[3]_382 GPIO_D[4]_388 GPIO_D[5]_394 GPIO_D[6]_400 GPIO_D[7]_406 GPIO_D[8]_412 GPIO_D[9]_418 GPIO_D[10]_424 GPIO_D[11]_430 GPIO_D[12]_436 GPIO_D[13]_442 GPIO_D[14]_448 GPIO_D[15]_454 GPIO_D[16]_460 GPIO_D[17]_466 GPIO_D[18]_472 GPIO_D[19]_478 GPIO_D[20]_484 GPIO_D[21]_490 GPIO_D[22]_496 GPIO_D[23]_502 GPIO_D[24]_508 GPIO_D[25]_514 GPIO_D[26]_520 GPIO_D[27]_526 GPIO_D[28]_532 GPIO_D[29]_538 GPIO_D[30]_544 GPIO_D[31]_550 GPIO_D[32]_556 GPIO_D[33]_562 GPIO_D[34]_568 GPIO_D[35]_574 -attr @name GPIO_D[0..35] -portAttr GPIO_D[0]_364 @name GPIO_D[0] -portAttr GPIO_D[1]_370 @name GPIO_D[1] -portAttr GPIO_D[2]_376 @name GPIO_D[2] -portAttr GPIO_D[3]_382 @name GPIO_D[3] -portAttr GPIO_D[4]_388 @name GPIO_D[4] -portAttr GPIO_D[5]_394 @name GPIO_D[5] -portAttr GPIO_D[6]_400 @name GPIO_D[6] -portAttr GPIO_D[7]_406 @name GPIO_D[7] -portAttr GPIO_D[8]_412 @name GPIO_D[8] -portAttr GPIO_D[9]_418 @name GPIO_D[9] -portAttr GPIO_D[10]_424 @name GPIO_D[10] -portAttr GPIO_D[11]_430 @name GPIO_D[11] -portAttr GPIO_D[12]_436 @name GPIO_D[12] -portAttr GPIO_D[13]_442 @name GPIO_D[13] -portAttr GPIO_D[14]_448 @name GPIO_D[14] -portAttr GPIO_D[15]_454 @name GPIO_D[15] -portAttr GPIO_D[16]_460 @name GPIO_D[16] -portAttr GPIO_D[17]_466 @name GPIO_D[17] -portAttr GPIO_D[18]_472 @name GPIO_D[18] -portAttr GPIO_D[19]_478 @name GPIO_D[19] -portAttr GPIO_D[20]_484 @name GPIO_D[20] -portAttr GPIO_D[21]_490 @name GPIO_D[21] -portAttr GPIO_D[22]_496 @name GPIO_D[22] -portAttr GPIO_D[23]_502 @name GPIO_D[23] -portAttr GPIO_D[24]_508 @name GPIO_D[24] -portAttr GPIO_D[25]_514 @name GPIO_D[25] -portAttr GPIO_D[26]_520 @name GPIO_D[26] -portAttr GPIO_D[27]_526 @name GPIO_D[27] -portAttr GPIO_D[28]_532 @name GPIO_D[28] -portAttr GPIO_D[29]_538 @name GPIO_D[29] -portAttr GPIO_D[30]_544 @name GPIO_D[30] -portAttr GPIO_D[31]_550 @name GPIO_D[31] -portAttr GPIO_D[32]_556 @name GPIO_D[32] -portAttr GPIO_D[33]_562 @name GPIO_D[33] -portAttr GPIO_D[34]_568 @name GPIO_D[34] -portAttr GPIO_D[35]_574 @name GPIO_D[35] -pg 1 -lvl 2 -x 440 -y 3420
+load portBus HDMI_TX_D[0..23]_601 output 24 HDMI_TX_D[0]_108 HDMI_TX_D[1]_109 HDMI_TX_D[2]_110 HDMI_TX_D[3]_111 HDMI_TX_D[4]_112 HDMI_TX_D[5]_113 HDMI_TX_D[6]_114 HDMI_TX_D[7]_115 HDMI_TX_D[8]_116 HDMI_TX_D[9]_117 HDMI_TX_D[10]_118 HDMI_TX_D[11]_119 HDMI_TX_D[12]_120 HDMI_TX_D[13]_121 HDMI_TX_D[14]_122 HDMI_TX_D[15]_123 HDMI_TX_D[16]_124 HDMI_TX_D[17]_125 HDMI_TX_D[18]_126 HDMI_TX_D[19]_127 HDMI_TX_D[20]_128 HDMI_TX_D[21]_129 HDMI_TX_D[22]_130 HDMI_TX_D[23]_131 -attr @name HDMI_TX_D[0..23] -portAttr HDMI_TX_D[0]_108 @name HDMI_TX_D[0] -portAttr HDMI_TX_D[1]_109 @name HDMI_TX_D[1] -portAttr HDMI_TX_D[2]_110 @name HDMI_TX_D[2] -portAttr HDMI_TX_D[3]_111 @name HDMI_TX_D[3] -portAttr HDMI_TX_D[4]_112 @name HDMI_TX_D[4] -portAttr HDMI_TX_D[5]_113 @name HDMI_TX_D[5] -portAttr HDMI_TX_D[6]_114 @name HDMI_TX_D[6] -portAttr HDMI_TX_D[7]_115 @name HDMI_TX_D[7] -portAttr HDMI_TX_D[8]_116 @name HDMI_TX_D[8] -portAttr HDMI_TX_D[9]_117 @name HDMI_TX_D[9] -portAttr HDMI_TX_D[10]_118 @name HDMI_TX_D[10] -portAttr HDMI_TX_D[11]_119 @name HDMI_TX_D[11] -portAttr HDMI_TX_D[12]_120 @name HDMI_TX_D[12] -portAttr HDMI_TX_D[13]_121 @name HDMI_TX_D[13] -portAttr HDMI_TX_D[14]_122 @name HDMI_TX_D[14] -portAttr HDMI_TX_D[15]_123 @name HDMI_TX_D[15] -portAttr HDMI_TX_D[16]_124 @name HDMI_TX_D[16] -portAttr HDMI_TX_D[17]_125 @name HDMI_TX_D[17] -portAttr HDMI_TX_D[18]_126 @name HDMI_TX_D[18] -portAttr HDMI_TX_D[19]_127 @name HDMI_TX_D[19] -portAttr HDMI_TX_D[20]_128 @name HDMI_TX_D[20] -portAttr HDMI_TX_D[21]_129 @name HDMI_TX_D[21] -portAttr HDMI_TX_D[22]_130 @name HDMI_TX_D[22] -portAttr HDMI_TX_D[23]_131 @name HDMI_TX_D[23] -pg 1 -lvl 2 -x 440 -y 3320
+load portBus HEX0[0..6]_602 output 7 HEX0[0]_38 HEX0[1]_39 HEX0[2]_40 HEX0[3]_41 HEX0[4]_42 HEX0[5]_43 HEX0[6]_44 -attr @name HEX0[0..6] -portAttr HEX0[0]_38 @name HEX0[0] -portAttr HEX0[1]_39 @name HEX0[1] -portAttr HEX0[2]_40 @name HEX0[2] -portAttr HEX0[3]_41 @name HEX0[3] -portAttr HEX0[4]_42 @name HEX0[4] -portAttr HEX0[5]_43 @name HEX0[5] -portAttr HEX0[6]_44 @name HEX0[6] -pg 1 -lvl 2 -x 440 -y 2930
+load portBus HEX1[0..6]_603 output 7 HEX1[0]_45 HEX1[1]_46 HEX1[2]_47 HEX1[3]_48 HEX1[4]_49 HEX1[5]_50 HEX1[6]_51 -attr @name HEX1[0..6] -portAttr HEX1[0]_45 @name HEX1[0] -portAttr HEX1[1]_46 @name HEX1[1] -portAttr HEX1[2]_47 @name HEX1[2] -portAttr HEX1[3]_48 @name HEX1[3] -portAttr HEX1[4]_49 @name HEX1[4] -portAttr HEX1[5]_50 @name HEX1[5] -portAttr HEX1[6]_51 @name HEX1[6] -pg 1 -lvl 2 -x 440 -y 2950
+load portBus HEX2[0..6]_604 output 7 HEX2[0]_52 HEX2[1]_53 HEX2[2]_54 HEX2[3]_55 HEX2[4]_56 HEX2[5]_57 HEX2[6]_58 -attr @name HEX2[0..6] -portAttr HEX2[0]_52 @name HEX2[0] -portAttr HEX2[1]_53 @name HEX2[1] -portAttr HEX2[2]_54 @name HEX2[2] -portAttr HEX2[3]_55 @name HEX2[3] -portAttr HEX2[4]_56 @name HEX2[4] -portAttr HEX2[5]_57 @name HEX2[5] -portAttr HEX2[6]_58 @name HEX2[6] -pg 1 -lvl 2 -x 440 -y 2970
+load portBus HEX3[0..6]_605 output 7 HEX3[0]_59 HEX3[1]_60 HEX3[2]_61 HEX3[3]_62 HEX3[4]_63 HEX3[5]_64 HEX3[6]_65 -attr @name HEX3[0..6] -portAttr HEX3[0]_59 @name HEX3[0] -portAttr HEX3[1]_60 @name HEX3[1] -portAttr HEX3[2]_61 @name HEX3[2] -portAttr HEX3[3]_62 @name HEX3[3] -portAttr HEX3[4]_63 @name HEX3[4] -portAttr HEX3[5]_64 @name HEX3[5] -portAttr HEX3[6]_65 @name HEX3[6] -pg 1 -lvl 2 -x 440 -y 2990
+load portBus HEX4[0..6]_606 output 7 HEX4[0]_66 HEX4[1]_67 HEX4[2]_68 HEX4[3]_69 HEX4[4]_70 HEX4[5]_71 HEX4[6]_72 -attr @name HEX4[0..6] -portAttr HEX4[0]_66 @name HEX4[0] -portAttr HEX4[1]_67 @name HEX4[1] -portAttr HEX4[2]_68 @name HEX4[2] -portAttr HEX4[3]_69 @name HEX4[3] -portAttr HEX4[4]_70 @name HEX4[4] -portAttr HEX4[5]_71 @name HEX4[5] -portAttr HEX4[6]_72 @name HEX4[6] -pg 1 -lvl 2 -x 440 -y 3010
+load portBus HEX5[0..6]_607 output 7 HEX5[0]_73 HEX5[1]_74 HEX5[2]_75 HEX5[3]_76 HEX5[4]_77 HEX5[5]_78 HEX5[6]_79 -attr @name HEX5[0..6] -portAttr HEX5[0]_73 @name HEX5[0] -portAttr HEX5[1]_74 @name HEX5[1] -portAttr HEX5[2]_75 @name HEX5[2] -portAttr HEX5[3]_76 @name HEX5[3] -portAttr HEX5[4]_77 @name HEX5[4] -portAttr HEX5[5]_78 @name HEX5[5] -portAttr HEX5[6]_79 @name HEX5[6] -pg 1 -lvl 2 -x 440 -y 3030
+load portBus KEY[0..3]_608 input 4 KEY[0]_18 KEY[1]_19 KEY[2]_20 KEY[3]_21 -attr @name KEY[0..3] -portAttr KEY[0]_18 @name KEY[0] -portAttr KEY[1]_19 @name KEY[1] -portAttr KEY[2]_20 @name KEY[2] -portAttr KEY[3]_21 @name KEY[3] -pg 1 -lvl 0 -x -20 -y 80
+load portBus LEDR[0..9]_609 output 10 LEDR[0]_28 LEDR[1]_29 LEDR[2]_30 LEDR[3]_31 LEDR[4]_32 LEDR[5]_33 LEDR[6]_34 LEDR[7]_35 LEDR[8]_36 LEDR[9]_37 -attr @name LEDR[0..9] -portAttr LEDR[0]_28 @name LEDR[0] -portAttr LEDR[1]_29 @name LEDR[1] -portAttr LEDR[2]_30 @name LEDR[2] -portAttr LEDR[3]_31 @name LEDR[3] -portAttr LEDR[4]_32 @name LEDR[4] -portAttr LEDR[5]_33 @name LEDR[5] -portAttr LEDR[6]_34 @name LEDR[6] -portAttr LEDR[7]_35 @name LEDR[7] -portAttr LEDR[8]_36 @name LEDR[8] -portAttr LEDR[9]_37 @name LEDR[9] -pg 1 -lvl 2 -x 440 -y 3380
+load portBus SW[0..9]_610 input 10 SW[0]_580 SW[1]_581 SW[2]_582 SW[3]_583 SW[4]_22 SW[5]_23 SW[6]_24 SW[7]_25 SW[8]_26 SW[9]_27 -attr @name SW[0..9] -portAttr SW[0]_580 @name SW[0] -portAttr SW[1]_581 @name SW[1] -portAttr SW[2]_582 @name SW[2] -portAttr SW[3]_583 @name SW[3] -portAttr SW[4]_22 @name SW[4] -portAttr SW[5]_23 @name SW[5] -portAttr SW[6]_24 @name SW[6] -portAttr SW[7]_25 @name SW[7] -portAttr SW[8]_26 @name SW[8] -portAttr SW[9]_27 @name SW[9] -pg 1 -lvl 0 -x -20 -y 2990
+load inst auto_fab_0_2 auto_fab_0_2 {} -autohide -attr @name auto_fab_0 -attr @cell (alt_sld_fab_0) -pg 1 -lvl 1 -x 70 -y 4500
+load inst [0].lut_7seg_inst_7 [0].lut_7seg_inst_7 {} -unfold -autohide -attr @name [0].lut_7seg_inst -attr @cell (lut_7seg) -pinBusAttr SW[0..3]_611 @name SW[0..3] -pinAttr SW[0]_585 @name SW[0] -pinAttr SW[1]_586 @name SW[1] -pinAttr SW[2]_587 @name SW[2] -pinAttr SW[3]_588 @name SW[3] -pinAttr Mux_0~1_595 @name Mux_0~1 -pinAttr Mux_1~0_594 @name Mux_1~0 -pinAttr Mux_2~0_593 @name Mux_2~0 -pinAttr Mux_3~0_592 @name Mux_3~0 -pinAttr Mux_4~0_591 @name Mux_4~0 -pinAttr Mux_5~0_590 @name Mux_5~0 -pinAttr Mux_6~0_589 @name Mux_6~0 -hierPinBusAttr SW[0..3]_611 @name SW[0..3] -hierPinAttr SW[0]_585 @name SW[0] -hierPinAttr SW[1]_586 @name SW[1] -hierPinAttr SW[2]_587 @name SW[2] -hierPinAttr SW[3]_588 @name SW[3] -hierPinAttr Mux_0~1_595 @name Mux_0~1 -hierPinAttr Mux_1~0_594 @name Mux_1~0 -hierPinAttr Mux_2~0_593 @name Mux_2~0 -hierPinAttr Mux_3~0_592 @name Mux_3~0 -hierPinAttr Mux_4~0_591 @name Mux_4~0 -hierPinAttr Mux_5~0_590 @name Mux_5~0 -hierPinAttr Mux_6~0_589 @name Mux_6~0 -pg 1 -lvl 1 -x 70 -y 2920
+load inst DRAM_DQ[0]~output_137 DRAM_DQ[0]~output_137 {} -attr @name DRAM_DQ[0]~output -attr @cell IO_OBUF -pinAttr I_139 @name I -pinAttr I_139 @vconn 1'h0 -pinAttr OE_140 @name OE -pinAttr OE_140 @vconn 1'h1 -pinAttr O_141 @name O -pg 1 -lvl 1 -x 70 -y 10
+load inst DRAM_DQ[1]~output_143 DRAM_DQ[1]~output_143 {} -attr @name DRAM_DQ[1]~output -attr @cell IO_OBUF -pinAttr I_145 @name I -pinAttr I_145 @vconn 1'h0 -pinAttr OE_146 @name OE -pinAttr OE_146 @vconn 1'h1 -pinAttr O_147 @name O -pg 1 -lvl 1 -x 70 -y 90
+load inst DRAM_DQ[2]~output_149 DRAM_DQ[2]~output_149 {} -attr @name DRAM_DQ[2]~output -attr @cell IO_OBUF -pinAttr I_151 @name I -pinAttr I_151 @vconn 1'h0 -pinAttr OE_152 @name OE -pinAttr OE_152 @vconn 1'h1 -pinAttr O_153 @name O -pg 1 -lvl 1 -x 70 -y 170
+load inst DRAM_DQ[3]~output_155 DRAM_DQ[3]~output_155 {} -attr @name DRAM_DQ[3]~output -attr @cell IO_OBUF -pinAttr I_157 @name I -pinAttr I_157 @vconn 1'h0 -pinAttr OE_158 @name OE -pinAttr OE_158 @vconn 1'h1 -pinAttr O_159 @name O -pg 1 -lvl 1 -x 70 -y 250
+load inst DRAM_DQ[4]~output_161 DRAM_DQ[4]~output_161 {} -attr @name DRAM_DQ[4]~output -attr @cell IO_OBUF -pinAttr I_163 @name I -pinAttr I_163 @vconn 1'h0 -pinAttr OE_164 @name OE -pinAttr OE_164 @vconn 1'h1 -pinAttr O_165 @name O -pg 1 -lvl 1 -x 70 -y 330
+load inst DRAM_DQ[5]~output_167 DRAM_DQ[5]~output_167 {} -attr @name DRAM_DQ[5]~output -attr @cell IO_OBUF -pinAttr I_169 @name I -pinAttr I_169 @vconn 1'h0 -pinAttr OE_170 @name OE -pinAttr OE_170 @vconn 1'h1 -pinAttr O_171 @name O -pg 1 -lvl 1 -x 70 -y 410
+load inst DRAM_DQ[6]~output_173 DRAM_DQ[6]~output_173 {} -attr @name DRAM_DQ[6]~output -attr @cell IO_OBUF -pinAttr I_175 @name I -pinAttr I_175 @vconn 1'h0 -pinAttr OE_176 @name OE -pinAttr OE_176 @vconn 1'h1 -pinAttr O_177 @name O -pg 1 -lvl 1 -x 70 -y 490
+load inst DRAM_DQ[7]~output_179 DRAM_DQ[7]~output_179 {} -attr @name DRAM_DQ[7]~output -attr @cell IO_OBUF -pinAttr I_181 @name I -pinAttr I_181 @vconn 1'h0 -pinAttr OE_182 @name OE -pinAttr OE_182 @vconn 1'h1 -pinAttr O_183 @name O -pg 1 -lvl 1 -x 70 -y 570
+load inst DRAM_DQ[8]~output_185 DRAM_DQ[8]~output_185 {} -attr @name DRAM_DQ[8]~output -attr @cell IO_OBUF -pinAttr I_187 @name I -pinAttr I_187 @vconn 1'h0 -pinAttr OE_188 @name OE -pinAttr OE_188 @vconn 1'h1 -pinAttr O_189 @name O -pg 1 -lvl 1 -x 70 -y 650
+load inst DRAM_DQ[9]~output_191 DRAM_DQ[9]~output_191 {} -attr @name DRAM_DQ[9]~output -attr @cell IO_OBUF -pinAttr I_193 @name I -pinAttr I_193 @vconn 1'h0 -pinAttr OE_194 @name OE -pinAttr OE_194 @vconn 1'h1 -pinAttr O_195 @name O -pg 1 -lvl 1 -x 70 -y 730
+load inst DRAM_DQ[10]~output_197 DRAM_DQ[10]~output_197 {} -attr @name DRAM_DQ[10]~output -attr @cell IO_OBUF -pinAttr I_199 @name I -pinAttr I_199 @vconn 1'h0 -pinAttr OE_200 @name OE -pinAttr OE_200 @vconn 1'h1 -pinAttr O_201 @name O -pg 1 -lvl 1 -x 70 -y 810
+load inst DRAM_DQ[11]~output_203 DRAM_DQ[11]~output_203 {} -attr @name DRAM_DQ[11]~output -attr @cell IO_OBUF -pinAttr I_205 @name I -pinAttr I_205 @vconn 1'h0 -pinAttr OE_206 @name OE -pinAttr OE_206 @vconn 1'h1 -pinAttr O_207 @name O -pg 1 -lvl 1 -x 70 -y 890
+load inst DRAM_DQ[12]~output_209 DRAM_DQ[12]~output_209 {} -attr @name DRAM_DQ[12]~output -attr @cell IO_OBUF -pinAttr I_211 @name I -pinAttr I_211 @vconn 1'h0 -pinAttr OE_212 @name OE -pinAttr OE_212 @vconn 1'h1 -pinAttr O_213 @name O -pg 1 -lvl 1 -x 70 -y 970
+load inst DRAM_DQ[13]~output_215 DRAM_DQ[13]~output_215 {} -attr @name DRAM_DQ[13]~output -attr @cell IO_OBUF -pinAttr I_217 @name I -pinAttr I_217 @vconn 1'h0 -pinAttr OE_218 @name OE -pinAttr OE_218 @vconn 1'h1 -pinAttr O_219 @name O -pg 1 -lvl 1 -x 70 -y 1050
+load inst DRAM_DQ[14]~output_221 DRAM_DQ[14]~output_221 {} -attr @name DRAM_DQ[14]~output -attr @cell IO_OBUF -pinAttr I_223 @name I -pinAttr I_223 @vconn 1'h0 -pinAttr OE_224 @name OE -pinAttr OE_224 @vconn 1'h1 -pinAttr O_225 @name O -pg 1 -lvl 1 -x 70 -y 1130
+load inst DRAM_DQ[15]~output_227 DRAM_DQ[15]~output_227 {} -attr @name DRAM_DQ[15]~output -attr @cell IO_OBUF -pinAttr I_229 @name I -pinAttr I_229 @vconn 1'h0 -pinAttr OE_230 @name OE -pinAttr OE_230 @vconn 1'h1 -pinAttr O_231 @name O -pg 1 -lvl 1 -x 70 -y 1210
+load inst DRAM_DQ[16]~output_233 DRAM_DQ[16]~output_233 {} -attr @name DRAM_DQ[16]~output -attr @cell IO_OBUF -pinAttr I_235 @name I -pinAttr I_235 @vconn 1'h0 -pinAttr OE_236 @name OE -pinAttr OE_236 @vconn 1'h1 -pinAttr O_237 @name O -pg 1 -lvl 1 -x 70 -y 1290
+load inst DRAM_DQ[17]~output_239 DRAM_DQ[17]~output_239 {} -attr @name DRAM_DQ[17]~output -attr @cell IO_OBUF -pinAttr I_241 @name I -pinAttr I_241 @vconn 1'h0 -pinAttr OE_242 @name OE -pinAttr OE_242 @vconn 1'h1 -pinAttr O_243 @name O -pg 1 -lvl 1 -x 70 -y 1370
+load inst DRAM_DQ[18]~output_245 DRAM_DQ[18]~output_245 {} -attr @name DRAM_DQ[18]~output -attr @cell IO_OBUF -pinAttr I_247 @name I -pinAttr I_247 @vconn 1'h0 -pinAttr OE_248 @name OE -pinAttr OE_248 @vconn 1'h1 -pinAttr O_249 @name O -pg 1 -lvl 1 -x 70 -y 1450
+load inst DRAM_DQ[19]~output_251 DRAM_DQ[19]~output_251 {} -attr @name DRAM_DQ[19]~output -attr @cell IO_OBUF -pinAttr I_253 @name I -pinAttr I_253 @vconn 1'h0 -pinAttr OE_254 @name OE -pinAttr OE_254 @vconn 1'h1 -pinAttr O_255 @name O -pg 1 -lvl 1 -x 70 -y 1530
+load inst DRAM_DQ[20]~output_257 DRAM_DQ[20]~output_257 {} -attr @name DRAM_DQ[20]~output -attr @cell IO_OBUF -pinAttr I_259 @name I -pinAttr I_259 @vconn 1'h0 -pinAttr OE_260 @name OE -pinAttr OE_260 @vconn 1'h1 -pinAttr O_261 @name O -pg 1 -lvl 1 -x 70 -y 1610
+load inst DRAM_DQ[21]~output_263 DRAM_DQ[21]~output_263 {} -attr @name DRAM_DQ[21]~output -attr @cell IO_OBUF -pinAttr I_265 @name I -pinAttr I_265 @vconn 1'h0 -pinAttr OE_266 @name OE -pinAttr OE_266 @vconn 1'h1 -pinAttr O_267 @name O -pg 1 -lvl 1 -x 70 -y 1690
+load inst DRAM_DQ[22]~output_269 DRAM_DQ[22]~output_269 {} -attr @name DRAM_DQ[22]~output -attr @cell IO_OBUF -pinAttr I_271 @name I -pinAttr I_271 @vconn 1'h0 -pinAttr OE_272 @name OE -pinAttr OE_272 @vconn 1'h1 -pinAttr O_273 @name O -pg 1 -lvl 1 -x 70 -y 1770
+load inst DRAM_DQ[23]~output_275 DRAM_DQ[23]~output_275 {} -attr @name DRAM_DQ[23]~output -attr @cell IO_OBUF -pinAttr I_277 @name I -pinAttr I_277 @vconn 1'h0 -pinAttr OE_278 @name OE -pinAttr OE_278 @vconn 1'h1 -pinAttr O_279 @name O -pg 1 -lvl 1 -x 70 -y 1850
+load inst DRAM_DQ[24]~output_281 DRAM_DQ[24]~output_281 {} -attr @name DRAM_DQ[24]~output -attr @cell IO_OBUF -pinAttr I_283 @name I -pinAttr I_283 @vconn 1'h0 -pinAttr OE_284 @name OE -pinAttr OE_284 @vconn 1'h1 -pinAttr O_285 @name O -pg 1 -lvl 1 -x 70 -y 1930
+load inst DRAM_DQ[25]~output_287 DRAM_DQ[25]~output_287 {} -attr @name DRAM_DQ[25]~output -attr @cell IO_OBUF -pinAttr I_289 @name I -pinAttr I_289 @vconn 1'h0 -pinAttr OE_290 @name OE -pinAttr OE_290 @vconn 1'h1 -pinAttr O_291 @name O -pg 1 -lvl 1 -x 70 -y 2010
+load inst DRAM_DQ[26]~output_293 DRAM_DQ[26]~output_293 {} -attr @name DRAM_DQ[26]~output -attr @cell IO_OBUF -pinAttr I_295 @name I -pinAttr I_295 @vconn 1'h0 -pinAttr OE_296 @name OE -pinAttr OE_296 @vconn 1'h1 -pinAttr O_297 @name O -pg 1 -lvl 1 -x 70 -y 2090
+load inst DRAM_DQ[27]~output_299 DRAM_DQ[27]~output_299 {} -attr @name DRAM_DQ[27]~output -attr @cell IO_OBUF -pinAttr I_301 @name I -pinAttr I_301 @vconn 1'h0 -pinAttr OE_302 @name OE -pinAttr OE_302 @vconn 1'h1 -pinAttr O_303 @name O -pg 1 -lvl 1 -x 70 -y 2170
+load inst DRAM_DQ[28]~output_305 DRAM_DQ[28]~output_305 {} -attr @name DRAM_DQ[28]~output -attr @cell IO_OBUF -pinAttr I_307 @name I -pinAttr I_307 @vconn 1'h0 -pinAttr OE_308 @name OE -pinAttr OE_308 @vconn 1'h1 -pinAttr O_309 @name O -pg 1 -lvl 1 -x 70 -y 2250
+load inst DRAM_DQ[29]~output_311 DRAM_DQ[29]~output_311 {} -attr @name DRAM_DQ[29]~output -attr @cell IO_OBUF -pinAttr I_313 @name I -pinAttr I_313 @vconn 1'h0 -pinAttr OE_314 @name OE -pinAttr OE_314 @vconn 1'h1 -pinAttr O_315 @name O -pg 1 -lvl 1 -x 70 -y 2330
+load inst DRAM_DQ[30]~output_317 DRAM_DQ[30]~output_317 {} -attr @name DRAM_DQ[30]~output -attr @cell IO_OBUF -pinAttr I_319 @name I -pinAttr I_319 @vconn 1'h0 -pinAttr OE_320 @name OE -pinAttr OE_320 @vconn 1'h1 -pinAttr O_321 @name O -pg 1 -lvl 1 -x 70 -y 2410
+load inst DRAM_DQ[31]~output_323 DRAM_DQ[31]~output_323 {} -attr @name DRAM_DQ[31]~output -attr @cell IO_OBUF -pinAttr I_325 @name I -pinAttr I_325 @vconn 1'h0 -pinAttr OE_326 @name OE -pinAttr OE_326 @vconn 1'h1 -pinAttr O_327 @name O -pg 1 -lvl 1 -x 70 -y 2490
+load inst HDMI_LRCLK~output_329 HDMI_LRCLK~output_329 {} -attr @name HDMI_LRCLK~output -attr @cell IO_OBUF -pinAttr I_331 @name I -pinAttr I_331 @vconn 1'h0 -pinAttr OE_332 @name OE -pinAttr OE_332 @vconn 1'h1 -pinAttr O_333 @name O -pg 1 -lvl 1 -x 70 -y 2650
+load inst HDMI_MCLK~output_335 HDMI_MCLK~output_335 {} -attr @name HDMI_MCLK~output -attr @cell IO_OBUF -pinAttr I_337 @name I -pinAttr I_337 @vconn 1'h0 -pinAttr OE_338 @name OE -pinAttr OE_338 @vconn 1'h1 -pinAttr O_339 @name O -pg 1 -lvl 1 -x 70 -y 2730
+load inst HDMI_SCLK~output_341 HDMI_SCLK~output_341 {} -attr @name HDMI_SCLK~output -attr @cell IO_OBUF -pinAttr I_343 @name I -pinAttr I_343 @vconn 1'h0 -pinAttr OE_344 @name OE -pinAttr OE_344 @vconn 1'h1 -pinAttr O_345 @name O -pg 1 -lvl 1 -x 70 -y 2810
+load inst HDMI_I2S0~output_347 HDMI_I2S0~output_347 {} -attr @name HDMI_I2S0~output -attr @cell IO_OBUF -pinAttr I_349 @name I -pinAttr I_349 @vconn 1'h0 -pinAttr OE_350 @name OE -pinAttr OE_350 @vconn 1'h1 -pinAttr O_351 @name O -pg 1 -lvl 1 -x 70 -y 2570
+load inst I2C_SCL~output_353 I2C_SCL~output_353 {} -attr @name I2C_SCL~output -attr @cell IO_OBUF -pinAttr I_355 @name I -pinAttr I_355 @vconn 1'h0 -pinAttr OE_356 @name OE -pinAttr OE_356 @vconn 1'h1 -pinAttr O_357 @name O -pg 1 -lvl 1 -x 70 -y 6620
+load inst I2C_SDA~output_359 I2C_SDA~output_359 {} -attr @name I2C_SDA~output -attr @cell IO_OBUF -pinAttr I_361 @name I -pinAttr I_361 @vconn 1'h0 -pinAttr OE_362 @name OE -pinAttr OE_362 @vconn 1'h1 -pinAttr O_363 @name O -pg 1 -lvl 1 -x 70 -y 6700
+load inst GPIO_D[0]~output_365 GPIO_D[0]~output_365 {} -attr @name GPIO_D[0]~output -attr @cell IO_OBUF -pinAttr I_367 @name I -pinAttr I_367 @vconn 1'h0 -pinAttr OE_368 @name OE -pinAttr OE_368 @vconn 1'h1 -pinAttr O_369 @name O -pg 1 -lvl 1 -x 70 -y 4540
+load inst GPIO_D[1]~output_371 GPIO_D[1]~output_371 {} -attr @name GPIO_D[1]~output -attr @cell IO_OBUF -pinAttr I_373 @name I -pinAttr I_373 @vconn 1'h0 -pinAttr OE_374 @name OE -pinAttr OE_374 @vconn 1'h1 -pinAttr O_375 @name O -pg 1 -lvl 1 -x 70 -y 4620
+load inst GPIO_D[2]~output_377 GPIO_D[2]~output_377 {} -attr @name GPIO_D[2]~output -attr @cell IO_OBUF -pinAttr I_379 @name I -pinAttr I_379 @vconn 1'h0 -pinAttr OE_380 @name OE -pinAttr OE_380 @vconn 1'h1 -pinAttr O_381 @name O -pg 1 -lvl 1 -x 70 -y 5980
+load inst GPIO_D[3]~output_383 GPIO_D[3]~output_383 {} -attr @name GPIO_D[3]~output -attr @cell IO_OBUF -pinAttr I_385 @name I -pinAttr I_385 @vconn 1'h0 -pinAttr OE_386 @name OE -pinAttr OE_386 @vconn 1'h1 -pinAttr O_387 @name O -pg 1 -lvl 1 -x 70 -y 6060
+load inst GPIO_D[4]~output_389 GPIO_D[4]~output_389 {} -attr @name GPIO_D[4]~output -attr @cell IO_OBUF -pinAttr I_391 @name I -pinAttr I_391 @vconn 1'h0 -pinAttr OE_392 @name OE -pinAttr OE_392 @vconn 1'h1 -pinAttr O_393 @name O -pg 1 -lvl 1 -x 70 -y 6460
+load inst GPIO_D[5]~output_395 GPIO_D[5]~output_395 {} -attr @name GPIO_D[5]~output -attr @cell IO_OBUF -pinAttr I_397 @name I -pinAttr I_397 @vconn 1'h0 -pinAttr OE_398 @name OE -pinAttr OE_398 @vconn 1'h1 -pinAttr O_399 @name O -pg 1 -lvl 1 -x 70 -y 3680
+load inst GPIO_D[6]~output_401 GPIO_D[6]~output_401 {} -attr @name GPIO_D[6]~output -attr @cell IO_OBUF -pinAttr I_403 @name I -pinAttr I_403 @vconn 1'h0 -pinAttr OE_404 @name OE -pinAttr OE_404 @vconn 1'h1 -pinAttr O_405 @name O -pg 1 -lvl 1 -x 70 -y 3760
+load inst GPIO_D[7]~output_407 GPIO_D[7]~output_407 {} -attr @name GPIO_D[7]~output -attr @cell IO_OBUF -pinAttr I_409 @name I -pinAttr I_409 @vconn 1'h0 -pinAttr OE_410 @name OE -pinAttr OE_410 @vconn 1'h1 -pinAttr O_411 @name O -pg 1 -lvl 1 -x 70 -y 3840
+load inst GPIO_D[8]~output_413 GPIO_D[8]~output_413 {} -attr @name GPIO_D[8]~output -attr @cell IO_OBUF -pinAttr I_415 @name I -pinAttr I_415 @vconn 1'h0 -pinAttr OE_416 @name OE -pinAttr OE_416 @vconn 1'h1 -pinAttr O_417 @name O -pg 1 -lvl 1 -x 70 -y 3920
+load inst GPIO_D[9]~output_419 GPIO_D[9]~output_419 {} -attr @name GPIO_D[9]~output -attr @cell IO_OBUF -pinAttr I_421 @name I -pinAttr I_421 @vconn 1'h0 -pinAttr OE_422 @name OE -pinAttr OE_422 @vconn 1'h1 -pinAttr O_423 @name O -pg 1 -lvl 1 -x 70 -y 4000
+load inst GPIO_D[10]~output_425 GPIO_D[10]~output_425 {} -attr @name GPIO_D[10]~output -attr @cell IO_OBUF -pinAttr I_427 @name I -pinAttr I_427 @vconn 1'h0 -pinAttr OE_428 @name OE -pinAttr OE_428 @vconn 1'h1 -pinAttr O_429 @name O -pg 1 -lvl 1 -x 70 -y 4700
+load inst GPIO_D[11]~output_431 GPIO_D[11]~output_431 {} -attr @name GPIO_D[11]~output -attr @cell IO_OBUF -pinAttr I_433 @name I -pinAttr I_433 @vconn 1'h0 -pinAttr OE_434 @name OE -pinAttr OE_434 @vconn 1'h1 -pinAttr O_435 @name O -pg 1 -lvl 1 -x 70 -y 4080
+load inst GPIO_D[12]~output_437 GPIO_D[12]~output_437 {} -attr @name GPIO_D[12]~output -attr @cell IO_OBUF -pinAttr I_439 @name I -pinAttr I_439 @vconn 1'h0 -pinAttr OE_440 @name OE -pinAttr OE_440 @vconn 1'h1 -pinAttr O_441 @name O -pg 1 -lvl 1 -x 70 -y 4160
+load inst GPIO_D[13]~output_443 GPIO_D[13]~output_443 {} -attr @name GPIO_D[13]~output -attr @cell IO_OBUF -pinAttr I_445 @name I -pinAttr I_445 @vconn 1'h0 -pinAttr OE_446 @name OE -pinAttr OE_446 @vconn 1'h1 -pinAttr O_447 @name O -pg 1 -lvl 1 -x 70 -y 4240
+load inst GPIO_D[14]~output_449 GPIO_D[14]~output_449 {} -attr @name GPIO_D[14]~output -attr @cell IO_OBUF -pinAttr I_451 @name I -pinAttr I_451 @vconn 1'h0 -pinAttr OE_452 @name OE -pinAttr OE_452 @vconn 1'h1 -pinAttr O_453 @name O -pg 1 -lvl 1 -x 70 -y 4320
+load inst GPIO_D[15]~output_455 GPIO_D[15]~output_455 {} -attr @name GPIO_D[15]~output -attr @cell IO_OBUF -pinAttr I_457 @name I -pinAttr I_457 @vconn 1'h0 -pinAttr OE_458 @name OE -pinAttr OE_458 @vconn 1'h1 -pinAttr O_459 @name O -pg 1 -lvl 1 -x 70 -y 4780
+load inst GPIO_D[16]~output_461 GPIO_D[16]~output_461 {} -attr @name GPIO_D[16]~output -attr @cell IO_OBUF -pinAttr I_463 @name I -pinAttr I_463 @vconn 1'h0 -pinAttr OE_464 @name OE -pinAttr OE_464 @vconn 1'h1 -pinAttr O_465 @name O -pg 1 -lvl 1 -x 70 -y 4860
+load inst GPIO_D[17]~output_467 GPIO_D[17]~output_467 {} -attr @name GPIO_D[17]~output -attr @cell IO_OBUF -pinAttr I_469 @name I -pinAttr I_469 @vconn 1'h0 -pinAttr OE_470 @name OE -pinAttr OE_470 @vconn 1'h1 -pinAttr O_471 @name O -pg 1 -lvl 1 -x 70 -y 4940
+load inst GPIO_D[18]~output_473 GPIO_D[18]~output_473 {} -attr @name GPIO_D[18]~output -attr @cell IO_OBUF -pinAttr I_475 @name I -pinAttr I_475 @vconn 1'h0 -pinAttr OE_476 @name OE -pinAttr OE_476 @vconn 1'h1 -pinAttr O_477 @name O -pg 1 -lvl 1 -x 70 -y 5020
+load inst GPIO_D[19]~output_479 GPIO_D[19]~output_479 {} -attr @name GPIO_D[19]~output -attr @cell IO_OBUF -pinAttr I_481 @name I -pinAttr I_481 @vconn 1'h0 -pinAttr OE_482 @name OE -pinAttr OE_482 @vconn 1'h1 -pinAttr O_483 @name O -pg 1 -lvl 1 -x 70 -y 5100
+load inst GPIO_D[20]~output_485 GPIO_D[20]~output_485 {} -attr @name GPIO_D[20]~output -attr @cell IO_OBUF -pinAttr I_487 @name I -pinAttr I_487 @vconn 1'h0 -pinAttr OE_488 @name OE -pinAttr OE_488 @vconn 1'h1 -pinAttr O_489 @name O -pg 1 -lvl 1 -x 70 -y 5180
+load inst GPIO_D[21]~output_491 GPIO_D[21]~output_491 {} -attr @name GPIO_D[21]~output -attr @cell IO_OBUF -pinAttr I_493 @name I -pinAttr I_493 @vconn 1'h0 -pinAttr OE_494 @name OE -pinAttr OE_494 @vconn 1'h1 -pinAttr O_495 @name O -pg 1 -lvl 1 -x 70 -y 5260
+load inst GPIO_D[22]~output_497 GPIO_D[22]~output_497 {} -attr @name GPIO_D[22]~output -attr @cell IO_OBUF -pinAttr I_499 @name I -pinAttr I_499 @vconn 1'h0 -pinAttr OE_500 @name OE -pinAttr OE_500 @vconn 1'h1 -pinAttr O_501 @name O -pg 1 -lvl 1 -x 70 -y 5340
+load inst GPIO_D[23]~output_503 GPIO_D[23]~output_503 {} -attr @name GPIO_D[23]~output -attr @cell IO_OBUF -pinAttr I_505 @name I -pinAttr I_505 @vconn 1'h0 -pinAttr OE_506 @name OE -pinAttr OE_506 @vconn 1'h1 -pinAttr O_507 @name O -pg 1 -lvl 1 -x 70 -y 5420
+load inst GPIO_D[24]~output_509 GPIO_D[24]~output_509 {} -attr @name GPIO_D[24]~output -attr @cell IO_OBUF -pinAttr I_511 @name I -pinAttr I_511 @vconn 1'h0 -pinAttr OE_512 @name OE -pinAttr OE_512 @vconn 1'h1 -pinAttr O_513 @name O -pg 1 -lvl 1 -x 70 -y 5500
+load inst GPIO_D[25]~output_515 GPIO_D[25]~output_515 {} -attr @name GPIO_D[25]~output -attr @cell IO_OBUF -pinAttr I_517 @name I -pinAttr I_517 @vconn 1'h0 -pinAttr OE_518 @name OE -pinAttr OE_518 @vconn 1'h1 -pinAttr O_519 @name O -pg 1 -lvl 1 -x 70 -y 5580
+load inst GPIO_D[26]~output_521 GPIO_D[26]~output_521 {} -attr @name GPIO_D[26]~output -attr @cell IO_OBUF -pinAttr I_523 @name I -pinAttr I_523 @vconn 1'h0 -pinAttr OE_524 @name OE -pinAttr OE_524 @vconn 1'h1 -pinAttr O_525 @name O -pg 1 -lvl 1 -x 70 -y 5660
+load inst GPIO_D[27]~output_527 GPIO_D[27]~output_527 {} -attr @name GPIO_D[27]~output -attr @cell IO_OBUF -pinAttr I_529 @name I -pinAttr I_529 @vconn 1'h0 -pinAttr OE_530 @name OE -pinAttr OE_530 @vconn 1'h1 -pinAttr O_531 @name O -pg 1 -lvl 1 -x 70 -y 5740
+load inst GPIO_D[28]~output_533 GPIO_D[28]~output_533 {} -attr @name GPIO_D[28]~output -attr @cell IO_OBUF -pinAttr I_535 @name I -pinAttr I_535 @vconn 1'h0 -pinAttr OE_536 @name OE -pinAttr OE_536 @vconn 1'h1 -pinAttr O_537 @name O -pg 1 -lvl 1 -x 70 -y 5820
+load inst GPIO_D[29]~output_539 GPIO_D[29]~output_539 {} -attr @name GPIO_D[29]~output -attr @cell IO_OBUF -pinAttr I_541 @name I -pinAttr I_541 @vconn 1'h0 -pinAttr OE_542 @name OE -pinAttr OE_542 @vconn 1'h1 -pinAttr O_543 @name O -pg 1 -lvl 1 -x 70 -y 5900
+load inst GPIO_D[30]~output_545 GPIO_D[30]~output_545 {} -attr @name GPIO_D[30]~output -attr @cell IO_OBUF -pinAttr I_547 @name I -pinAttr I_547 @vconn 1'h0 -pinAttr OE_548 @name OE -pinAttr OE_548 @vconn 1'h1 -pinAttr O_549 @name O -pg 1 -lvl 1 -x 70 -y 6140
+load inst GPIO_D[31]~output_551 GPIO_D[31]~output_551 {} -attr @name GPIO_D[31]~output -attr @cell IO_OBUF -pinAttr I_553 @name I -pinAttr I_553 @vconn 1'h0 -pinAttr OE_554 @name OE -pinAttr OE_554 @vconn 1'h1 -pinAttr O_555 @name O -pg 1 -lvl 1 -x 70 -y 6220
+load inst GPIO_D[32]~output_557 GPIO_D[32]~output_557 {} -attr @name GPIO_D[32]~output -attr @cell IO_OBUF -pinAttr I_559 @name I -pinAttr I_559 @vconn 1'h0 -pinAttr OE_560 @name OE -pinAttr OE_560 @vconn 1'h1 -pinAttr O_561 @name O -pg 1 -lvl 1 -x 70 -y 6300
+load inst GPIO_D[33]~output_563 GPIO_D[33]~output_563 {} -attr @name GPIO_D[33]~output -attr @cell IO_OBUF -pinAttr I_565 @name I -pinAttr I_565 @vconn 1'h0 -pinAttr OE_566 @name OE -pinAttr OE_566 @vconn 1'h1 -pinAttr O_567 @name O -pg 1 -lvl 1 -x 70 -y 6380
+load inst GPIO_D[34]~output_569 GPIO_D[34]~output_569 {} -attr @name GPIO_D[34]~output -attr @cell IO_OBUF -pinAttr I_571 @name I -pinAttr I_571 @vconn 1'h0 -pinAttr OE_572 @name OE -pinAttr OE_572 @vconn 1'h1 -pinAttr O_573 @name O -pg 1 -lvl 1 -x 70 -y 6540
+load inst GPIO_D[35]~output_575 GPIO_D[35]~output_575 {} -attr @name GPIO_D[35]~output -attr @cell IO_OBUF -pinAttr I_577 @name I -pinAttr I_577 @vconn 1'h0 -pinAttr OE_578 @name OE -pinAttr OE_578 @vconn 1'h1 -pinAttr O_579 @name O -pg 1 -lvl 1 -x 70 -y 4400
+load inst ~GND_584 ~GND_584 {} -attr @name ~GND -attr @cell {} -pinAttr COMBOUT_308 @name COMBOUT -pg 1 -lvl 1 -x 70 -y 3640
+load inst [0].lut_7seg_inst_7|Mux_6~0_9 Mux_6~0_9 {} -hier [0].lut_7seg_inst_7 -attr @name Mux_6~0 -attr @cell {} -pinAttr DATAA_1 @name DATAA -pinAttr DATAB_2 @name DATAB -pinAttr DATAC_3 @name DATAC -pinAttr DATAD_4 @name DATAD -pinAttr COMBOUT_1 @name COMBOUT -pg 1 -lvl 1 -x 130 -y 3410
+load inst [0].lut_7seg_inst_7|Mux_5~0_10 Mux_5~0_10 {} -hier [0].lut_7seg_inst_7 -attr @name Mux_5~0 -attr @cell {} -pinAttr DATAA_5 @name DATAA -pinAttr DATAB_6 @name DATAB -pinAttr DATAC_7 @name DATAC -pinAttr DATAD_8 @name DATAD -pinAttr COMBOUT_2 @name COMBOUT -pg 1 -lvl 1 -x 130 -y 3310
+load inst [0].lut_7seg_inst_7|Mux_4~0_11 Mux_4~0_11 {} -hier [0].lut_7seg_inst_7 -attr @name Mux_4~0 -attr @cell {} -pinAttr DATAA_9 @name DATAA -pinAttr DATAB_10 @name DATAB -pinAttr DATAC_11 @name DATAC -pinAttr DATAD_12 @name DATAD -pinAttr COMBOUT_3 @name COMBOUT -pg 1 -lvl 1 -x 130 -y 3510
+load inst [0].lut_7seg_inst_7|Mux_3~0_12 Mux_3~0_12 {} -hier [0].lut_7seg_inst_7 -attr @name Mux_3~0 -attr @cell {} -pinAttr DATAA_13 @name DATAA -pinAttr DATAB_14 @name DATAB -pinAttr DATAC_15 @name DATAC -pinAttr DATAD_16 @name DATAD -pinAttr COMBOUT_4 @name COMBOUT -pg 1 -lvl 1 -x 130 -y 3210
+load inst [0].lut_7seg_inst_7|Mux_2~0_13 Mux_2~0_13 {} -hier [0].lut_7seg_inst_7 -attr @name Mux_2~0 -attr @cell {} -pinAttr DATAA_17 @name DATAA -pinAttr DATAB_18 @name DATAB -pinAttr DATAC_19 @name DATAC -pinAttr DATAD_20 @name DATAD -pinAttr COMBOUT_5 @name COMBOUT -pg 1 -lvl 1 -x 130 -y 3110
+load inst [0].lut_7seg_inst_7|Mux_1~0_14 Mux_1~0_14 {} -hier [0].lut_7seg_inst_7 -attr @name Mux_1~0 -attr @cell {} -pinAttr DATAA_21 @name DATAA -pinAttr DATAB_22 @name DATAB -pinAttr DATAC_23 @name DATAC -pinAttr DATAD_24 @name DATAD -pinAttr COMBOUT_6 @name COMBOUT -pg 1 -lvl 1 -x 130 -y 3010
+load inst [0].lut_7seg_inst_7|Mux_0~1_15 Mux_0~1_15 {} -hier [0].lut_7seg_inst_7 -attr @name Mux_0~1 -attr @cell {} -pinAttr DATAA_25 @name DATAA -pinAttr DATAB_26 @name DATAB -pinAttr DATAC_27 @name DATAC -pinAttr DATAD_28 @name DATAD -pinAttr COMBOUT_7 @name COMBOUT -pg 1 -lvl 1 -x 130 -y 2910
+load net I_1 -ground -attr @name {} -pin DRAM_DQ[0]~output_137 I_139
+load net OE_2 -power -attr @name {} -pin DRAM_DQ[0]~output_137 OE_140
+load net I_6 -ground -attr @name {} -pin DRAM_DQ[1]~output_143 I_145
+load net OE_7 -power -attr @name {} -pin DRAM_DQ[1]~output_143 OE_146
+load net I_11 -ground -attr @name {} -pin DRAM_DQ[2]~output_149 I_151
+load net OE_12 -power -attr @name {} -pin DRAM_DQ[2]~output_149 OE_152
+load net I_16 -ground -attr @name {} -pin DRAM_DQ[3]~output_155 I_157
+load net OE_17 -power -attr @name {} -pin DRAM_DQ[3]~output_155 OE_158
+load net I_21 -ground -attr @name {} -pin DRAM_DQ[4]~output_161 I_163
+load net OE_22 -power -attr @name {} -pin DRAM_DQ[4]~output_161 OE_164
+load net I_26 -ground -attr @name {} -pin DRAM_DQ[5]~output_167 I_169
+load net OE_27 -power -attr @name {} -pin DRAM_DQ[5]~output_167 OE_170
+load net I_31 -ground -attr @name {} -pin DRAM_DQ[6]~output_173 I_175
+load net OE_32 -power -attr @name {} -pin DRAM_DQ[6]~output_173 OE_176
+load net I_36 -ground -attr @name {} -pin DRAM_DQ[7]~output_179 I_181
+load net OE_37 -power -attr @name {} -pin DRAM_DQ[7]~output_179 OE_182
+load net I_41 -ground -attr @name {} -pin DRAM_DQ[8]~output_185 I_187
+load net OE_42 -power -attr @name {} -pin DRAM_DQ[8]~output_185 OE_188
+load net I_46 -ground -attr @name {} -pin DRAM_DQ[9]~output_191 I_193
+load net OE_47 -power -attr @name {} -pin DRAM_DQ[9]~output_191 OE_194
+load net I_51 -ground -attr @name {} -pin DRAM_DQ[10]~output_197 I_199
+load net OE_52 -power -attr @name {} -pin DRAM_DQ[10]~output_197 OE_200
+load net I_56 -ground -attr @name {} -pin DRAM_DQ[11]~output_203 I_205
+load net OE_57 -power -attr @name {} -pin DRAM_DQ[11]~output_203 OE_206
+load net I_61 -ground -attr @name {} -pin DRAM_DQ[12]~output_209 I_211
+load net OE_62 -power -attr @name {} -pin DRAM_DQ[12]~output_209 OE_212
+load net I_66 -ground -attr @name {} -pin DRAM_DQ[13]~output_215 I_217
+load net OE_67 -power -attr @name {} -pin DRAM_DQ[13]~output_215 OE_218
+load net I_71 -ground -attr @name {} -pin DRAM_DQ[14]~output_221 I_223
+load net OE_72 -power -attr @name {} -pin DRAM_DQ[14]~output_221 OE_224
+load net I_76 -ground -attr @name {} -pin DRAM_DQ[15]~output_227 I_229
+load net OE_77 -power -attr @name {} -pin DRAM_DQ[15]~output_227 OE_230
+load net I_81 -ground -attr @name {} -pin DRAM_DQ[16]~output_233 I_235
+load net OE_82 -power -attr @name {} -pin DRAM_DQ[16]~output_233 OE_236
+load net I_86 -ground -attr @name {} -pin DRAM_DQ[17]~output_239 I_241
+load net OE_87 -power -attr @name {} -pin DRAM_DQ[17]~output_239 OE_242
+load net I_91 -ground -attr @name {} -pin DRAM_DQ[18]~output_245 I_247
+load net OE_92 -power -attr @name {} -pin DRAM_DQ[18]~output_245 OE_248
+load net I_96 -ground -attr @name {} -pin DRAM_DQ[19]~output_251 I_253
+load net OE_97 -power -attr @name {} -pin DRAM_DQ[19]~output_251 OE_254
+load net I_101 -ground -attr @name {} -pin DRAM_DQ[20]~output_257 I_259
+load net OE_102 -power -attr @name {} -pin DRAM_DQ[20]~output_257 OE_260
+load net I_106 -ground -attr @name {} -pin DRAM_DQ[21]~output_263 I_265
+load net OE_107 -power -attr @name {} -pin DRAM_DQ[21]~output_263 OE_266
+load net I_111 -ground -attr @name {} -pin DRAM_DQ[22]~output_269 I_271
+load net OE_112 -power -attr @name {} -pin DRAM_DQ[22]~output_269 OE_272
+load net I_116 -ground -attr @name {} -pin DRAM_DQ[23]~output_275 I_277
+load net OE_117 -power -attr @name {} -pin DRAM_DQ[23]~output_275 OE_278
+load net I_121 -ground -attr @name {} -pin DRAM_DQ[24]~output_281 I_283
+load net OE_122 -power -attr @name {} -pin DRAM_DQ[24]~output_281 OE_284
+load net I_126 -ground -attr @name {} -pin DRAM_DQ[25]~output_287 I_289
+load net OE_127 -power -attr @name {} -pin DRAM_DQ[25]~output_287 OE_290
+load net I_131 -ground -attr @name {} -pin DRAM_DQ[26]~output_293 I_295
+load net OE_132 -power -attr @name {} -pin DRAM_DQ[26]~output_293 OE_296
+load net I_136 -ground -attr @name {} -pin DRAM_DQ[27]~output_299 I_301
+load net OE_137 -power -attr @name {} -pin DRAM_DQ[27]~output_299 OE_302
+load net I_141 -ground -attr @name {} -pin DRAM_DQ[28]~output_305 I_307
+load net OE_142 -power -attr @name {} -pin DRAM_DQ[28]~output_305 OE_308
+load net I_146 -ground -attr @name {} -pin DRAM_DQ[29]~output_311 I_313
+load net OE_147 -power -attr @name {} -pin DRAM_DQ[29]~output_311 OE_314
+load net I_151 -ground -attr @name {} -pin DRAM_DQ[30]~output_317 I_319
+load net OE_152 -power -attr @name {} -pin DRAM_DQ[30]~output_317 OE_320
+load net I_156 -ground -attr @name {} -pin DRAM_DQ[31]~output_323 I_325
+load net OE_157 -power -attr @name {} -pin DRAM_DQ[31]~output_323 OE_326
+load net I_161 -ground -attr @name {} -pin HDMI_LRCLK~output_329 I_331
+load net OE_162 -power -attr @name {} -pin HDMI_LRCLK~output_329 OE_332
+load net I_166 -ground -attr @name {} -pin HDMI_MCLK~output_335 I_337
+load net OE_167 -power -attr @name {} -pin HDMI_MCLK~output_335 OE_338
+load net I_171 -ground -attr @name {} -pin HDMI_SCLK~output_341 I_343
+load net OE_172 -power -attr @name {} -pin HDMI_SCLK~output_341 OE_344
+load net I_176 -ground -attr @name {} -pin HDMI_I2S0~output_347 I_349
+load net OE_177 -power -attr @name {} -pin HDMI_I2S0~output_347 OE_350
+load net I_181 -ground -attr @name {} -pin I2C_SCL~output_353 I_355
+load net OE_182 -power -attr @name {} -pin I2C_SCL~output_353 OE_356
+load net I_186 -ground -attr @name {} -pin I2C_SDA~output_359 I_361
+load net OE_187 -power -attr @name {} -pin I2C_SDA~output_359 OE_362
+load net I_191 -ground -attr @name {} -pin GPIO_D[0]~output_365 I_367
+load net OE_192 -power -attr @name {} -pin GPIO_D[0]~output_365 OE_368
+load net I_196 -ground -attr @name {} -pin GPIO_D[1]~output_371 I_373
+load net OE_197 -power -attr @name {} -pin GPIO_D[1]~output_371 OE_374
+load net I_201 -ground -attr @name {} -pin GPIO_D[2]~output_377 I_379
+load net OE_202 -power -attr @name {} -pin GPIO_D[2]~output_377 OE_380
+load net I_206 -ground -attr @name {} -pin GPIO_D[3]~output_383 I_385
+load net OE_207 -power -attr @name {} -pin GPIO_D[3]~output_383 OE_386
+load net I_211 -ground -attr @name {} -pin GPIO_D[4]~output_389 I_391
+load net OE_212 -power -attr @name {} -pin GPIO_D[4]~output_389 OE_392
+load net I_216 -ground -attr @name {} -pin GPIO_D[5]~output_395 I_397
+load net OE_217 -power -attr @name {} -pin GPIO_D[5]~output_395 OE_398
+load net I_221 -ground -attr @name {} -pin GPIO_D[6]~output_401 I_403
+load net OE_222 -power -attr @name {} -pin GPIO_D[6]~output_401 OE_404
+load net I_226 -ground -attr @name {} -pin GPIO_D[7]~output_407 I_409
+load net OE_227 -power -attr @name {} -pin GPIO_D[7]~output_407 OE_410
+load net I_231 -ground -attr @name {} -pin GPIO_D[8]~output_413 I_415
+load net OE_232 -power -attr @name {} -pin GPIO_D[8]~output_413 OE_416
+load net I_236 -ground -attr @name {} -pin GPIO_D[9]~output_419 I_421
+load net OE_237 -power -attr @name {} -pin GPIO_D[9]~output_419 OE_422
+load net I_241 -ground -attr @name {} -pin GPIO_D[10]~output_425 I_427
+load net OE_242 -power -attr @name {} -pin GPIO_D[10]~output_425 OE_428
+load net I_246 -ground -attr @name {} -pin GPIO_D[11]~output_431 I_433
+load net OE_247 -power -attr @name {} -pin GPIO_D[11]~output_431 OE_434
+load net I_251 -ground -attr @name {} -pin GPIO_D[12]~output_437 I_439
+load net OE_252 -power -attr @name {} -pin GPIO_D[12]~output_437 OE_440
+load net I_256 -ground -attr @name {} -pin GPIO_D[13]~output_443 I_445
+load net OE_257 -power -attr @name {} -pin GPIO_D[13]~output_443 OE_446
+load net I_261 -ground -attr @name {} -pin GPIO_D[14]~output_449 I_451
+load net OE_262 -power -attr @name {} -pin GPIO_D[14]~output_449 OE_452
+load net I_266 -ground -attr @name {} -pin GPIO_D[15]~output_455 I_457
+load net OE_267 -power -attr @name {} -pin GPIO_D[15]~output_455 OE_458
+load net I_271 -ground -attr @name {} -pin GPIO_D[16]~output_461 I_463
+load net OE_272 -power -attr @name {} -pin GPIO_D[16]~output_461 OE_464
+load net I_276 -ground -attr @name {} -pin GPIO_D[17]~output_467 I_469
+load net OE_277 -power -attr @name {} -pin GPIO_D[17]~output_467 OE_470
+load net I_281 -ground -attr @name {} -pin GPIO_D[18]~output_473 I_475
+load net OE_282 -power -attr @name {} -pin GPIO_D[18]~output_473 OE_476
+load net I_286 -ground -attr @name {} -pin GPIO_D[19]~output_479 I_481
+load net OE_287 -power -attr @name {} -pin GPIO_D[19]~output_479 OE_482
+load net I_291 -ground -attr @name {} -pin GPIO_D[20]~output_485 I_487
+load net OE_292 -power -attr @name {} -pin GPIO_D[20]~output_485 OE_488
+load net I_296 -ground -attr @name {} -pin GPIO_D[21]~output_491 I_493
+load net OE_297 -power -attr @name {} -pin GPIO_D[21]~output_491 OE_494
+load net I_301 -ground -attr @name {} -pin GPIO_D[22]~output_497 I_499
+load net OE_302 -power -attr @name {} -pin GPIO_D[22]~output_497 OE_500
+load net I_306 -ground -attr @name {} -pin GPIO_D[23]~output_503 I_505
+load net OE_307 -power -attr @name {} -pin GPIO_D[23]~output_503 OE_506
+load net I_311 -ground -attr @name {} -pin GPIO_D[24]~output_509 I_511
+load net OE_312 -power -attr @name {} -pin GPIO_D[24]~output_509 OE_512
+load net I_316 -ground -attr @name {} -pin GPIO_D[25]~output_515 I_517
+load net OE_317 -power -attr @name {} -pin GPIO_D[25]~output_515 OE_518
+load net I_321 -ground -attr @name {} -pin GPIO_D[26]~output_521 I_523
+load net OE_322 -power -attr @name {} -pin GPIO_D[26]~output_521 OE_524
+load net I_326 -ground -attr @name {} -pin GPIO_D[27]~output_527 I_529
+load net OE_327 -power -attr @name {} -pin GPIO_D[27]~output_527 OE_530
+load net I_331 -ground -attr @name {} -pin GPIO_D[28]~output_533 I_535
+load net OE_332 -power -attr @name {} -pin GPIO_D[28]~output_533 OE_536
+load net I_336 -ground -attr @name {} -pin GPIO_D[29]~output_539 I_541
+load net OE_337 -power -attr @name {} -pin GPIO_D[29]~output_539 OE_542
+load net I_341 -ground -attr @name {} -pin GPIO_D[30]~output_545 I_547
+load net OE_342 -power -attr @name {} -pin GPIO_D[30]~output_545 OE_548
+load net I_346 -ground -attr @name {} -pin GPIO_D[31]~output_551 I_553
+load net OE_347 -power -attr @name {} -pin GPIO_D[31]~output_551 OE_554
+load net I_351 -ground -attr @name {} -pin GPIO_D[32]~output_557 I_559
+load net OE_352 -power -attr @name {} -pin GPIO_D[32]~output_557 OE_560
+load net I_356 -ground -attr @name {} -pin GPIO_D[33]~output_563 I_565
+load net OE_357 -power -attr @name {} -pin GPIO_D[33]~output_563 OE_566
+load net I_361 -ground -attr @name {} -pin GPIO_D[34]~output_569 I_571
+load net OE_362 -power -attr @name {} -pin GPIO_D[34]~output_569 OE_572
+load net I_366 -ground -attr @name {} -pin GPIO_D[35]~output_575 I_577
+load net OE_367 -power -attr @name {} -pin GPIO_D[35]~output_575 OE_578
+load net O_371 -attr @name DRAM_DQ[0]~output:O -port DRAM_DQ[0]_136 -pin DRAM_DQ[0]~output_137 O_141
+load net O_372 -attr @name DRAM_DQ[1]~output:O -port DRAM_DQ[1]_142 -pin DRAM_DQ[1]~output_143 O_147
+load net O_373 -attr @name DRAM_DQ[2]~output:O -port DRAM_DQ[2]_148 -pin DRAM_DQ[2]~output_149 O_153
+load net O_374 -attr @name DRAM_DQ[3]~output:O -port DRAM_DQ[3]_154 -pin DRAM_DQ[3]~output_155 O_159
+load net O_375 -attr @name DRAM_DQ[4]~output:O -port DRAM_DQ[4]_160 -pin DRAM_DQ[4]~output_161 O_165
+load net O_376 -attr @name DRAM_DQ[5]~output:O -port DRAM_DQ[5]_166 -pin DRAM_DQ[5]~output_167 O_171
+load net O_377 -attr @name DRAM_DQ[6]~output:O -port DRAM_DQ[6]_172 -pin DRAM_DQ[6]~output_173 O_177
+load net O_378 -attr @name DRAM_DQ[7]~output:O -port DRAM_DQ[7]_178 -pin DRAM_DQ[7]~output_179 O_183
+load net O_379 -attr @name DRAM_DQ[8]~output:O -port DRAM_DQ[8]_184 -pin DRAM_DQ[8]~output_185 O_189
+load net O_380 -attr @name DRAM_DQ[9]~output:O -port DRAM_DQ[9]_190 -pin DRAM_DQ[9]~output_191 O_195
+load net O_381 -attr @name DRAM_DQ[10]~output:O -port DRAM_DQ[10]_196 -pin DRAM_DQ[10]~output_197 O_201
+load net O_382 -attr @name DRAM_DQ[11]~output:O -port DRAM_DQ[11]_202 -pin DRAM_DQ[11]~output_203 O_207
+load net O_383 -attr @name DRAM_DQ[12]~output:O -port DRAM_DQ[12]_208 -pin DRAM_DQ[12]~output_209 O_213
+load net O_384 -attr @name DRAM_DQ[13]~output:O -port DRAM_DQ[13]_214 -pin DRAM_DQ[13]~output_215 O_219
+load net O_385 -attr @name DRAM_DQ[14]~output:O -port DRAM_DQ[14]_220 -pin DRAM_DQ[14]~output_221 O_225
+load net O_386 -attr @name DRAM_DQ[15]~output:O -port DRAM_DQ[15]_226 -pin DRAM_DQ[15]~output_227 O_231
+load net O_387 -attr @name DRAM_DQ[16]~output:O -port DRAM_DQ[16]_232 -pin DRAM_DQ[16]~output_233 O_237
+load net O_388 -attr @name DRAM_DQ[17]~output:O -port DRAM_DQ[17]_238 -pin DRAM_DQ[17]~output_239 O_243
+load net O_389 -attr @name DRAM_DQ[18]~output:O -port DRAM_DQ[18]_244 -pin DRAM_DQ[18]~output_245 O_249
+load net O_390 -attr @name DRAM_DQ[19]~output:O -port DRAM_DQ[19]_250 -pin DRAM_DQ[19]~output_251 O_255
+load net O_391 -attr @name DRAM_DQ[20]~output:O -port DRAM_DQ[20]_256 -pin DRAM_DQ[20]~output_257 O_261
+load net O_392 -attr @name DRAM_DQ[21]~output:O -port DRAM_DQ[21]_262 -pin DRAM_DQ[21]~output_263 O_267
+load net O_393 -attr @name DRAM_DQ[22]~output:O -port DRAM_DQ[22]_268 -pin DRAM_DQ[22]~output_269 O_273
+load net O_394 -attr @name DRAM_DQ[23]~output:O -port DRAM_DQ[23]_274 -pin DRAM_DQ[23]~output_275 O_279
+load net O_395 -attr @name DRAM_DQ[24]~output:O -port DRAM_DQ[24]_280 -pin DRAM_DQ[24]~output_281 O_285
+load net O_396 -attr @name DRAM_DQ[25]~output:O -port DRAM_DQ[25]_286 -pin DRAM_DQ[25]~output_287 O_291
+load net O_397 -attr @name DRAM_DQ[26]~output:O -port DRAM_DQ[26]_292 -pin DRAM_DQ[26]~output_293 O_297
+load net O_398 -attr @name DRAM_DQ[27]~output:O -port DRAM_DQ[27]_298 -pin DRAM_DQ[27]~output_299 O_303
+load net O_399 -attr @name DRAM_DQ[28]~output:O -port DRAM_DQ[28]_304 -pin DRAM_DQ[28]~output_305 O_309
+load net O_400 -attr @name DRAM_DQ[29]~output:O -port DRAM_DQ[29]_310 -pin DRAM_DQ[29]~output_311 O_315
+load net O_401 -attr @name DRAM_DQ[30]~output:O -port DRAM_DQ[30]_316 -pin DRAM_DQ[30]~output_317 O_321
+load net O_402 -attr @name DRAM_DQ[31]~output:O -port DRAM_DQ[31]_322 -pin DRAM_DQ[31]~output_323 O_327
+load net O_403 -attr @name HDMI_LRCLK~output:O -port HDMI_LRCLK_328 -pin HDMI_LRCLK~output_329 O_333
+netloc O_403 1 1 1 340J 2660n
+load net O_404 -attr @name HDMI_MCLK~output:O -port HDMI_MCLK_334 -pin HDMI_MCLK~output_335 O_339
+netloc O_404 1 1 1 340J 2740n
+load net O_405 -attr @name HDMI_SCLK~output:O -port HDMI_SCLK_340 -pin HDMI_SCLK~output_341 O_345
+netloc O_405 1 1 1 340J 2820n
+load net O_406 -attr @name HDMI_I2S0~output:O -port HDMI_I2S0_346 -pin HDMI_I2S0~output_347 O_351
+netloc O_406 1 1 1 340J 2580n
+load net O_407 -attr @name I2C_SCL~output:O -port I2C_SCL_352 -pin I2C_SCL~output_353 O_357
+netloc O_407 1 1 1 400J 6090n
+load net O_408 -attr @name I2C_SDA~output:O -port I2C_SDA_358 -pin I2C_SDA~output_359 O_363
+netloc O_408 1 1 1 420J 6170n
+load net O_409 -attr @name GPIO_D[0]~output:O -port GPIO_D[0]_364 -pin GPIO_D[0]~output_365 O_369
+load net O_410 -attr @name GPIO_D[1]~output:O -port GPIO_D[1]_370 -pin GPIO_D[1]~output_371 O_375
+load net O_411 -attr @name GPIO_D[2]~output:O -port GPIO_D[2]_376 -pin GPIO_D[2]~output_377 O_381
+load net O_412 -attr @name GPIO_D[3]~output:O -port GPIO_D[3]_382 -pin GPIO_D[3]~output_383 O_387
+load net O_413 -attr @name GPIO_D[4]~output:O -port GPIO_D[4]_388 -pin GPIO_D[4]~output_389 O_393
+load net O_414 -attr @name GPIO_D[5]~output:O -port GPIO_D[5]_394 -pin GPIO_D[5]~output_395 O_399
+load net O_415 -attr @name GPIO_D[6]~output:O -port GPIO_D[6]_400 -pin GPIO_D[6]~output_401 O_405
+load net O_416 -attr @name GPIO_D[7]~output:O -port GPIO_D[7]_406 -pin GPIO_D[7]~output_407 O_411
+load net O_417 -attr @name GPIO_D[8]~output:O -port GPIO_D[8]_412 -pin GPIO_D[8]~output_413 O_417
+load net O_418 -attr @name GPIO_D[9]~output:O -port GPIO_D[9]_418 -pin GPIO_D[9]~output_419 O_423
+load net O_419 -attr @name GPIO_D[10]~output:O -port GPIO_D[10]_424 -pin GPIO_D[10]~output_425 O_429
+load net O_420 -attr @name GPIO_D[11]~output:O -port GPIO_D[11]_430 -pin GPIO_D[11]~output_431 O_435
+load net O_421 -attr @name GPIO_D[12]~output:O -port GPIO_D[12]_436 -pin GPIO_D[12]~output_437 O_441
+load net O_422 -attr @name GPIO_D[13]~output:O -port GPIO_D[13]_442 -pin GPIO_D[13]~output_443 O_447
+load net O_423 -attr @name GPIO_D[14]~output:O -port GPIO_D[14]_448 -pin GPIO_D[14]~output_449 O_453
+load net O_424 -attr @name GPIO_D[15]~output:O -port GPIO_D[15]_454 -pin GPIO_D[15]~output_455 O_459
+load net O_425 -attr @name GPIO_D[16]~output:O -port GPIO_D[16]_460 -pin GPIO_D[16]~output_461 O_465
+load net O_426 -attr @name GPIO_D[17]~output:O -port GPIO_D[17]_466 -pin GPIO_D[17]~output_467 O_471
+load net O_427 -attr @name GPIO_D[18]~output:O -port GPIO_D[18]_472 -pin GPIO_D[18]~output_473 O_477
+load net O_428 -attr @name GPIO_D[19]~output:O -port GPIO_D[19]_478 -pin GPIO_D[19]~output_479 O_483
+load net O_429 -attr @name GPIO_D[20]~output:O -port GPIO_D[20]_484 -pin GPIO_D[20]~output_485 O_489
+load net O_430 -attr @name GPIO_D[21]~output:O -port GPIO_D[21]_490 -pin GPIO_D[21]~output_491 O_495
+load net O_431 -attr @name GPIO_D[22]~output:O -port GPIO_D[22]_496 -pin GPIO_D[22]~output_497 O_501
+load net O_432 -attr @name GPIO_D[23]~output:O -port GPIO_D[23]_502 -pin GPIO_D[23]~output_503 O_507
+load net O_433 -attr @name GPIO_D[24]~output:O -port GPIO_D[24]_508 -pin GPIO_D[24]~output_509 O_513
+load net O_434 -attr @name GPIO_D[25]~output:O -port GPIO_D[25]_514 -pin GPIO_D[25]~output_515 O_519
+load net O_435 -attr @name GPIO_D[26]~output:O -port GPIO_D[26]_520 -pin GPIO_D[26]~output_521 O_525
+load net O_436 -attr @name GPIO_D[27]~output:O -port GPIO_D[27]_526 -pin GPIO_D[27]~output_527 O_531
+load net O_437 -attr @name GPIO_D[28]~output:O -port GPIO_D[28]_532 -pin GPIO_D[28]~output_533 O_537
+load net O_438 -attr @name GPIO_D[29]~output:O -port GPIO_D[29]_538 -pin GPIO_D[29]~output_539 O_543
+load net O_439 -attr @name GPIO_D[30]~output:O -port GPIO_D[30]_544 -pin GPIO_D[30]~output_545 O_549
+load net O_440 -attr @name GPIO_D[31]~output:O -port GPIO_D[31]_550 -pin GPIO_D[31]~output_551 O_555
+load net O_441 -attr @name GPIO_D[32]~output:O -port GPIO_D[32]_556 -pin GPIO_D[32]~output_557 O_561
+load net O_442 -attr @name GPIO_D[33]~output:O -port GPIO_D[33]_562 -pin GPIO_D[33]~output_563 O_567
+load net O_443 -attr @name GPIO_D[34]~output:O -port GPIO_D[34]_568 -pin GPIO_D[34]~output_569 O_573
+load net O_444 -attr @name GPIO_D[35]~output:O -port GPIO_D[35]_574 -pin GPIO_D[35]~output_575 O_579
+load net Mux_6~0_454 -attr @name Mux_6~0 -port HEX0[0]_38 -port HEX1[0]_45 -port HEX2[0]_52 -port HEX3[0]_59 -port HEX4[0]_66 -port HEX5[0]_73 -pin [0].lut_7seg_inst_7 Mux_6~0_589
+load net Mux_5~0_456 -attr @name Mux_5~0 -port HEX0[1]_39 -port HEX1[1]_46 -port HEX2[1]_53 -port HEX3[1]_60 -port HEX4[1]_67 -port HEX5[1]_74 -pin [0].lut_7seg_inst_7 Mux_5~0_590
+load net Mux_4~0_458 -attr @name Mux_4~0 -port HEX0[2]_40 -port HEX1[2]_47 -port HEX2[2]_54 -port HEX3[2]_61 -port HEX4[2]_68 -port HEX5[2]_75 -pin [0].lut_7seg_inst_7 Mux_4~0_591
+load net Mux_3~0_460 -attr @name Mux_3~0 -port HEX0[3]_41 -port HEX1[3]_48 -port HEX2[3]_55 -port HEX3[3]_62 -port HEX4[3]_69 -port HEX5[3]_76 -pin [0].lut_7seg_inst_7 Mux_3~0_592
+load net Mux_2~0_462 -attr @name Mux_2~0 -port HEX0[4]_42 -port HEX1[4]_49 -port HEX2[4]_56 -port HEX3[4]_63 -port HEX4[4]_70 -port HEX5[4]_77 -pin [0].lut_7seg_inst_7 Mux_2~0_593
+load net Mux_1~0_464 -attr @name Mux_1~0 -port HEX0[5]_43 -port HEX1[5]_50 -port HEX2[5]_57 -port HEX3[5]_64 -port HEX4[5]_71 -port HEX5[5]_78 -pin [0].lut_7seg_inst_7 Mux_1~0_594
+load net Mux_0~1_466 -attr @name Mux_0~1 -port HEX0[6]_44 -port HEX1[6]_51 -port HEX2[6]_58 -port HEX3[6]_65 -port HEX4[6]_72 -port HEX5[6]_79 -pin [0].lut_7seg_inst_7 Mux_0~1_595
+load net COMBOUT_467 -attr @name ~GND:COMBOUT -port DRAM_ADDR[0]_82 -port DRAM_ADDR[1]_83 -port DRAM_ADDR[2]_84 -port DRAM_ADDR[3]_85 -port DRAM_ADDR[4]_86 -port DRAM_ADDR[5]_87 -port DRAM_ADDR[6]_88 -port DRAM_ADDR[7]_89 -port DRAM_ADDR[8]_90 -port DRAM_ADDR[9]_91 -port DRAM_ADDR[10]_92 -port DRAM_ADDR[11]_93 -port DRAM_ADDR[12]_94 -port DRAM_BA[0]_95 -port DRAM_BA[1]_96 -port DRAM_CAS_n_99 -port DRAM_CKE_81 -port DRAM_CLK_80 -port DRAM_CS_n_97 -port DRAM_DQM[0]_101 -port DRAM_DQM[1]_102 -port DRAM_DQM[2]_103 -port DRAM_DQM[3]_104 -port DRAM_RAS_n_100 -port DRAM_WE_n_98 -port HDMI_TX_CLK_105 -port HDMI_TX_DE_132 -port HDMI_TX_D[0]_108 -port HDMI_TX_D[1]_109 -port HDMI_TX_D[2]_110 -port HDMI_TX_D[3]_111 -port HDMI_TX_D[4]_112 -port HDMI_TX_D[5]_113 -port HDMI_TX_D[6]_114 -port HDMI_TX_D[7]_115 -port HDMI_TX_D[8]_116 -port HDMI_TX_D[9]_117 -port HDMI_TX_D[10]_118 -port HDMI_TX_D[11]_119 -port HDMI_TX_D[12]_120 -port HDMI_TX_D[13]_121 -port HDMI_TX_D[14]_122 -port HDMI_TX_D[15]_123 -port HDMI_TX_D[16]_124 -port HDMI_TX_D[17]_125 -port HDMI_TX_D[18]_126 -port HDMI_TX_D[19]_127 -port HDMI_TX_D[20]_128 -port HDMI_TX_D[21]_129 -port HDMI_TX_D[22]_130 -port HDMI_TX_D[23]_131 -port HDMI_TX_HS_106 -port HDMI_TX_VS_107 -port LEDR[0]_28 -port LEDR[1]_29 -port LEDR[2]_30 -port LEDR[3]_31 -port LEDR[4]_32 -port LEDR[5]_33 -port LEDR[6]_34 -port LEDR[7]_35 -port LEDR[8]_36 -port LEDR[9]_37 -port UART_TX_134 -pin ~GND_584 COMBOUT_308
+netloc COMBOUT_467 1 1 1 360J 3100n
+load net OUTPUT_446 -attr @name SW[0] -attr @rip 0 -port SW[0]_580 -pin [0].lut_7seg_inst_7 SW[0]_585
+load net OUTPUT_448 -attr @name SW[1] -attr @rip 1 -port SW[1]_581 -pin [0].lut_7seg_inst_7 SW[1]_586
+load net OUTPUT_450 -attr @name SW[2] -attr @rip 2 -port SW[2]_582 -pin [0].lut_7seg_inst_7 SW[2]_587
+load net OUTPUT_452 -attr @name SW[3] -attr @rip 3 -port SW[3]_583 -pin [0].lut_7seg_inst_7 SW[3]_588
+load net [0].lut_7seg_inst_7|COMBOUT_453 -attr @name Mux_6~0:COMBOUT -hierPin [0].lut_7seg_inst_7 Mux_6~0_589 -pin [0].lut_7seg_inst_7|Mux_6~0_9 COMBOUT_1
+netloc [0].lut_7seg_inst_7|COMBOUT_453 1 1 1 NJ 3440
+load net [0].lut_7seg_inst_7|COMBOUT_455 -attr @name Mux_5~0:COMBOUT -hierPin [0].lut_7seg_inst_7 Mux_5~0_590 -pin [0].lut_7seg_inst_7|Mux_5~0_10 COMBOUT_2
+netloc [0].lut_7seg_inst_7|COMBOUT_455 1 1 1 NJ 3340
+load net [0].lut_7seg_inst_7|COMBOUT_457 -attr @name Mux_4~0:COMBOUT -hierPin [0].lut_7seg_inst_7 Mux_4~0_591 -pin [0].lut_7seg_inst_7|Mux_4~0_11 COMBOUT_3
+netloc [0].lut_7seg_inst_7|COMBOUT_457 1 1 1 NJ 3540
+load net [0].lut_7seg_inst_7|COMBOUT_459 -attr @name Mux_3~0:COMBOUT -hierPin [0].lut_7seg_inst_7 Mux_3~0_592 -pin [0].lut_7seg_inst_7|Mux_3~0_12 COMBOUT_4
+netloc [0].lut_7seg_inst_7|COMBOUT_459 1 1 1 NJ 3240
+load net [0].lut_7seg_inst_7|COMBOUT_461 -attr @name Mux_2~0:COMBOUT -hierPin [0].lut_7seg_inst_7 Mux_2~0_593 -pin [0].lut_7seg_inst_7|Mux_2~0_13 COMBOUT_5
+netloc [0].lut_7seg_inst_7|COMBOUT_461 1 1 1 NJ 3140
+load net [0].lut_7seg_inst_7|COMBOUT_463 -attr @name Mux_1~0:COMBOUT -hierPin [0].lut_7seg_inst_7 Mux_1~0_594 -pin [0].lut_7seg_inst_7|Mux_1~0_14 COMBOUT_6
+netloc [0].lut_7seg_inst_7|COMBOUT_463 1 1 1 NJ 3040
+load net [0].lut_7seg_inst_7|COMBOUT_465 -attr @name Mux_0~1:COMBOUT -hierPin [0].lut_7seg_inst_7 Mux_0~1_595 -pin [0].lut_7seg_inst_7|Mux_0~1_15 COMBOUT_7
+netloc [0].lut_7seg_inst_7|COMBOUT_465 1 1 1 NJ 2940
+load net [0].lut_7seg_inst_7|COMBOUT_445 -attr @name SW[0] -attr @rip 0 -hierPin [0].lut_7seg_inst_7 SW[0]_585 -pin [0].lut_7seg_inst_7|Mux_0~1_15 DATAA_25 -pin [0].lut_7seg_inst_7|Mux_1~0_14 DATAA_21 -pin [0].lut_7seg_inst_7|Mux_2~0_13 DATAA_17 -pin [0].lut_7seg_inst_7|Mux_3~0_12 DATAA_13 -pin [0].lut_7seg_inst_7|Mux_4~0_11 DATAA_9 -pin [0].lut_7seg_inst_7|Mux_5~0_10 DATAA_5 -pin [0].lut_7seg_inst_7|Mux_6~0_9 DATAA_1
+load net [0].lut_7seg_inst_7|COMBOUT_447 -attr @name SW[1] -attr @rip 1 -hierPin [0].lut_7seg_inst_7 SW[1]_586 -pin [0].lut_7seg_inst_7|Mux_0~1_15 DATAB_26 -pin [0].lut_7seg_inst_7|Mux_1~0_14 DATAB_22 -pin [0].lut_7seg_inst_7|Mux_2~0_13 DATAB_18 -pin [0].lut_7seg_inst_7|Mux_3~0_12 DATAB_14 -pin [0].lut_7seg_inst_7|Mux_4~0_11 DATAB_10 -pin [0].lut_7seg_inst_7|Mux_5~0_10 DATAB_6 -pin [0].lut_7seg_inst_7|Mux_6~0_9 DATAB_2
+load net [0].lut_7seg_inst_7|COMBOUT_449 -attr @name SW[2] -attr @rip 2 -hierPin [0].lut_7seg_inst_7 SW[2]_587 -pin [0].lut_7seg_inst_7|Mux_0~1_15 DATAC_27 -pin [0].lut_7seg_inst_7|Mux_1~0_14 DATAC_23 -pin [0].lut_7seg_inst_7|Mux_2~0_13 DATAC_19 -pin [0].lut_7seg_inst_7|Mux_3~0_12 DATAC_15 -pin [0].lut_7seg_inst_7|Mux_4~0_11 DATAC_11 -pin [0].lut_7seg_inst_7|Mux_5~0_10 DATAC_7 -pin [0].lut_7seg_inst_7|Mux_6~0_9 DATAC_3
+load net [0].lut_7seg_inst_7|COMBOUT_451 -attr @name SW[3] -attr @rip 3 -hierPin [0].lut_7seg_inst_7 SW[3]_588 -pin [0].lut_7seg_inst_7|Mux_0~1_15 DATAD_28 -pin [0].lut_7seg_inst_7|Mux_1~0_14 DATAD_24 -pin [0].lut_7seg_inst_7|Mux_2~0_13 DATAD_20 -pin [0].lut_7seg_inst_7|Mux_3~0_12 DATAD_16 -pin [0].lut_7seg_inst_7|Mux_4~0_11 DATAD_12 -pin [0].lut_7seg_inst_7|Mux_5~0_10 DATAD_8 -pin [0].lut_7seg_inst_7|Mux_6~0_9 DATAD_4
+load netBundle OUTPUT_468 4 OUTPUT_446 OUTPUT_448 OUTPUT_450 OUTPUT_452 -attr @name SW[0..9]
+netbloc OUTPUT_468 1 0 1 0J 2920n
+load netBundle [0].lut_7seg_inst_7|COMBOUT_469 4 [0].lut_7seg_inst_7|COMBOUT_445 [0].lut_7seg_inst_7|COMBOUT_447 [0].lut_7seg_inst_7|COMBOUT_449 [0].lut_7seg_inst_7|COMBOUT_451 -attr @name SW[0..3]
+netbloc [0].lut_7seg_inst_7|COMBOUT_469 1 0 1 100 2920n
+load netBundle @O_ 32 O_371 O_372 O_373 O_374 O_375 O_376 O_377 O_378 O_379 O_380 O_381 O_382 O_383 O_384 O_385 O_386 O_387 O_388 O_389 O_390 O_391 O_392 O_393 O_394 O_395 O_396 O_397 O_398 O_399 O_400 O_401 O_402 -autobundled
+netbloc @O_ 1 1 1 340 20n
+load netBundle @O__1 36 O_409 O_410 O_411 O_412 O_413 O_414 O_415 O_416 O_417 O_418 O_419 O_420 O_421 O_422 O_423 O_424 O_425 O_426 O_427 O_428 O_429 O_430 O_431 O_432 O_433 O_434 O_435 O_436 O_437 O_438 O_439 O_440 O_441 O_442 O_443 O_444 -autobundled
+netbloc @O__1 1 1 1 380 3420n
+load netBundle @Mux_6~0_,Mux_5~0_,Mux_4~0_ 7 Mux_6~0_454 Mux_5~0_456 Mux_4~0_458 Mux_3~0_460 Mux_2~0_462 Mux_1~0_464 Mux_0~1_466 -autobundled
+netbloc @Mux_6~0_,Mux_5~0_,Mux_4~0_ 1 1 1 340J 2930n
+levelinfo -pg 1 -20 70 440
+levelinfo -hier [0].lut_7seg_inst_7 * 130 *
+pagesize -pg 1 -db -bbox -sgen -130 -10 590 6770
+pagesize -hier [0].lut_7seg_inst_7 -db -bbox -sgen 70 2890 270 3600
+show
+zoom 1.14382
+scrollpos -506 3202
+#
+# initialize ictrl to current module _1 {}
+ictrl init {} |
+ictrl property autohide 1
+ictrl property addSubpinInfo 1
+ictrl property addSubportInfo 1
+ictrl property addFillcolor12 0

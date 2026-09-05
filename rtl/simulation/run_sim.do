@@ -1,8 +1,7 @@
 vlib work
 
-vlog ../utils/*.sv
-vlog ../peripheral/*.sv 
-vlog ../peripheral/testbench/*.sv
+vlog -lint ../utils/*.sv
+vlog -lint ../peripheral/uart/*.sv
 
 noview library
 vsim -voptargs=+acc work.uart_rx_test

@@ -2,6 +2,8 @@
 ***/*.bak
 ***/.*/***
 
+***/_*
+
 rtl/dni
 rtl/output_files
 rtl/qdb
