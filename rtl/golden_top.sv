@@ -62,6 +62,7 @@ assign I2C_SDA = '1;
 
 logic CLK_sys;
 assign CLK_sys = CLOCK0_50;
+parameter int CLK_FREQ = 'd50_000_000;
 
 logic INIT_DONE_n, RST_sync_n;
 
@@ -72,19 +73,27 @@ reset_release reset_release_inst (
 reset_sync (.CLK_sys, .RST_n(~INIT_DONE_n), .RST_sync_n);
 
 logic [7:0] data;
-logic recv, err;
-parameter UART_BAUD = 115200;
+logic valid, ready;
+logic err, err_clr, overrun, overrun_clr;
+assign ready = ~KEY[0];
+assign err_clr = ~KEY[1];
+assign overrun_clr = ~KEY[2];
 
-assign LEDR = ~{9'b0, err};
+assign LEDR = ~{7'b0, overrun, err, valid};
 
-uart_rx #(.UART_BAUD(UART_BAUD)) uart_rx_inst (
+parameter int UART_BAUD = 'd115200;
+parameter int CLK_DIV = uart_pkg::calc_uart_clk_div(UART_BAUD, CLK_FREQ);
+uart_rx #(.CLK_DIV(CLK_DIV)) uart_rx_inst (
     .CLK_sys,
     .RST_n(RST_sync_n),
     .uart_RX(UART_RX),
     .data_o(data),
-    .recv_o(recv),
-    .err_clr_i(~KEY[0]),
-    .err_o(err)
+    .valid_o(valid),
+    .ready_i(ready),
+    .err_clr_i(err_clr),
+    .err_o(err),
+    .overrun_clr_i(overrun_clr),
+    .overrun_o(overrun)
 );
 
 logic [7:0] data_latched0, data_latched1, data_latched2;
@@ -95,7 +104,7 @@ always_ff @(posedge CLK_sys or negedge RST_sync_n) begin
         data_latched1 <= '0;
         data_latched2 <= '0;
     end else begin
-        if (recv) begin
+        if (ready & valid) begin
             data_latched0 <= data;
             data_latched1 <= data_latched0;
             data_latched2 <= data_latched1;

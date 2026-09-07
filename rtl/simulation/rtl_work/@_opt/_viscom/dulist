@@ -1,3 +1,5 @@
-2 10 reset_sync 4 fast 67 D:/FPGA/DE23Lite/MyProjects/UnnamedComputer/rtl/simulation/rtl_work 1 0 0 0 26 0
-1 7 uart_rx 4 fast 67 D:/FPGA/DE23Lite/MyProjects/UnnamedComputer/rtl/simulation/rtl_work 1 0 131072 0 358 0
-1 12 uart_rx_test 4 fast 67 D:/FPGA/DE23Lite/MyProjects/UnnamedComputer/rtl/simulation/rtl_work 1 0 0 0 315 0
+2 8 uart_pkg 4 fast 67 D:/FPGA/DE23Lite/MyProjects/UnnamedComputer/rtl/simulation/rtl_work 1 0 0 0 13 0
+2 20 uart_rx_test_sv_unit 4 fast 67 D:/FPGA/DE23Lite/MyProjects/UnnamedComputer/rtl/simulation/rtl_work 1 0 0 0 0 0
+2 10 reset_sync 4 fast 67 D:/FPGA/DE23Lite/MyProjects/UnnamedComputer/rtl/simulation/rtl_work 1 0 0 0 27 0
+1 7 uart_rx 4 fast 67 D:/FPGA/DE23Lite/MyProjects/UnnamedComputer/rtl/simulation/rtl_work 1 0 131072 0 397 0
+1 12 uart_rx_test 4 fast 67 D:/FPGA/DE23Lite/MyProjects/UnnamedComputer/rtl/simulation/rtl_work 1 0 0 0 342 0

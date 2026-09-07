@@ -1,6 +1,5 @@
 module uart_rx #(
-    parameter int UART_BAUD = 'd9600,
-    parameter int CLK_FREQ = 'd50_000_000
+    parameter int CLK_DIV
 )(
     input   CLK_sys,
     input   RST_n,
@@ -8,19 +7,23 @@ module uart_rx #(
     input   uart_RX,
 
     output  reg [7:0] data_o,
-    output  reg recv_o,
+    output  reg valid_o,
+    input   ready_i,
+
+    output  reg err_o,
     input   err_clr_i,
-    output  reg err_o
+
+    output  reg overrun_o,
+    input   overrun_clr_i
 );
 
 typedef enum logic [2:0] {
-    IDLE, TRIGGERED, START, READ, DONE, STOP, ERR_HOLD
+    IDLE, TRIGGERED, START, READ, STOP, DONE, ERR_HOLD
 } uart_state_t;
 
 logic rx_sample, rx_sync_0, rx_sync_1;
 uart_state_t state, state_next;
 
-localparam int CLK_DIV = (CLK_FREQ + UART_BAUD/2) / UART_BAUD;
 localparam int CLK_DIV_WIDTH = $clog2(CLK_DIV);
 logic [CLK_DIV_WIDTH:0] count_sample, count_sample_next;
 localparam logic [CLK_DIV_WIDTH:0]
@@ -65,7 +68,8 @@ always_ff @(posedge CLK_sys or negedge RST_n) begin
         data_recv <= 0;
         
         data_o <= 0;
-        recv_o <= 0;
+        valid_o <= 0;
+        overrun_o <= 0;
     end else begin
         state <= state_next;
         count_sample <= count_sample_next;
@@ -79,11 +83,34 @@ always_ff @(posedge CLK_sys or negedge RST_n) begin
         end
         
         if (state == STOP && state_next == DONE) begin
-            data_o <= data_recv;
-            recv_o <= 1;
+            // New byte coming in
+            if (valid_o == 0 || ready_i == 1) begin
+                // Either consumed or ready to be consumed
+                data_o <= data_recv;
+                valid_o <= 1;
+                if (overrun_clr_i) begin
+                    overrun_o <= 1;
+                end
+            end else begin
+                // Holding the old byte, new byte got dropped
+                data_o <= data_o;
+                valid_o <= valid_o;
+                overrun_o <= 1;
+            end
         end else begin
-            data_o <= data_o;
-            recv_o <= 0;
+            if (ready_i == 1) begin
+                // Consumed
+                data_o <= data_o;
+                valid_o <= 0;
+            end else begin
+                data_o <= data_o;
+                valid_o <= valid_o;
+            end
+            if (overrun_clr_i) begin
+                overrun_o <= 0;
+            end else begin
+                overrun_o <= overrun_o;
+            end
         end
     end
 end
@@ -172,6 +199,11 @@ always_comb begin
             end
         end
     end
+    DONE: begin
+        state_next = IDLE;
+        count_sample_next = 0;
+        count_bit_next = 0;
+    end
     ERR_HOLD: begin
         if (rx_sample == '1) begin
             if (count_sample == COUNT_SAMPLE_MAX) begin
@@ -185,11 +217,6 @@ always_comb begin
             state_next = ERR_HOLD;
             count_sample_next = 0;
         end
-        count_bit_next = 0;
-    end
-    DONE: begin
-        state_next = IDLE;
-        count_sample_next = 0;
         count_bit_next = 0;
     end
     endcase

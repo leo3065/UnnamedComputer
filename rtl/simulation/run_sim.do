@@ -1,6 +1,6 @@
 vlib work
 
-vlog -lint ../utils/*.sv
+vlog -lint ../peripheral/uart/uart.sv
 vlog -lint ../peripheral/uart/*.sv
 
 noview library

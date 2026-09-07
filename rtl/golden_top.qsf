@@ -481,3 +481,4 @@ set_global_assignment -name ENABLE_INTERMEDIATE_SNAPSHOTS ON
 set_global_assignment -name FAST_PRESERVE AUTO -entity golden_top
 set_global_assignment -name SYNCHRONIZER_IDENTIFICATION "FORCED IF ASYNCHRONOUS"
 set_global_assignment -name OPTIMIZE_FOR_METASTABILITY ON
+set_global_assignment -name SYSTEMVERILOG_FILE peripheral/uart/uart.sv

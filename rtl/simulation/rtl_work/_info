@@ -57,6 +57,16 @@ R0
 R1
 R0
 R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
 !s11f vlog 2025.3 2025.09, Sep 15 2025
 !s112 1.1
 !i10d 8192
@@ -67,10 +77,10 @@ Z2 dD:/FPGA/DE23Lite/MyProjects/UnnamedComputer/rtl/simulation
 T_opt
 !i145 1
 !i144 0
-!s110 1788467024
-V:`TmY;=RjSPn937EBA3T13
+!s110 1788792107
+VVWOnSN<7kXMOe<VV75ge`2
 04 12 4 work uart_rx_test fast 0
-=1-9cb150b6a8b4-6a99d74f-16e-1395c
+=1-9cb150b6a8b4-6a9ecd2b-1e0-4894
 R1
 !s12f OEM100
 !s12b OEM100
@@ -80,78 +90,184 @@ o-quiet -auto_acc_if_foreign -work work +acc
 tCvgOpt 0 defaultOptions 1108163524
 n@_opt
 OL;O;2025.3;82
+R2
+vlut_7seg
+Z3 2../utils/lut_7seg.sv|../utils/reset_sync.sv
+Z4 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
+Z5 !s110 1788791328
+!i10b 1
+!s100 ;]I:KQ;P3EnH9]23^36=^0
+I`=Y28I>dX03`mmoE^oPh;1
+S1
+R2
+w1788535710
+8../utils/lut_7seg.sv
+F../utils/lut_7seg.sv
+!i122 103
+L0 1 13
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2025.3;82
+r1
+!s85 0
+31
+Z8 !s108 1788791328.000000
+Z9 !s107 ../utils/reset_sync.sv|../utils/lut_7seg.sv|
+Z10 !s90 -reportprogress|300|-lint|../utils/lut_7seg.sv|../utils/reset_sync.sv|
+!i113 0
+Z11 o-lint -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z12 tCvgOpt 0 defaultOptions 1085729624
 vreset_sync
-2../utils/reset_sync.sv
-Z3 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
-!s110 1788467021
+R3
+R4
+R5
 !i10b 1
 !s100 5`PHen^Yld0ZX1QgG5Uo=1
-I_J]iTP8cEi9^C`Ah2mPM11
+I7YX8oiTUb7dO5Ai>;D_P:3
 S1
 R2
 w1788463467
 8../utils/reset_sync.sv
 F../utils/reset_sync.sv
-!i122 71
+!i122 103
 L0 1 17
-Z4 VDg1SIo80bB@j0V0VzS_@n1
-Z5 OL;L;2025.3;82
-r1
-!s85 0
-31
-!s108 1788467021.000000
-!s107 ../utils/reset_sync.sv|
-!s90 -reportprogress|300|../utils/reset_sync.sv|
-!i113 0
-Z6 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z7 tCvgOpt 0 defaultOptions 1085729624
-vuart_rx
-2../peripheral/uart.sv
-R3
-Z8 !s110 1788467022
-!i10b 1
-!s100 z<5m`M`OH5Kk4WSE`=1PS3
-INk3efo[>_b2WQef9590YZ3
-S1
-R2
-w1788466585
-8../peripheral/uart.sv
-F../peripheral/uart.sv
-!i122 72
-L0 1 198
-R4
-R5
-r1
-!s85 0
-31
-Z9 !s108 1788467022.000000
-!s107 ../peripheral/uart.sv|
-!s90 -reportprogress|300|../peripheral/uart.sv|
-!i113 0
 R6
 R7
-vuart_rx_test
-2../peripheral/testbench/uart_test.sv
-R3
+r1
+!s85 0
+31
 R8
+R9
+R10
+!i113 0
+R11
+R12
+Xuart_pkg
+Z13 2../peripheral/uart/uart.sv|../peripheral/uart/uart_rx.sv|../peripheral/uart/uart_rx_test.sv
+R4
+Z14 !s110 1788792968
 !i10b 1
-!s100 P5]a2GE1dL4KG;T=i8DV_2
-INhUSABJYNW6i50JHMdd;L2
+!s100 =g3UHnmjGc;;Pg?HNeD632
+I>lLmfJP=;cY8O4QNK7TGZ0
 S1
 R2
-w1788466995
-8../peripheral/testbench/uart_test.sv
-F../peripheral/testbench/uart_test.sv
-!i122 73
-L0 2 148
-R4
-R5
+w1788792270
+Z15 8../peripheral/uart/uart.sv
+Z16 F../peripheral/uart/uart.sv
+!i122 110
+Z17 L0 1 0
+V>lLmfJP=;cY8O4QNK7TGZ0
+R7
 r1
 !s85 0
 31
-R9
-!s107 ../peripheral/testbench/uart_test.sv|
-!s90 -reportprogress|300|../peripheral/testbench/uart_test.sv|
+Z18 !s108 1788792968.000000
+Z19 !s107 ../peripheral/uart/uart_rx_test.sv|../peripheral/uart/uart_rx.sv|../peripheral/uart/uart.sv|
+Z20 !s90 -reportprogress|300|-lint|../peripheral/uart/uart.sv|../peripheral/uart/uart_rx.sv|../peripheral/uart/uart_rx_test.sv|
 !i113 0
+R11
+R12
+vuart_rx
+R13
+R4
+R14
+!i10b 1
+!s100 B=K<6IS5>oehlzg_=C7_03
+ImOkLL?HK3z?mIk[IOzeio0
+S1
+R2
+w1788791988
+8../peripheral/uart/uart_rx.sv
+F../peripheral/uart/uart_rx.sv
+!i122 110
+L0 1 223
 R6
 R7
+r1
+!s85 0
+31
+R18
+R19
+R20
+!i113 0
+R11
+R12
+vuart_rx_test
+R13
+R4
+Z21 DXx4 work 8 uart_pkg 0 22 >lLmfJP=;cY8O4QNK7TGZ0
+DXx4 work 20 uart_rx_test_sv_unit 0 22 RHS3NHf]5jG8d@];DkaWT1
+R14
+R6
+r1
+!s85 0
+!i10b 1
+!s100 ?^>HcfkAMLW7j0elW_WGD0
+IEHg_AFgl3C];:8]nIO^9:1
+!s105 uart_rx_test_sv_unit
+S1
+R2
+Z22 w1788792100
+Z23 8../peripheral/uart/uart_rx_test.sv
+Z24 F../peripheral/uart/uart_rx_test.sv
+!i122 110
+L0 5 156
+R7
+31
+R18
+R19
+R20
+!i113 0
+R11
+R12
+Xuart_rx_test_sv_unit
+R13
+R4
+R21
+R14
+VRHS3NHf]5jG8d@];DkaWT1
+r1
+!s85 0
+!i10b 1
+!s100 X7`:hY^lMU<ka@:PYcNT_1
+IRHS3NHf]5jG8d@];DkaWT1
+!i103 1
+S1
+R2
+R22
+R23
+R24
+!i122 110
+L0 3 0
+R7
+31
+R18
+R19
+R20
+!i113 0
+R11
+R12
+Xuart_sv_unit
+R4
+!s110 1788790925
+V9[6_Efz7:]BlHnG7Z;Z@73
+r1
+!s85 0
+!i10b 1
+!s100 L@PiT[HSh?3jN`_lHSNB@2
+I9[6_Efz7:]BlHnG7Z;Z@73
+!i103 1
+S1
+R2
+w1788790827
+R15
+R16
+!i122 100
+R17
+R7
+31
+!s108 1788790925.000000
+R19
+R20
+!i113 0
+R11
+R12

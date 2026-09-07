@@ -1,4 +1,7 @@
 `default_nettype none
+
+import uart_pkg::*;
+
 module uart_rx_test();
 timeunit 1ns/1ns;
 
@@ -8,7 +11,7 @@ logic RST_sync_n;
 logic uart_RX;
 logic err_clr;
 logic [7:0] data;
-logic recv;
+logic valid;
 logic err;
 
 logic [7:0] data_lastest;
@@ -58,6 +61,7 @@ task automatic uart_noise_to (ref logic uart_rx);
     uart_rx = 1;
 endtask
 
+always #(CLK_HALF_DURATION) CLK_sys = ~CLK_sys;
 initial begin
     CLK_sys = 1'b0;
     RST_n = 1'b1;
@@ -112,11 +116,18 @@ initial begin
     end
     $stop;
 end
+logic ready;
 
-always #(CLK_HALF_DURATION) CLK_sys = ~CLK_sys;
+initial begin
+    ready = 1'b0;
+    forever begin
+        @(posedge CLK_sys);
+        ready <= ($urandom_range(0, 9) < 5);
+    end
+end
 
 always @(posedge CLK_sys) begin
-    if (recv) begin
+    if (valid && ready) begin
         byte_recieved++;
         $display("Receive: data = %02x", data);
         if (data != data_lastest) begin
@@ -134,14 +145,14 @@ reset_sync reset_sync_inst (
     .CLK_sys, .RST_n, .RST_sync_n
 );
 
-uart_rx #(
-    .UART_BAUD(UART_BAUD), .CLK_FREQ(CLK_FREQ)
-) uart_rx_inst (
+parameter CLK_DIV = calc_uart_clk_div(UART_BAUD, CLK_FREQ);
+uart_rx #(.CLK_DIV(CLK_DIV)) uart_rx_inst (
     .CLK_sys,
     .RST_n(RST_sync_n),
     .uart_RX,
     .data_o(data),
-    .recv_o(recv),
+    .valid_o(valid),
+    .ready_i(ready),
     .err_clr_i(err_clr),
     .err_o(err)
 );
