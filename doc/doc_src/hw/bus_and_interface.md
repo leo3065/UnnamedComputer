@@ -44,4 +44,4 @@ Basically Wishbone
   - Specified by `REGION_START` and `REGION_SIZE`
     - Assertions:
       - `REGION_SIZE & (REGION_SIZE - 1) == 0`
-      - `ADDR_START & (REGION_SIZE - 1) == 0`
+      - `REGION_START & (REGION_SIZE - 1) == 0`

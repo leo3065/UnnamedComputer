@@ -64,7 +64,7 @@ Opcode: 6 bits
 |                                  |         | `0x03` |                           |           |
 | Multiply low                     | `mul`   | `0x04` | `t = (a * ze(b))[31:0]`   | ZE        |
 | Multiply high                    | `muh`   | `0x05` | `t = (a * ze(b))[63:32]`  | ZE        |
-| Multiply high signed             | `muhs`  | `0x06` | `t = (a *s se(b))[63:32]` |        SE |
+| Multiply high signed             | `muhs`  | `0x06` | `t = (a *s se(b))[63:32]` | SE        |
 | Multiply high signed unsigned    | `muhsu` | `0x07` | `t = (a *s ze(b))[63:32]` | ZE        |
 | And                              | `and`   | `0x08` | `t = a & ze(b)`           | ZE        |
 |                                  |         | `0x09` |                           |           |
@@ -76,12 +76,12 @@ Opcode: 6 bits
 |                                  |         | `0x0F` |                           |           |
 | Set If equal                     | `seq`   | `0x10` | `t = b2i(ra == ze(rb))`   | ZE        |
 | Set If not equal                 | `sne`   | `0x11` | `t = b2i(ra != ze(rb))`   | ZE        |
-| Set If greater then              | `sgt`   | `0x12` | `t = b2i(ra >  ze(rb))`   | ZE        |
-| Set If less or equal then        | `sle`   | `0x13` | `t = b2i(ra <= ze(rb))`   | ZE        |
+| Set If greater than              | `sgt`   | `0x12` | `t = b2i(ra >  ze(rb))`   | ZE        |
+| Set If less or equal than        | `sle`   | `0x13` | `t = b2i(ra <= ze(rb))`   | ZE        |
 |                                  |         | `0x14` |                           |           |
 |                                  |         | `0x15` |                           |           |
-| Set If greater then signed       | `sgts`  | `0x16` | `t = b2i(ra >s  se(rb))`  |        SE |
-| Set If less or equal then signed | `sles`  | `0x17` | `t = b2i(ra <=s se(rb))`  |        SE |
+| Set If greater than signed       | `sgts`  | `0x16` | `t = b2i(ra >s  se(rb))`  | SE        |
+| Set If less or equal than signed | `sles`  | `0x17` | `t = b2i(ra <=s se(rb))`  | SE        |
 |                                  |         | `0x18` |                           |           |
 |                                  |         | `0x19` |                           |           |
 |                                  |         | `0x1A` |                           |           |
@@ -91,17 +91,17 @@ Opcode: 6 bits
 |                                  |         | `0x1E` |                           |           |
 |                                  |         | `0x1F` |                           |           |
 
-#### Condition (a: rt, b: ri)
+#### Condition (a: ra, b: rb)
 | Condition                    | Op name | `fa5`  | Operation   |
 | ---------------------------- | ------- | ------ | ----------- |
 | If equal                     | `beq`   | `0x00` | `ra == rb`  |
 | If not equal                 | `bne`   | `0x01` | `ra != rb`  |
-| If greater then              | `bgt`   | `0x02` | `ra >  rb`  |
-| If less or equal then        | `ble`   | `0x03` | `ra <= rb`  |
+| If greater than              | `bgt`   | `0x02` | `ra >  rb`  |
+| If less or equal than        | `ble`   | `0x03` | `ra <= rb`  |
 |                              |         | `0x04` |             |
 |                              |         | `0x05` |             |
-| If greater then signed       | `bgts`  | `0x06` | `ra >s  rb` |
-| If less or equal then signed | `bles`  | `0x07` | `ra <=s rb` |
+| If greater than signed       | `bgts`  | `0x06` | `ra >s  rb` |
+| If less or equal than signed | `bles`  | `0x07` | `ra <=s rb` |
 |                              |         | `0x08` |             |
 |                              |         | `0x09` |             |
 |                              |         | `0x0A` |             |
@@ -125,12 +125,13 @@ All are 32 bit:
 | `sev`  | `0x00`  | Event vector, base address to jump to when having exception or interrupt |
 | `sepc` | `0x01`  | Event PC, PC when exception or interrupt happens |
 | `seid` | `0x02`  | Event ID, cause/source of event |
-| `sim`  | `0x03`  | Interupt mask, bit masking of interupt |
-| `simb` | `0x04`  | Interupt mask backup |
+| `sim`  | `0x03`  | Interrupt mask, bit masking of interrupt |
+| `simb` | `0x04`  | Interrupt mask backup |
+
 When there is event:
 `pc → sepc; exception_id → seid; sim → simb; 0 → sim; sev & ~0x00000003 → pc'`
 
-#### Excpetion IDs
+#### Exception IDs
 Types:
 | `seid`         | Type      | Desc. |
 | -------------- | --------- | ----- |
@@ -138,4 +139,4 @@ Types:
 | `{0x0001____}` | HW. Int.  | Interrupts triggered by hardware or inputs |
 | `{0x0002____}` | SW. Int.  | Interrupts triggered by software |
 
-**TODO: Excpetion IDs**
+**TODO: Exception IDs**

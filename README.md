@@ -33,7 +33,7 @@ Building a computer from the ground up.
   - [ ] Configuration sequence (uses I2C)
   - [ ] Frame signal generation
   - [ ] Character screen
-  - [ ] Palette/low-bitdepth graphic
+  - [ ] Palette/low-bit-depth graphic
 - [ ] **V2: V1 + Video output and Nunchuck input**
 - [ ] HDMI audio
   - [ ] I2S
@@ -42,15 +42,16 @@ Building a computer from the ground up.
   - [ ] SPI host
   - [ ] SD card controller
 - [ ] SDRAM controller
-- [ ] **V3: V2 + standalone storage and balk memory**
+- [ ] **V3: V2 + standalone storage and bulk memory**
 - [ ] DMA
   - [ ] Parameterized HxT bus despatcher
   - [ ] DMA controller
-  - [ ] DM-driven buffer fetch
-- [ ] **V3.5: V3 + streams with higher thoughput**
+  - [ ] DMA-driven buffer fetch
+- [ ] **V4: V3 + streams with higher throughput**
 - [ ] USB HID host
   - [ ] USB host
+- [ ] **V5**
 - [ ] Graphic acceleration
   - [ ] Composition of multiple sources
   - [ ] Shape drawing
-- [ ] **V4**
+- [ ] **V6**
