@@ -2,8 +2,7 @@
 ## UART
 Supports `8N1` serial.
 ### Parameters
-- `UART_BAUD` default `'d9600`
-- `CLK_FREQ` default `'d50_000_000`
+- `CLK_DIV`: `round(CLK_FREQ/UART_BAUD)`
 ### IOs
 - System: `CLK_sys`, `RST_n`,
 - UART: `uart_RX`, `uart_TX`
