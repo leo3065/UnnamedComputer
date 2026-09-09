@@ -16,30 +16,52 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # Errors: 0, Warnings: 1
 # Questa Altera Starter FPGA Edition-64 vlog 2025.3 Compiler 2025.09 Sep 15 2025
-# Start time: 22:56:08 on Sep 07,2026
-# vlog -reportprogress 300 -lint ../peripheral/uart/uart.sv 
+# Start time: 22:25:06 on Sep 09,2026
+# vlog -reportprogress 300 -lint ../utils/fifo.sv ../utils/fifo_test.sv ../utils/lut_7seg.sv ../utils/reset_sync.sv 
 # ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
-# -- Compiling package uart_pkg
+# -- Compiling module fifo
+# -- Compiling module fifo_test
+# -- Compiling module lut_7seg
+# -- Compiling module reset_sync
 # 
 # Top level modules:
-# 	--none--
-# End time: 22:56:08 on Sep 07,2026, Elapsed time: 0:00:00
+# 	fifo_test
+# 	lut_7seg
+# End time: 22:25:07 on Sep 09,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Questa Altera Starter FPGA Edition-64 vlog 2025.3 Compiler 2025.09 Sep 15 2025
-# Start time: 22:56:08 on Sep 07,2026
-# vlog -reportprogress 300 -lint ../peripheral/uart/uart.sv ../peripheral/uart/uart_rx.sv ../peripheral/uart/uart_rx_test.sv 
+# Start time: 22:25:07 on Sep 09,2026
+# vlog -reportprogress 300 -lint ../peripheral/uart/uart.sv ../peripheral/uart/uart_rx.sv ../peripheral/uart/uart_rx_test.sv ../peripheral/uart/uart_tx.sv ../peripheral/uart/uart_tx_test.sv 
 # ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
 # -- Compiling package uart_pkg
 # -- Compiling module uart_rx
-# ** Warning: ../peripheral/uart/uart_rx_test.sv(5): (vlog-2605) empty port name in port list.
 # -- Compiling package uart_rx_test_sv_unit
 # -- Importing package uart_pkg
 # -- Compiling module uart_rx_test
-# ** Warning: ../peripheral/uart/uart_rx_test.sv(5): (vlog-2605) empty port name in port list.
+# -- Compiling module uart_tx
+# -- Compiling package uart_tx_test_sv_unit
+# -- Compiling module uart_tx_test
 # 
 # Top level modules:
 # 	uart_rx_test
-# End time: 22:56:08 on Sep 07,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 2
-# ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
+# 	uart_tx_test
+# End time: 22:25:07 on Sep 09,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+# ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
+# vsim -voptargs="+acc" work.fifo_test 
+# Start time: 22:25:07 on Sep 09,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.fifo_test(fast)
+# Loading work.reset_sync(fast)
+# Loading work.fifo(fast)
+# ** Note: $stop    : ../utils/fifo_test.sv(68)
+#    Time: 4495 ns  Iteration: 0  Instance: /fifo_test
+# Break in Module fifo_test at ../utils/fifo_test.sv line 68
+# 0 ns
+# 4720 ns
+# End time: 22:25:38 on Sep 09,2026, Elapsed time: 0:00:31
+# Errors: 0, Warnings: 1

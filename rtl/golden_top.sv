@@ -56,67 +56,107 @@ module golden_top(
     inout    [35: 0]   GPIO_D
 );
 
-assign UART_TX = '1;
-assign I2C_SCL = '1;
-assign I2C_SDA = '1;
+// assign UART_TX = '1;
 
 logic CLK_sys;
 assign CLK_sys = CLOCK0_50;
-parameter int CLK_FREQ = 'd50_000_000;
+localparam int CLK_FREQ = 'd50_000_000;
 
-logic INIT_DONE_n, RST_sync_n;
+logic INIT_DONE_n, RST_sync_n, RST_n_ext;
 
-reset_release reset_release_inst (
-    .ninit_done(INIT_DONE_n)
-);
+reset_release reset_release_inst (.ninit_done(INIT_DONE_n));
+reset_sync reset_sync_inst  (.CLK_sys, .RST_n(~INIT_DONE_n & RST_n_ext), .RST_sync_n);
 
-reset_sync (.CLK_sys, .RST_n(~INIT_DONE_n), .RST_sync_n);
+localparam int UART_BAUD = 'd115200;
+localparam int CLK_DIV = uart_pkg::calc_uart_clk_div(UART_BAUD, CLK_FREQ);
 
-logic [7:0] data;
-logic valid, ready;
-logic err, err_clr, overrun, overrun_clr;
-assign ready = ~KEY[0];
-assign err_clr = ~KEY[1];
-assign overrun_clr = ~KEY[2];
+logic [7:0] data_recv, data_fifo, data_send;
+logic rx_valid_recv, rx_ready_recv, err, err_clr, overrun, overrun_clr;
+logic fifo_rx_full, fifo_rx_empty, fifo_tx_full, fifo_tx_empty;
+logic [7:0] fifo_rx_count, fifo_tx_count;
+logic fifo_valid, fifo_ready, send_trigger, send_en;
+logic tx_valid_send, tx_ready_send;
 
-assign LEDR = ~{7'b0, overrun, err, valid};
-
-parameter int UART_BAUD = 'd115200;
-parameter int CLK_DIV = uart_pkg::calc_uart_clk_div(UART_BAUD, CLK_FREQ);
+localparam int FIFO_DEPTH = 1<<7;
 uart_rx #(.CLK_DIV(CLK_DIV)) uart_rx_inst (
     .CLK_sys,
     .RST_n(RST_sync_n),
     .uart_RX(UART_RX),
-    .data_o(data),
-    .valid_o(valid),
-    .ready_i(ready),
-    .err_clr_i(err_clr),
+    .data_o(data_recv),
+    .valid_o(rx_valid_recv),
+    .ready_i(rx_ready_recv),
     .err_o(err),
-    .overrun_clr_i(overrun_clr),
-    .overrun_o(overrun)
+    .err_clr_i(err_clr),
+    .overrun_o(overrun),
+    .overrun_clr_i(overrun_clr)
 );
 
-logic [7:0] data_latched0, data_latched1, data_latched2;
+fifo #(.DATA_WIDTH(8), .FIFO_DEPTH(FIFO_DEPTH)) fifo_rx_inst (
+    .CLK_sys,
+    .RST_n(RST_sync_n),
+    .data_i(data_recv),
+    .in_valid_i(rx_valid_recv),
+    .in_ready_o(rx_ready_recv),
+    .data_o(data_fifo),
+    .out_valid_o(fifo_valid),
+    .out_ready_i(fifo_ready & send_en),
+    .fifo_count_o(fifo_rx_count),
+    .fifo_full_o(fifo_rx_full),
+    .fifo_empty_o(fifo_rx_empty)
+);
 
-always_ff @(posedge CLK_sys or negedge RST_sync_n) begin
-    if (RST_sync_n == '0) begin
-        data_latched0 <= '0;
-        data_latched1 <= '0;
-        data_latched2 <= '0;
+localparam [7:0] SEND_TRIGGER_PATTERN = 8'hAA;
+logic rx_beat, rx_trigger;
+assign rx_beat = rx_valid_recv && rx_ready_recv;
+assign rx_trigger = rx_beat && (data_recv == SEND_TRIGGER_PATTERN);
+always_ff @(posedge CLK_sys or negedge RST_sync_n) begin : send_control
+    if (!RST_sync_n) begin
+        send_en <= 1'b0;
     end else begin
-        if (ready & valid) begin
-            data_latched0 <= data;
-            data_latched1 <= data_latched0;
-            data_latched2 <= data_latched1;
+        if (rx_trigger) begin
+            send_en <= 1'b1;
+        end else if (fifo_rx_empty) begin
+            send_en <= 1'b0;
         end
     end
 end
 
-lut_7seg (.val_i(data_latched2[7:4]), .disp_n_o(HEX5));
-lut_7seg (.val_i(data_latched2[3:0]), .disp_n_o(HEX4));
-lut_7seg (.val_i(data_latched1[7:4]), .disp_n_o(HEX3));
-lut_7seg (.val_i(data_latched1[3:0]), .disp_n_o(HEX2));
-lut_7seg (.val_i(data_latched0[7:4]), .disp_n_o(HEX1));
-lut_7seg (.val_i(data_latched0[3:0]), .disp_n_o(HEX0));
+fifo #(.DATA_WIDTH(8), .FIFO_DEPTH(FIFO_DEPTH)) fifo_tx_inst (
+    .CLK_sys,
+    .RST_n(RST_sync_n),
+    .data_i(data_fifo),
+    .in_valid_i(fifo_valid & send_en),
+    .in_ready_o(fifo_ready),
+    .data_o(data_send),
+    .out_valid_o(tx_valid_send),
+    .out_ready_i(tx_ready_send),
+    .fifo_count_o(fifo_tx_count),
+    .fifo_full_o(fifo_tx_full),
+    .fifo_empty_o(fifo_tx_empty)
+);
+
+uart_tx #(.CLK_DIV(CLK_DIV)) uart_tx_inst (
+    .CLK_sys,
+    .RST_n(RST_sync_n),
+    .uart_TX(UART_TX),
+    .data_i(data_send),
+    .valid_i(tx_valid_send),
+    .ready_o(tx_ready_send)
+);
+
+lut_7seg lut_7seg_inst0 (.val_i(fifo_rx_count[3:0]), .hex_o(HEX0));
+lut_7seg lut_7seg_inst1 (.val_i(fifo_rx_count[7:4]), .hex_o(HEX1));
+assign HEX2 = '1;
+assign HEX3 = '1;
+lut_7seg lut_7seg_inst4 (.val_i(fifo_tx_count[3:0]), .hex_o(HEX4));
+lut_7seg lut_7seg_inst5 (.val_i(fifo_tx_count[7:4]), .hex_o(HEX5));
+
+assign LEDR = ~{
+    fifo_tx_full, fifo_tx_empty, send_en, fifo_rx_full, fifo_rx_empty,
+    1'b0, overrun, err, ~UART_RX, ~UART_TX};
+
+assign RST_n_ext = KEY[0];
+assign err_clr = ~KEY[2];
+assign overrun_clr = ~KEY[3];
 
 endmodule

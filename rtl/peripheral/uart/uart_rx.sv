@@ -19,10 +19,10 @@ module uart_rx #(
 
 typedef enum logic [2:0] {
     IDLE, TRIGGERED, START, READ, STOP, DONE, ERR_HOLD
-} uart_state_t;
+} uart_rx_state_t;
 
 logic rx_sample, rx_sync_0, rx_sync_1;
-uart_state_t state, state_next;
+uart_rx_state_t state, state_next;
 
 localparam int CLK_DIV_WIDTH = $clog2(CLK_DIV);
 logic [CLK_DIV_WIDTH:0] count_sample, count_sample_next;
@@ -38,7 +38,7 @@ localparam logic [3:0] COUNT_BIT_DONE = 8;
 logic [7:0] data_recv;
 
 always_ff @(posedge CLK_sys or negedge RST_n) begin
-    if (RST_n == '0) begin
+    if (~RST_n) begin
         rx_sync_0 <= 1;
         rx_sync_1 <= 1;
     end else begin
@@ -48,7 +48,7 @@ always_ff @(posedge CLK_sys or negedge RST_n) begin
 end
 
 always_ff @(posedge CLK_sys or negedge RST_n) begin
-    if (RST_n == '0) begin
+    if (~RST_n) begin
         err_o <= 0;
     end else begin
         if (state_next == ERR_HOLD && state != ERR_HOLD) begin
@@ -60,7 +60,7 @@ always_ff @(posedge CLK_sys or negedge RST_n) begin
 end
 
 always_ff @(posedge CLK_sys or negedge RST_n) begin
-    if (RST_n == '0) begin
+    if (~RST_n) begin
         state <= IDLE;
         count_sample <= 0;
         count_bit <= 0;

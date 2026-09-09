@@ -1,24 +1,3 @@
 # TCL commands history
-# Sat Sep 5 00:44:35 2026
-dni::selection -action set -object {unfolded_instance::golden_top::uart_rx_inst}
-dni::trigger_gui -command gui_command::rtl_analyzer::unfold -options {"checkpoint":"user_runs/default_run/swept","object":"button @hier_unfold inst uart_rx_inst uart_rx_inst {}"}
-dni::selection -action set -object {unfolded_instance::golden_top::uart_rx_inst}
-dni::selection -action set -object {unfolded_module::golden_top::}
-dni::selection -action set -object {}
-dni::trigger_gui -command gui_command::rtl_analyzer::fold -options {"checkpoint":"user_runs/default_run/swept","object":"button @hier_fold inst uart_rx_inst uart_rx_inst {}"}
-dni::selection -action set -object {unfolded_instance::golden_top::uart_rx_inst}
-dni::selection -action set -object {}
-dni::selection -action set -object {unfolded_module::golden_top::}
-dni::trigger_gui -command gui_command::rtl_analyzer::new_tab_view -options {"checkpoint":"user_runs/default_run/swept","objects":["unfolded_module::golden_top::"]}
-dni::selection -action set -object {unfolded_instance::golden_top::auto_fab_0 unfolded_module::golden_top::}
-dni::selection -action set -object {unfolded_instance::golden_top::auto_fab_0 unfolded_instance::golden_top::reset_release_inst unfolded_module::golden_top::}
-dni::selection -action set -object {unfolded_instance::golden_top::auto_fab_0 unfolded_module::golden_top::}
-dni::selection -action set -object {unfolded_module::golden_top::}
-dni::selection -action set -object {}
-dni::trigger_gui -command gui_command::rtl_analyzer::unfold -options {"checkpoint":"user_runs/default_run/swept","object":"button @hier_unfold inst uart_rx_inst uart_rx_inst {}"}
-dni::selection -action set -object {unfolded_instance::golden_top::uart_rx_inst}
-dni::selection -action set -object {}
-dni::selection -action set -object {unfolded_instance::golden_top::uart_rx_inst}
-dni::trigger_gui -command gui_command::rtl_analyzer::fold -options {"checkpoint":"user_runs/default_run/swept","object":"button @hier_fold inst uart_rx_inst uart_rx_inst {}"}
-dni::selection -action set -object {unfolded_instance::golden_top::uart_rx_inst}
-dni::selection -action set -object {}
+# Wed Sep 9 23:45:35 2026
+dni::selection -action set -object {unfolded_instance::golden_top::fifo_valid_gated}

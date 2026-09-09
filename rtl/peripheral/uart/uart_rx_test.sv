@@ -2,7 +2,7 @@
 
 import uart_pkg::*;
 
-module uart_rx_test();
+module uart_rx_test;
 timeunit 1ns/1ns;
 
 logic CLK_sys;
@@ -28,7 +28,7 @@ parameter real CLK_UART_RATIO_ACTUAL = CLK_UART_RATIO * 0.98;
 parameter CLK_HALF_DURATION = 5;
 parameter BIT_DURATION = CLK_HALF_DURATION*2*CLK_UART_RATIO_ACTUAL;
 
-task automatic uart_send_to(input [7:0] send_val, ref logic uart_rx);
+task automatic uart_rx_send_to(input [7:0] send_val, ref logic uart_rx);
 begin
     $display("Sending: data = %02x", send_val);
     uart_rx = 0; #BIT_DURATION // Start bit
@@ -40,7 +40,7 @@ begin
 end
 endtask
 
-task automatic uart_broken_stop_to(input [7:0] send_val, ref logic uart_rx);
+task automatic uart_rx_broken_stop_to(input [7:0] send_val, ref logic uart_rx);
 begin
     $display("Sending with broken stop bit: data = %02x", send_val);
     uart_rx = 0; #BIT_DURATION // Start bit
@@ -54,7 +54,7 @@ begin
 end
 endtask
 
-task automatic uart_noise_to (ref logic uart_rx);
+task automatic uart_rx_noise_to (ref logic uart_rx);
     $display("Inject noise");
     uart_rx = 0;
     #($urandom_range(1, BIT_DURATION/3)) // Not long enough
@@ -80,7 +80,7 @@ initial begin
             send_case = NORMAL;
             data_lastest = $urandom_range('0, 'hff);
             byte_sent++;
-            uart_send_to (
+            uart_rx_send_to (
                 .send_val(data_lastest),
                 .uart_rx(uart_RX)
             );
@@ -88,14 +88,14 @@ initial begin
         end else begin
             if ($urandom_range(0, 9) < 5) begin
                 send_case = ERR_START;
-                uart_noise_to(
+                uart_rx_noise_to(
                     .uart_rx(uart_RX)
                 );
                 #($urandom_range(BIT_DURATION, BIT_DURATION*2));
             end else begin
                 send_case = ERR_END;
                 data_lastest = $urandom_range('0, 'hff);
-                uart_broken_stop_to (
+                uart_rx_broken_stop_to (
                     .send_val(data_lastest),
                     .uart_rx(uart_RX)
                 );

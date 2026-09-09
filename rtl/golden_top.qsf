@@ -458,6 +458,8 @@ set_global_assignment -name BOARD default
 
 #============================================================
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name SYSTEMVERILOG_FILE utils/fifo_test.sv
+set_global_assignment -name SYSTEMVERILOG_FILE utils/fifo.sv
 set_global_assignment -name SYSTEMVERILOG_FILE peripheral/uart/uart_rx.sv
 set_global_assignment -name SYSTEMVERILOG_FILE peripheral/uart/uart_rx_test.sv
 set_global_assignment -name SYSTEMVERILOG_FILE utils/reset_sync.sv
@@ -482,3 +484,6 @@ set_global_assignment -name FAST_PRESERVE AUTO -entity golden_top
 set_global_assignment -name SYNCHRONIZER_IDENTIFICATION "FORCED IF ASYNCHRONOUS"
 set_global_assignment -name OPTIMIZE_FOR_METASTABILITY ON
 set_global_assignment -name SYSTEMVERILOG_FILE peripheral/uart/uart.sv
+set_global_assignment -name SYSTEMVERILOG_FILE peripheral/uart/uart_tx.sv
+set_global_assignment -name SYSTEMVERILOG_FILE peripheral/uart/uart_tx_test.sv
+set_instance_assignment -name PARTITION_COLOUR 4294930289 -to auto_fab_0 -entity golden_top

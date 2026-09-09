@@ -1,0 +1,482 @@
+--altdpram ACF_BLOCK_RAM_AND_MLAB_EQUIVALENT_PAUSED_READ_CAPABILITIES="CARE" CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" DEVICE_FAMILY="Agilex 3" INDATA_ACLR="OFF" INDATA_REG="INCLOCK" NUMWORDS=128 OUTDATA_ACLR="OFF" OUTDATA_REG="UNREGISTERED" RAM_BLOCK_TYPE="MLAB" RDADDRESS_ACLR="OFF" RDADDRESS_REG="UNREGISTERED" RDCONTROL_ACLR="OFF" RDCONTROL_REG="UNREGISTERED" WIDTH=8 WIDTHAD=7 WRADDRESS_ACLR="OFF" WRADDRESS_REG="INCLOCK" WRCONTROL_ACLR="OFF" WRCONTROL_REG="INCLOCK" data inclock q rdaddress wraddress wren CARRY_CHAIN="MANUAL" CYCLONEII_M4K_COMPATIBILITY="ON" LOW_POWER_MODE="AUTO"
+--VERSION_BEGIN 26.1 cbx_altdpram 2026:07:25:08:17:06:SC cbx_altera_syncram 2026:07:25:08:17:06:SC cbx_altera_syncram_ltm 2026:07:25:08:17:06:SC cbx_altera_syncram_nd_impl 2026:07:25:08:17:06:SC cbx_altsyncram 2026:07:25:08:17:05:SC cbx_libertymesa 2026:07:25:08:17:05:SC cbx_lpm_add_sub 2026:07:25:08:17:06:SC cbx_lpm_compare 2026:07:25:08:17:05:SC cbx_lpm_decode 2026:07:25:08:17:05:SC cbx_lpm_mux 2026:07:25:08:17:05:SC cbx_mgl 2026:07:25:08:17:10:SC cbx_nadder 2026:07:25:08:17:05:SC cbx_stratix 2026:07:25:08:17:05:SC cbx_stratixii 2026:07:25:08:17:06:SC cbx_stratixiii 2026:07:25:08:17:06:SC cbx_stratixv 2026:07:25:08:17:06:SC cbx_util_mgl 2026:07:25:08:17:06:SC  VERSION_END
+
+
+-- Copyright (C) 2026  Altera Corporation. All rights reserved.
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and any partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, the Altera Quartus Prime License Agreement,
+--  the Altera IP License Agreement, or other applicable license
+--  agreement, including, without limitation, that your use is for
+--  the sole purpose of programming logic devices manufactured by
+--  Altera and sold by Altera or its authorized distributors.  Please
+--  refer to the Altera Software License Subscription Agreements 
+--  on the Quartus Prime software download page.
+
+
+FUNCTION tennm_mlab_cell (clk0, clk1, clr, ena0, ena1, ena2, portaaddr[address_width-1..0], portabyteenamasks[byte_enable_mask_width-1..0], portadatain[data_width-1..0], portbaddr[address_width-1..0])
+WITH ( address_width = 1, byte_enable_mask_width = 2, data_width = 1, first_address, first_bit_number, init_file, last_address, logical_ram_depth, logical_ram_name, logical_ram_width, mem_init0, mixed_port_feed_through_mode, port_b_data_out_clear, port_b_data_out_clock)
+RETURNS ( portbdataout[data_width-1..0]);
+FUNCTION decode_83u91 (data[1..0], enable)
+RETURNS ( eq[3..0]);
+FUNCTION mux_6dj5 (data[31..0], sel[1..0])
+RETURNS ( result[7..0]);
+
+--synthesis_resources = lut 12 MLAB 4 
+SUBDESIGN dpram_qp2o1
+( 
+	data[7..0]	:	input;
+	inclock	:	input;
+	q[7..0]	:	output;
+	rdaddress[6..0]	:	input;
+	wraddress[6..0]	:	input;
+	wren	:	input;
+) 
+VARIABLE 
+	lutrama0 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 0,
+			first_bit_number = 0,
+			last_address = 31,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama1 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 0,
+			first_bit_number = 1,
+			last_address = 31,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama2 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 0,
+			first_bit_number = 2,
+			last_address = 31,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama3 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 0,
+			first_bit_number = 3,
+			last_address = 31,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama4 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 0,
+			first_bit_number = 4,
+			last_address = 31,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama5 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 0,
+			first_bit_number = 5,
+			last_address = 31,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama6 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 0,
+			first_bit_number = 6,
+			last_address = 31,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama7 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 0,
+			first_bit_number = 7,
+			last_address = 31,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama8 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 32,
+			first_bit_number = 0,
+			last_address = 63,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama9 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 32,
+			first_bit_number = 1,
+			last_address = 63,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama10 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 32,
+			first_bit_number = 2,
+			last_address = 63,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama11 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 32,
+			first_bit_number = 3,
+			last_address = 63,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama12 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 32,
+			first_bit_number = 4,
+			last_address = 63,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama13 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 32,
+			first_bit_number = 5,
+			last_address = 63,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama14 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 32,
+			first_bit_number = 6,
+			last_address = 63,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama15 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 32,
+			first_bit_number = 7,
+			last_address = 63,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama16 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 64,
+			first_bit_number = 0,
+			last_address = 95,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama17 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 64,
+			first_bit_number = 1,
+			last_address = 95,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama18 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 64,
+			first_bit_number = 2,
+			last_address = 95,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama19 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 64,
+			first_bit_number = 3,
+			last_address = 95,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama20 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 64,
+			first_bit_number = 4,
+			last_address = 95,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama21 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 64,
+			first_bit_number = 5,
+			last_address = 95,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama22 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 64,
+			first_bit_number = 6,
+			last_address = 95,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama23 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 64,
+			first_bit_number = 7,
+			last_address = 95,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama24 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 96,
+			first_bit_number = 0,
+			last_address = 127,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama25 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 96,
+			first_bit_number = 1,
+			last_address = 127,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama26 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 96,
+			first_bit_number = 2,
+			last_address = 127,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama27 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 96,
+			first_bit_number = 3,
+			last_address = 127,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama28 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 96,
+			first_bit_number = 4,
+			last_address = 127,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama29 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 96,
+			first_bit_number = 5,
+			last_address = 127,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama30 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 96,
+			first_bit_number = 6,
+			last_address = 127,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	lutrama31 : tennm_mlab_cell
+		WITH (
+			address_width = 5,
+			data_width = 1,
+			first_address = 96,
+			first_bit_number = 7,
+			last_address = 127,
+			logical_ram_depth = 128,
+			logical_ram_name = "ALTDPRAM_INSTANCE",
+			logical_ram_width = 8,
+			mixed_port_feed_through_mode = "dont care"
+		);
+	wr_decode : decode_83u91;
+	rd_mux : mux_6dj5;
+	datain_wire[7..0]	: WIRE;
+	dataout_latch[7..0]	: WIRE;
+	dataout_wire[7..0]	: WIRE;
+	rdaddr_wire[6..0]	: WIRE;
+	wr_en	: WIRE;
+	wraddr_wire[6..0]	: WIRE;
+
+BEGIN 
+	lutrama[31..0].clk0 = inclock;
+	lutrama[31..0].ena0 = ( wr_decode.eq[3..3], wr_decode.eq[3..3], wr_decode.eq[3..3], wr_decode.eq[3..3], wr_decode.eq[3..3], wr_decode.eq[3..3], wr_decode.eq[3..3], wr_decode.eq[3..2], wr_decode.eq[2..2], wr_decode.eq[2..2], wr_decode.eq[2..2], wr_decode.eq[2..2], wr_decode.eq[2..2], wr_decode.eq[2..2], wr_decode.eq[2..1], wr_decode.eq[1..1], wr_decode.eq[1..1], wr_decode.eq[1..1], wr_decode.eq[1..1], wr_decode.eq[1..1], wr_decode.eq[1..1], wr_decode.eq[1..0], wr_decode.eq[0..0], wr_decode.eq[0..0], wr_decode.eq[0..0], wr_decode.eq[0..0], wr_decode.eq[0..0], wr_decode.eq[0..0], wr_decode.eq[0..0]);
+	lutrama[31..0].portaaddr[4..0] = wraddr_wire[4..0];
+	lutrama[0].portadatain[0..0] = datain_wire[0..0];
+	lutrama[1].portadatain[0..0] = datain_wire[1..1];
+	lutrama[2].portadatain[0..0] = datain_wire[2..2];
+	lutrama[3].portadatain[0..0] = datain_wire[3..3];
+	lutrama[4].portadatain[0..0] = datain_wire[4..4];
+	lutrama[5].portadatain[0..0] = datain_wire[5..5];
+	lutrama[6].portadatain[0..0] = datain_wire[6..6];
+	lutrama[7].portadatain[0..0] = datain_wire[7..7];
+	lutrama[8].portadatain[0..0] = datain_wire[0..0];
+	lutrama[9].portadatain[0..0] = datain_wire[1..1];
+	lutrama[10].portadatain[0..0] = datain_wire[2..2];
+	lutrama[11].portadatain[0..0] = datain_wire[3..3];
+	lutrama[12].portadatain[0..0] = datain_wire[4..4];
+	lutrama[13].portadatain[0..0] = datain_wire[5..5];
+	lutrama[14].portadatain[0..0] = datain_wire[6..6];
+	lutrama[15].portadatain[0..0] = datain_wire[7..7];
+	lutrama[16].portadatain[0..0] = datain_wire[0..0];
+	lutrama[17].portadatain[0..0] = datain_wire[1..1];
+	lutrama[18].portadatain[0..0] = datain_wire[2..2];
+	lutrama[19].portadatain[0..0] = datain_wire[3..3];
+	lutrama[20].portadatain[0..0] = datain_wire[4..4];
+	lutrama[21].portadatain[0..0] = datain_wire[5..5];
+	lutrama[22].portadatain[0..0] = datain_wire[6..6];
+	lutrama[23].portadatain[0..0] = datain_wire[7..7];
+	lutrama[24].portadatain[0..0] = datain_wire[0..0];
+	lutrama[25].portadatain[0..0] = datain_wire[1..1];
+	lutrama[26].portadatain[0..0] = datain_wire[2..2];
+	lutrama[27].portadatain[0..0] = datain_wire[3..3];
+	lutrama[28].portadatain[0..0] = datain_wire[4..4];
+	lutrama[29].portadatain[0..0] = datain_wire[5..5];
+	lutrama[30].portadatain[0..0] = datain_wire[6..6];
+	lutrama[31].portadatain[0..0] = datain_wire[7..7];
+	lutrama[31..0].portbaddr[4..0] = rdaddr_wire[4..0];
+	wr_decode.data[1..0] = wraddr_wire[6..5];
+	wr_decode.enable = wr_en;
+	rd_mux.data[] = ( lutrama[31..0].portbdataout[]);
+	rd_mux.sel[1..0] = rdaddr_wire[6..5];
+	datain_wire[] = data[];
+	dataout_latch[] = dataout_wire[];
+	dataout_wire[] = rd_mux.result[];
+	q[] = dataout_latch[];
+	rdaddr_wire[] = rdaddress[];
+	wr_en = wren;
+	wraddr_wire[] = wraddress[];
+END;
+--VALID FILE
