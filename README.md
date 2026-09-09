@@ -6,8 +6,8 @@ Building a computer from the ground up.
 
 - [ ] UART
   - [x] RX
-  - [ ] TX
-  - [ ] FIFO
+  - [x] TX
+  - [x] FIFO
   - [ ] UART bus interface (along with the bus)
   - [ ] IRQ wrapper
 - [ ] Bus

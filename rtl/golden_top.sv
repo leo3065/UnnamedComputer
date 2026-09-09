@@ -105,7 +105,7 @@ fifo #(.DATA_WIDTH(8), .FIFO_DEPTH(FIFO_DEPTH)) fifo_rx_inst (
     .fifo_empty_o(fifo_rx_empty)
 );
 
-localparam [7:0] SEND_TRIGGER_PATTERN = 8'hAA;
+localparam [7:0] SEND_TRIGGER_PATTERN = 8'h0D; // Carrage return
 logic rx_beat, rx_trigger;
 assign rx_beat = rx_valid_recv && rx_ready_recv;
 assign rx_trigger = rx_beat && (data_recv == SEND_TRIGGER_PATTERN);
