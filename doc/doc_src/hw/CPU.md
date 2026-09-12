@@ -1,5 +1,7 @@
 # CPU and ISA
 
+Name: V32, due to how much things is related to 32 in this
+
 ## Overview
 
 - 32-bit address space
@@ -17,7 +19,7 @@ Opcode: 6 bits
 | R    | `fb6 [15:10]`, `rb[9:5]`, `ra[4:0]` | `fa5[15:11]`, `rt [10:6]`, `op[5:0]` | rt, fa5, ra, rb, fb6        |
 | I    | `im11[15:5]`              `rs[4:0]` | `fa5[15:11]`, `rt [10:6]`, `op[5:0]` | rt, fa5, rs, im11           |
 | L    | `im16[15:0]`                        | `fa5[15:11]`, `rt [10:6]`, `op[5:0]` | rt, fa5, im16               |
-| A    | `im16[15:0]`                        | `im5[15:11]`, `rt [10:6]`, `op[5:0]` | rt, im21={im16,im5}         |
+| P    | `im16[15:0]`                        | `im5[15:11]`, `rt [10:6]`, `op[5:0]` | rt, im21={im16,im5}         |
 | B    | `of6 [15:10]`, `rb[9:5]`, `ra[4:0]` | `fa5[15:11]`, `of5[10:6]`, `op[5:0]` | fa5, ra, rb, of11={of6,of5} |
 
 ### Operations
@@ -43,7 +45,7 @@ Opcode: 6 bits
 | Load half immediate        | L    | `lhi   rt, im16`     | `0x05` | `0x01` | `im16 → rt`                                |
 | Load half signed immediate | L    | `lhsi  rt, im16`     | `0x05` | `0x05` | `se(im16) → rt`                            |
 | Load half upper immediate  | L    | `lhui  rt, im16`     | `0x05` | `0x0D` | `rt \| (im16 << 16) → rt`                  |
-| Add upper immediate to PC  | A    | `auipc rt, im21`     | `0x10` | (N/A)  | `pc + (im21 << 11) → rt`                   |
+| Add upper immediate to PC  | P    | `auipc rt, im21`     | `0x10` | (N/A)  | `pc + (im21 << 11) → rt`                   |
 | Store status register      | I    | `ssr   rt, sridx`    | `0x12` | `0x00` | `rt → sr[sridx]`                           |
 | Load status register       | I    | `lsr   rt, sridx`    | `0x13` | `0x00` | `sr[sridx] → rt`                           |
 | Jump and link              | L    | `jal   rt, im16`     | `0x20` | `0x00` | `pc+4 → rt; pc+se(im16 << 2) → pc'`        |

@@ -1,22 +1,29 @@
+`default_nettype none
 module fifo #(
     parameter int DATA_WIDTH = 8,
     parameter int FIFO_DEPTH,
     parameter int POINTER_WIDTH = $clog2(FIFO_DEPTH) + 1
 ) (
-    input   CLK_sys,
-    input   RST_n,
+    input   wire CLK_sys,
+    input   wire RST_n,
     
-    input   [DATA_WIDTH-1:0] data_i,
-    input   in_valid_i,
-    output  in_ready_o,
+    input   wire [DATA_WIDTH-1:0] data_i,
+    input   wire in_valid_i,
+    output  wire in_ready_o,
 
-    output  [DATA_WIDTH-1:0] data_o,
-    output  out_valid_o,
-    input   out_ready_i,
+    output  wire [DATA_WIDTH-1:0] data_o,
+    output  wire out_valid_o,
+    input   wire out_ready_i,
 
-    output  [POINTER_WIDTH-1:0] fifo_count_o,
-    output  fifo_full_o,
-    output  fifo_empty_o
+    output  wire [POINTER_WIDTH-1:0] count_o,
+
+    input   wire [POINTER_WIDTH-1:0] almost_full_thres_i,
+    input   wire [POINTER_WIDTH-1:0] almost_empty_thres_i,
+
+    output  wire full_o,
+    output  wire empty_o,
+    output  wire almost_full_o,
+    output  wire almost_empty_o
 );
 if (FIFO_DEPTH < 0 || !$onehot(FIFO_DEPTH)) 
     $error("FIFO_DEPTH must be a power of 2 and greater than 0");
@@ -25,15 +32,18 @@ if (FIFO_DEPTH < 0 || !$onehot(FIFO_DEPTH))
 logic [DATA_WIDTH-1:0] fifo_mem [0:FIFO_DEPTH-1];
 
 logic [POINTER_WIDTH-1:0] write_ptr, read_ptr;
-logic [POINTER_WIDTH-1:0] fifo_count;
+logic [POINTER_WIDTH-1:0] count;
 
-assign fifo_count = write_ptr - read_ptr;
-assign fifo_count_o = fifo_count;
-assign fifo_full_o = (fifo_count == FIFO_DEPTH);
-assign fifo_empty_o = (fifo_count == 0);
+assign count = write_ptr - read_ptr;
+assign count_o = count;
 
-assign in_ready_o = ~fifo_full_o;
-assign out_valid_o = ~fifo_empty_o;
+assign full_o = (count == FIFO_DEPTH);
+assign empty_o = (count == 0);
+assign almost_full_o = (count >= almost_full_thres_i);
+assign almost_empty_o = (count <= almost_empty_thres_i);
+
+assign in_ready_o = ~full_o;
+assign out_valid_o = ~empty_o;
 
 logic write_ptr_advance, read_ptr_advance;
 assign write_ptr_advance = in_valid_i & in_ready_o;

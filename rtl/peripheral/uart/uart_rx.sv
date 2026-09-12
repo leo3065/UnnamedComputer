@@ -1,41 +1,59 @@
+`default_nettype none
 module uart_rx #(
-    parameter int CLK_DIV
+    parameter int CLK_DIV_INIT,
+    parameter int CLK_DIV_WIDTH = 13
 )(
-    input   CLK_sys,
-    input   RST_n,
+    input   wire CLK_sys,
+    input   wire RST_n,
 
-    input   uart_RX,
+    input   wire uart_RX,
 
     output  reg [7:0] data_o,
     output  reg valid_o,
-    input   ready_i,
+    input   wire ready_i,
 
     output  reg err_o,
-    input   err_clr_i,
+    input   wire err_clr_i,
 
     output  reg overrun_o,
-    input   overrun_clr_i
+    input   wire overrun_clr_i,
+
+    input   wire [CLK_DIV_WIDTH-1:0] clk_div_i
 );
 
 typedef enum logic [2:0] {
     IDLE, TRIGGERED, START, READ, STOP, DONE, ERR_HOLD
 } uart_rx_state_t;
-
-logic rx_sample, rx_sync_0, rx_sync_1;
 uart_rx_state_t state, state_next;
 
-localparam int CLK_DIV_WIDTH = $clog2(CLK_DIV);
-logic [CLK_DIV_WIDTH:0] count_sample, count_sample_next;
-localparam logic [CLK_DIV_WIDTH:0]
-    COUNT_SAMPLE_MAX = CLK_DIV - 1,
-    COUNT_SAMPLE_SAMPLE = CLK_DIV / 2,
-    COUNT_SAMPLE_STOP_LO = (CLK_DIV * 3) / 8,
-    COUNT_SAMPLE_STOP_HI = (CLK_DIV * 5) / 8;
+logic [CLK_DIV_WIDTH-1:0] count_sample, count_sample_next;
+logic [CLK_DIV_WIDTH-1:0] count_div_cur, count_div_cfg;
+logic [CLK_DIV_WIDTH-1:0]
+    count_sample_max, count_sample_sample,
+    count_sample_stop_lo, count_sample_stop_hi;
+assign count_sample_max = count_div_cur - 1;
+assign count_sample_sample = count_div_cur >> 1;
+assign count_sample_stop_lo = count_sample_sample - (count_div_cur >> 3);
+assign count_sample_stop_hi = count_sample_sample + (count_div_cur >> 3);
+
+always_ff @(posedge CLK_sys or negedge RST_n) begin : clk_div_cfg
+    if (~RST_n) begin
+        count_div_cfg <= CLK_DIV_INIT;
+        count_div_cur <= CLK_DIV_INIT;
+    end else begin
+        count_div_cfg <= clk_div_i;
+        if (state_next == TRIGGERED) begin
+            count_div_cur <= count_div_cfg;
+        end
+    end
+end
 
 logic [3:0] count_bit, count_bit_next;
 localparam logic [3:0] COUNT_BIT_DONE = 8;
 
 logic [7:0] data_recv;
+
+logic rx_sample, rx_sync_0, rx_sync_1;
 
 always_ff @(posedge CLK_sys or negedge RST_n) begin
     if (~RST_n) begin
@@ -75,7 +93,7 @@ always_ff @(posedge CLK_sys or negedge RST_n) begin
         count_sample <= count_sample_next;
         count_bit <= count_bit_next;
         rx_sample <= rx_sync_1;
-        if (count_sample_next == COUNT_SAMPLE_SAMPLE && state_next == READ) begin
+        if (count_sample_next == count_sample_sample && state_next == READ) begin
             // LSB first
             data_recv <= {rx_sample, data_recv[7:1]};
         end else begin
@@ -144,7 +162,7 @@ always_comb begin
             count_bit_next = 0;
         end else begin
             // Start bit stays for long enough, ready to receive
-            if (count_sample == COUNT_SAMPLE_SAMPLE) begin
+            if (count_sample == count_sample_sample) begin
                 state_next = START;
             end else begin
                 state_next = TRIGGERED;
@@ -154,7 +172,7 @@ always_comb begin
         end
     end
     START: begin
-        if (count_sample == COUNT_SAMPLE_MAX) begin
+        if (count_sample >= count_sample_max) begin
             state_next = READ;
             count_sample_next = 0;
             count_bit_next = 1;
@@ -165,14 +183,14 @@ always_comb begin
         end
     end
     READ: begin
-        if (count_sample < COUNT_SAMPLE_MAX) begin
+        if (count_sample < count_sample_max) begin
             count_sample_next = count_sample + 1;
         end else begin
             count_sample_next = 0;
         end
         
-        if (count_sample == COUNT_SAMPLE_MAX) begin
-            if (count_bit == COUNT_BIT_DONE) begin
+        if (count_sample >= count_sample_max) begin
+            if (count_bit >= COUNT_BIT_DONE) begin
                 state_next = STOP;
             end else begin
                 state_next = READ;
@@ -187,16 +205,16 @@ always_comb begin
         count_sample_next = count_sample + 1;
         count_bit_next    = count_bit;
         state_next        = STOP;
-        if (count_sample >= COUNT_SAMPLE_STOP_LO
-                && count_sample <= COUNT_SAMPLE_STOP_HI) begin
+        if (count_sample >= count_sample_stop_lo
+                && count_sample < count_sample_stop_hi) begin
             if (rx_sample == '0) begin
                 // Framing error
                 state_next = ERR_HOLD;
                 count_sample_next = 0;
-            end else if (count_sample == COUNT_SAMPLE_STOP_HI) begin
-                state_next = DONE;
-                count_sample_next = 0;
             end
+        end else if (count_sample >= count_sample_stop_hi) begin
+            state_next = DONE;
+            count_sample_next = 0;
         end
     end
     DONE: begin
@@ -206,7 +224,7 @@ always_comb begin
     end
     ERR_HOLD: begin
         if (rx_sample == '1) begin
-            if (count_sample == COUNT_SAMPLE_MAX) begin
+            if (count_sample >= count_sample_max) begin
                 state_next = IDLE;
                 count_sample_next = 0;
             end else begin

@@ -63,13 +63,14 @@ reset_sync reset_sync_inst (
 );
 
 parameter CLK_DIV = calc_uart_clk_div(UART_BAUD, CLK_FREQ);
-uart_tx #(.CLK_DIV(CLK_DIV)) uart_tx_inst (
+uart_tx #(.CLK_DIV_INIT(CLK_DIV)) uart_tx_inst (
     .CLK_sys,
     .RST_n(RST_sync_n),
     .uart_TX,
     .data_i(data_send),
     .valid_i(valid),
-    .ready_o(ready)
+    .ready_o(ready),
+    .clk_div_i(CLK_DIV)
 );
 
 endmodule

@@ -1,25 +1,37 @@
 m255
 K4
 z2
-Z0 !s12c _opt1
+Z0 !s12c _opt
 Z1 !s99 nomlopt
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-Z2 !s12c _opt
+Z2 !s12c _opt2
 R1
 R2
 R1
 R2
+R1
+R2
+R1
+R2
+R1
+Z3 !s12c _opt1
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R0
+R1
+R0
+R1
+R0
 R1
 !s11f vlog 2025.3 2025.09, Sep 15 2025
 !s112 1.1
@@ -27,24 +39,23 @@ R1
 !i10e 25
 !i10f 100
 cModel Technology
-Z3 dD:/FPGA/DE23Lite/MyProjects/UnnamedComputer/rtl/simulation
+Z4 dD:/FPGA/DE23Lite/MyProjects/UnnamedComputer/rtl/simulation
 T_opt
 !i145 1
 !i144 0
-!s110 1788956914
-VbRVIE4iN9[6hGP527i09C2
+!s110 1789238141
+V`hjLPiIQOn@HjiJ`2CO]<2
 04 12 4 work uart_tx_test fast 0
-=1-9cb150b6a8b4-6aa150f1-342-825c
+=1-9cb150b6a8b4-6aa59b7c-1d0-7060
 R1
-Z4 !s12f OEM100
-Z5 !s12b OEM100
-Z6 !s124 OEM10U3 
-Z7 !s135 nogc
-Z8 o-quiet -auto_acc_if_foreign -work work +acc
-Z9 tCvgOpt 0 defaultOptions 1108163524
+Z5 !s12f OEM100
+Z6 !s12b OEM100
+Z7 !s124 OEM10U3 
+Z8 !s135 nogc
+Z9 o-quiet -auto_acc_if_foreign -work work +acc
+Z10 tCvgOpt 0 defaultOptions 1108163524
 n@_opt
-Z10 OL;O;2025.3;82
-R3
+Z11 OL;O;2025.3;82
 T_opt1
 !i145 1
 !i144 0
@@ -53,296 +64,389 @@ Vh>4HD^Qo7MfB?_lC>kNhN0
 04 9 4 work fifo_test fast 0
 =1-9cb150b6a8b4-6aa16c43-343-994
 R1
-R4
 R5
 R6
 R7
 R8
 R9
-n@_opt1
 R10
-vfifo
-Z11 2../utils/fifo.sv|../utils/fifo_test.sv|../utils/lut_7seg.sv|../utils/reset_sync.sv
-Z12 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
-Z13 !s110 1788963907
+n@_opt1
+R11
+R4
+T_opt2
+!i145 1
+!i144 0
+!s110 1789237790
+VeRZGRZM>4eJ:BGOM:`L082
+04 12 4 work uart_rx_test fast 0
+=1-9cb150b6a8b4-6aa59a1d-297-4e84
+R1
+R5
+R6
+R7
+R8
+R9
+R10
+n@_opt2
+R11
+R4
+vedge_trigger
+Z12 2../common_module/edge_trigger.sv|../common_module/event_ctrl.sv|../common_module/fifo.sv|../common_module/fifo_test.sv|../common_module/reset_sync.sv
+Z13 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
+Z14 !s110 1789191659
 !i10b 1
-!s100 :aA:RT6969<]FG`XT:lEj3
-I:Fil:X?2k6f[SIYn<f9>@3
+!s100 2Y47Q?fKWkKbgI0@ZVB150
+IlMhg8gcejo^<9nbeG@PBA2
 S1
-R3
-w1788963828
-8../utils/fifo.sv
-F../utils/fifo.sv
-!i122 30
-L0 1 59
-Z14 VDg1SIo80bB@j0V0VzS_@n1
-Z15 OL;L;2025.3;82
+Z15 dD:/FPGA/DE23Lite/MyProjects/ComputerProject/rtl/simulation
+w1789191027
+8../common_module/edge_trigger.sv
+F../common_module/edge_trigger.sv
+!i122 50
+L0 1 19
+Z16 VDg1SIo80bB@j0V0VzS_@n1
+Z17 OL;L;2025.3;82
 r1
 !s85 0
 31
-Z16 !s108 1788963906.000000
-Z17 !s107 ../utils/reset_sync.sv|../utils/lut_7seg.sv|../utils/fifo_test.sv|../utils/fifo.sv|
-Z18 !s90 -reportprogress|300|-lint|../utils/fifo.sv|../utils/fifo_test.sv|../utils/lut_7seg.sv|../utils/reset_sync.sv|
+Z18 !s108 1789191659.000000
+Z19 !s107 ../common_module/reset_sync.sv|../common_module/fifo_test.sv|../common_module/fifo.sv|../common_module/event_ctrl.sv|../common_module/edge_trigger.sv|
+Z20 !s90 -reportprogress|300|-lint|../common_module/edge_trigger.sv|../common_module/event_ctrl.sv|../common_module/fifo.sv|../common_module/fifo_test.sv|../common_module/reset_sync.sv|
 !i113 0
-Z19 o-lint -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z20 tCvgOpt 0 defaultOptions 1085729624
-vfifo_test
-R11
+Z21 o-lint -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z22 tCvgOpt 0 defaultOptions 1085729624
+vevent_ctrl
 R12
 R13
-!i10b 1
-!s100 0hlG9FhQ:A;FJ?C]NMNQC0
-IKII0BC^zO8UKgOQ19h=P`3
-S1
-R3
-w1788963897
-8../utils/fifo_test.sv
-F../utils/fifo_test.sv
-!i122 30
-L0 2 93
 R14
+!i10b 1
+!s100 @LUFRei>=@P`I_hJajbk=1
+If41OB7W^OKcjO<YegHgzo2
+S1
 R15
-r1
-!s85 0
-31
+w1789191042
+8../common_module/event_ctrl.sv
+F../common_module/event_ctrl.sv
+!i122 50
+L0 1 56
 R16
 R17
+r1
+!s85 0
+31
 R18
-!i113 0
 R19
 R20
-vlut_7seg
-R11
-R12
+!i113 0
+R21
+R22
+vfifo
+Z23 2../common_module/fifo.sv|../common_module/fifo_test.sv|../common_module/reset_sync.sv
 R13
+Z24 !s110 1789238139
 !i10b 1
-!s100 ;]I:KQ;P3EnH9]23^36=^0
-I`=Y28I>dX03`mmoE^oPh;1
+!s100 3LLCn]H9YPzIin^n?^kCo3
+IezQ8]KeQiIE@OaM2CHLLI3
 S1
-R3
-w1788961985
+R15
+w1789237140
+8../common_module/fifo.sv
+F../common_module/fifo.sv
+!i122 65
+L0 2 67
+R16
+R17
+r1
+!s85 0
+31
+Z25 !s108 1789238139.000000
+Z26 !s107 ../common_module/reset_sync.sv|../common_module/fifo_test.sv|../common_module/fifo.sv|
+Z27 !s90 -reportprogress|300|-lint|../common_module/fifo.sv|../common_module/fifo_test.sv|../common_module/reset_sync.sv|
+!i113 0
+R21
+R22
+vfifo_test
+R23
+R13
+R24
+!i10b 1
+!s100 kX@Di9X41@lTa`eQ_ZDW31
+ISVNPzZT9cS<W4cFo4W>SB3
+S1
+R15
+w1789137406
+8../common_module/fifo_test.sv
+F../common_module/fifo_test.sv
+!i122 65
+L0 2 93
+R16
+R17
+r1
+!s85 0
+31
+R25
+R26
+R27
+!i113 0
+R21
+R22
+vlut_7seg
+2../utils/lut_7seg.sv
+R13
+R24
+!i10b 1
+!s100 RM]G]93kGgozO;AmzKU4c1
+Il5QY1DPj>;c]H6nG5gh4V0
+S1
+R15
+w1788966313
 8../utils/lut_7seg.sv
 F../utils/lut_7seg.sv
-!i122 30
+!i122 66
 L0 1 13
-R14
-R15
+R16
+R17
 r1
 !s85 0
 31
-R16
-R17
-R18
+R25
+!s107 ../utils/lut_7seg.sv|
+!s90 -reportprogress|300|-lint|../utils/lut_7seg.sv|
 !i113 0
-R19
-R20
+R21
+R22
 vreset_sync
-R11
-R12
+R23
 R13
+R24
 !i10b 1
 !s100 5`PHen^Yld0ZX1QgG5Uo=1
-I7YX8oiTUb7dO5Ai>;D_P:3
+I;>i=Y@Whg5LlIbCTm4dmm2
 S1
-R3
-w1788463467
-8../utils/reset_sync.sv
-F../utils/reset_sync.sv
-!i122 30
-L0 1 17
-R14
 R15
+w1788463467
+8../common_module/reset_sync.sv
+F../common_module/reset_sync.sv
+!i122 65
+L0 1 17
+R16
+R17
 r1
 !s85 0
 31
-R16
-R17
-R18
+R25
+R26
+R27
 !i113 0
-R19
-R20
+R21
+R22
 Xuart_pkg
-Z21 2../peripheral/uart/uart.sv|../peripheral/uart/uart_rx.sv|../peripheral/uart/uart_rx_test.sv|../peripheral/uart/uart_tx.sv|../peripheral/uart/uart_tx_test.sv
-R12
+Z28 2../peripheral/uart/uart.sv|../peripheral/uart/uart_rx.sv|../peripheral/uart/uart_rx_test.sv|../peripheral/uart/uart_tx.sv|../peripheral/uart/uart_tx_test.sv
 R13
+R24
 !i10b 1
 !s100 <CE36iTg3m7kKnS@z8:SV0
 I6AO`gQPnLfPTKAC^[V_Ve1
 S1
-R3
-w1788795121
+R15
+w1789237403
 8../peripheral/uart/uart.sv
 F../peripheral/uart/uart.sv
-!i122 31
+!i122 67
 L0 1 0
 V6AO`gQPnLfPTKAC^[V_Ve1
-R15
+R17
 r1
 !s85 0
 31
-Z22 !s108 1788963907.000000
-Z23 !s107 ../peripheral/uart/uart_tx_test.sv|../peripheral/uart/uart_tx.sv|../peripheral/uart/uart_rx_test.sv|../peripheral/uart/uart_rx.sv|../peripheral/uart/uart.sv|
-Z24 !s90 -reportprogress|300|-lint|../peripheral/uart/uart.sv|../peripheral/uart/uart_rx.sv|../peripheral/uart/uart_rx_test.sv|../peripheral/uart/uart_tx.sv|../peripheral/uart/uart_tx_test.sv|
+R25
+Z29 !s107 ../peripheral/uart/uart_tx_test.sv|../peripheral/uart/uart_tx.sv|../peripheral/uart/uart_rx_test.sv|../peripheral/uart/uart_rx.sv|../peripheral/uart/uart.sv|
+Z30 !s90 -reportprogress|300|-lint|../peripheral/uart/uart.sv|../peripheral/uart/uart_rx.sv|../peripheral/uart/uart_rx_test.sv|../peripheral/uart/uart_tx.sv|../peripheral/uart/uart_tx_test.sv|
 !i113 0
-R19
-R20
-vuart_rx
 R21
-R12
+R22
+vuart_rx
+R28
 R13
+R24
 !i10b 1
-!s100 aQVV8Q:9JG>@5=XafNNkU2
-InhZ@R=Bk41zYgk`Z0U@Dz0
+!s100 3Q0JO0G7oF@[HAE3L;Xn[2
+IE@NBA0:;^Nbb<ZXmk5n@J1
 S1
-R3
-w1788954176
+R15
+w1789236927
 8../peripheral/uart/uart_rx.sv
 F../peripheral/uart/uart_rx.sv
-!i122 31
-L0 1 225
-R14
-R15
+!i122 67
+L0 2 242
+R16
+R17
 r1
 !s85 0
 31
-R22
-R23
-R24
+R25
+R29
+R30
 !i113 0
-R19
-R20
-vuart_rx_test
 R21
-R12
-Z25 DXx4 work 8 uart_pkg 0 22 6AO`gQPnLfPTKAC^[V_Ve1
-DXx4 work 20 uart_rx_test_sv_unit 0 22 RHS3NHf]5jG8d@];DkaWT1
+R22
+vuart_rx_test
+R28
 R13
-R14
+Z31 DXx4 work 8 uart_pkg 0 22 6AO`gQPnLfPTKAC^[V_Ve1
+DXx4 work 20 uart_rx_test_sv_unit 0 22 `_cC9`I5OJ2VkUiJkh;T72
+R24
+R16
 r1
 !s85 0
 !i10b 1
-!s100 JGZG5g>MMzo7Rn]nFJ^PJ3
-I2KV1@9g_doEc`SCKL4MBe1
+!s100 B?Gfb7[nacznkSlIOLYW_3
+IS>Cdml`hdB2[k2JJUhzKS1
 !s105 uart_rx_test_sv_unit
 S1
-R3
-Z26 w1788961903
-Z27 8../peripheral/uart/uart_rx_test.sv
-Z28 F../peripheral/uart/uart_rx_test.sv
-!i122 31
-L0 5 156
 R15
+Z32 w1789237777
+Z33 8../peripheral/uart/uart_rx_test.sv
+Z34 F../peripheral/uart/uart_rx_test.sv
+!i122 67
+L0 5 157
+R17
 31
-R22
-R23
-R24
-!i113 0
-R19
-R20
-Xuart_rx_test_sv_unit
-R21
-R12
 R25
+R29
+R30
+!i113 0
+R21
+R22
+Xuart_rx_test_sv_unit
+R28
 R13
-VRHS3NHf]5jG8d@];DkaWT1
+R31
+R24
+V`_cC9`I5OJ2VkUiJkh;T72
 r1
 !s85 0
 !i10b 1
-!s100 X7`:hY^lMU<ka@:PYcNT_1
-IRHS3NHf]5jG8d@];DkaWT1
+!s100 zkdVhJ`49UF[HUYaE@f_30
+I`_cC9`I5OJ2VkUiJkh;T72
 !i103 1
 S1
-R3
-R26
-R27
-R28
-!i122 31
-Z29 L0 3 0
 R15
+R32
+R33
+R34
+!i122 67
+Z35 L0 3 0
+R17
 31
-R22
-R23
-R24
+R25
+R29
+R30
 !i113 0
-R19
-R20
-vuart_tx
 R21
-R12
+R22
+vuart_top
+2../peripheral/uart/uart_rx.sv|../peripheral/uart/uart_rx_test.sv|../peripheral/uart/uart_top.sv|../peripheral/uart/uart_tx.sv|../peripheral/uart/uart_tx_test.sv
 R13
+!s110 1789191660
 !i10b 1
-!s100 >bF:zh6`XYm<Ye`Id=PGk0
-I4GoE:IiRIjQbBDg86`=890
+!s100 _8mUma5ld>_V;cg3JToNf0
+I[1zHz?aVl`Y21h7oP[^0_0
 S1
-R3
-w1788956934
+R15
+w1789191421
+8../peripheral/uart/uart_top.sv
+F../peripheral/uart/uart_top.sv
+!i122 52
+L0 11 181
+R16
+R17
+r1
+!s85 0
+31
+!s108 1789191660.000000
+!s107 ../peripheral/uart/uart_tx_test.sv|../peripheral/uart/uart_tx.sv|../peripheral/uart/uart_top.sv|../peripheral/uart/uart_rx_test.sv|../peripheral/uart/uart_rx.sv|
+!s90 -reportprogress|300|-lint|../peripheral/uart/uart_rx.sv|../peripheral/uart/uart_rx_test.sv|../peripheral/uart/uart_top.sv|../peripheral/uart/uart_tx.sv|../peripheral/uart/uart_tx_test.sv|
+!i113 0
+R21
+R22
+vuart_tx
+R28
+R13
+R24
+!i10b 1
+!s100 1SWUdiY9f>:O4alFFTh?n2
+IV:DGI7hd4Nlkh7a7iP5ZP3
+S1
+R15
+w1789237597
 8../peripheral/uart/uart_tx.sv
 F../peripheral/uart/uart_tx.sv
-!i122 31
-L0 1 84
-R14
-R15
+!i122 67
+L0 2 100
+R16
+R17
 r1
 !s85 0
 31
-R22
-R23
-R24
-!i113 0
-R19
-R20
-vuart_tx_test
-R21
-R12
 R25
-DXx4 work 20 uart_tx_test_sv_unit 0 22 94;WIjZcR9VFhGiYI[F`M1
+R29
+R30
+!i113 0
+R21
+R22
+vuart_tx_test
+R28
 R13
-R14
+R31
+DXx4 work 20 uart_tx_test_sv_unit 0 22 c:>F6f5miEHOR^=ce=8802
+R24
+R16
 r1
 !s85 0
 !i10b 1
-!s100 [ekB]L@h8FSKNizJDM37h0
-I[K<H4:B=nQh[a?QYU2=l83
+!s100 KgTQO`eDIgz:PXMBZhMkE3
+IBfMjdiH7=cElVmH=@O11n2
 !s105 uart_tx_test_sv_unit
 S1
-R3
-Z30 w1788961907
-Z31 8../peripheral/uart/uart_tx_test.sv
-Z32 F../peripheral/uart/uart_tx_test.sv
-!i122 31
-L0 5 71
 R15
+Z36 w1789238126
+Z37 8../peripheral/uart/uart_tx_test.sv
+Z38 F../peripheral/uart/uart_tx_test.sv
+!i122 67
+L0 5 72
+R17
 31
-R22
-R23
-R24
-!i113 0
-R19
-R20
-Xuart_tx_test_sv_unit
-R21
-R12
 R25
+R29
+R30
+!i113 0
+R21
+R22
+Xuart_tx_test_sv_unit
+R28
 R13
-V94;WIjZcR9VFhGiYI[F`M1
+R31
+R24
+Vc:>F6f5miEHOR^=ce=8802
 r1
 !s85 0
 !i10b 1
-!s100 b@T`4^kW4oW`AXX;LgAEG2
-I94;WIjZcR9VFhGiYI[F`M1
+!s100 AT:0<WNCLaM1OTIc<cg4i2
+Ic:>F6f5miEHOR^=ce=8802
 !i103 1
 S1
-R3
-R30
-R31
-R32
-!i122 31
-R29
 R15
+R36
+R37
+R38
+!i122 67
+R35
+R17
 31
-R22
-R23
-R24
+R25
+R29
+R30
 !i113 0
-R19
-R20
+R21
+R22

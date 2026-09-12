@@ -6,8 +6,8 @@ logic CLK_sys, RST_n, RST_sync_n;
 logic [7:0] data_i, data_o;
 logic in_valid_i, in_ready_o;
 logic out_valid_o, out_ready_i;
-logic [3:0] fifo_count_o;
-logic fifo_full_o, fifo_empty_o;
+logic [3:0] count_o;
+logic full_o, empty_o;
 
 int test_data_sent_count = 0, test_data_recieved_count = 0;
 logic [7:0] test_data_sent [$] = {};
@@ -86,9 +86,9 @@ fifo #(.FIFO_DEPTH(16)) fifo_inst (
     .out_valid_o,
     .out_ready_i,
 
-    .fifo_count_o,
-    .fifo_full_o,
-    .fifo_empty_o
+    .count_o,
+    .full_o,
+    .empty_o
 );
 
 endmodule

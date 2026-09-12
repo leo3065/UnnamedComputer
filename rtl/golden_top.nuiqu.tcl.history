@@ -1,10 +1,10 @@
 # TCL commands history
-# Thu Sep 10 01:10:39 2026
-dni::selection -action set -object {unfolded_net::golden_top::RST_sync_n}
+# Fri Sep 11 23:20:53 2026
+dni::selection -action set -object {unfolded_instance::golden_top::fifo_rx_inst}
 dni::selection -action set -object {}
-dni::selection -action set -object {unfolded_net::golden_top::RST_sync_n}
-dni::selection -action set -object {unfolded_net::golden_top::RST_sync_n}
-dni::get_property -name is_preserve_for_debug -object unfolded_net::golden_top::RST_sync_n
+dni::trigger_gui -command gui_command::rtl_analyzer::unfold -options {"checkpoint":"user_runs/default_run/elaborated","object":"button @hier_unfold inst fifo_rx_inst fifo_rx_inst {}"}
+dni::selection -action set -object {unfolded_inst_port_bus::golden_top::fifo_rx_inst|fifo_mem|dataout}
 dni::selection -action set -object {}
-dni::trigger_gui -command gui_command::rtl_analyzer::set_view_mode -options {"checkpoint":"user_runs/default_run/elaborated","enable":"on","mode":"pan"}
-dni::trigger_gui -command gui_command::rtl_analyzer::zoom_fit -options {"checkpoint":"user_runs/default_run/elaborated"}
+dni::selection -action set -object {unfolded_instance::golden_top::fifo_rx_inst|fifo_mem}
+dni::selection -action set -object {}
+dni::selection -action set -object {unfolded_instance::golden_top::fifo_rx_inst|fifo_mem}

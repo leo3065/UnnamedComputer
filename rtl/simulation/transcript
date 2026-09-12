@@ -16,21 +16,29 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # Errors: 0, Warnings: 1
 # Questa Altera Starter FPGA Edition-64 vlog 2025.3 Compiler 2025.09 Sep 15 2025
-# Start time: 22:25:06 on Sep 09,2026
-# vlog -reportprogress 300 -lint ../utils/fifo.sv ../utils/fifo_test.sv ../utils/lut_7seg.sv ../utils/reset_sync.sv 
+# Start time: 02:35:39 on Sep 13,2026
+# vlog -reportprogress 300 -lint ../common_module/fifo.sv ../common_module/fifo_test.sv ../common_module/reset_sync.sv 
 # ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
 # -- Compiling module fifo
 # -- Compiling module fifo_test
-# -- Compiling module lut_7seg
 # -- Compiling module reset_sync
 # 
 # Top level modules:
 # 	fifo_test
-# 	lut_7seg
-# End time: 22:25:07 on Sep 09,2026, Elapsed time: 0:00:01
+# End time: 02:35:39 on Sep 13,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Questa Altera Starter FPGA Edition-64 vlog 2025.3 Compiler 2025.09 Sep 15 2025
-# Start time: 22:25:07 on Sep 09,2026
+# Start time: 02:35:39 on Sep 13,2026
+# vlog -reportprogress 300 -lint ../utils/lut_7seg.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module lut_7seg
+# 
+# Top level modules:
+# 	lut_7seg
+# End time: 02:35:39 on Sep 13,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Altera Starter FPGA Edition-64 vlog 2025.3 Compiler 2025.09 Sep 15 2025
+# Start time: 02:35:39 on Sep 13,2026
 # vlog -reportprogress 300 -lint ../peripheral/uart/uart.sv ../peripheral/uart/uart_rx.sv ../peripheral/uart/uart_rx_test.sv ../peripheral/uart/uart_tx.sv ../peripheral/uart/uart_tx_test.sv 
 # ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
 # -- Compiling package uart_pkg
@@ -45,23 +53,136 @@
 # Top level modules:
 # 	uart_rx_test
 # 	uart_tx_test
-# End time: 22:25:07 on Sep 09,2026, Elapsed time: 0:00:00
+# End time: 02:35:39 on Sep 13,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
-# vsim -voptargs="+acc" work.fifo_test 
-# Start time: 22:25:07 on Sep 09,2026
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# vsim -voptargs="+acc" work.uart_tx_test 
+# Start time: 02:35:40 on Sep 13,2026
+# ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
 # ** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # Loading sv_std.std
-# Loading work.fifo_test(fast)
+# Loading work.uart_pkg(fast)
+# Loading work.uart_tx_test_sv_unit(fast)
+# Loading work.uart_tx_test(fast)
 # Loading work.reset_sync(fast)
-# Loading work.fifo(fast)
-# ** Note: $stop    : ../utils/fifo_test.sv(68)
-#    Time: 4495 ns  Iteration: 0  Instance: /fifo_test
-# Break in Module fifo_test at ../utils/fifo_test.sv line 68
+# Loading work.uart_tx(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (13) does not match connection size (32) for port 'clk_div_i'. The port definition is at: ../peripheral/uart/uart_tx.sv(15).
+#    Time: 0 ns  Iteration: 0  Instance: /uart_tx_test/uart_tx_inst File: ../peripheral/uart/uart_tx_test.sv Line: 66
+# Sending (0/20): data = 7a
+# Sent
+# Wait for a while...
+# Sending (1/20): data = 4e
+# Sent
+# Wait for a while...
+# Sending (2/20): data = d9
+# Sent
+# Wait for a while...
+# Sending (3/20): data = 9b
+# Sent
+# Sending (4/20): data = f3
+# Sent
+# Wait for a while...
+# Sending (5/20): data = 80
+# Sent
+# Wait for a while...
+# Sending (6/20): data = 88
+# Sent
+# Wait for a while...
+# Sending (7/20): data = f3
+# Sent
+# Sending (8/20): data = e2
+# Sent
+# Wait for a while...
+# Sending (9/20): data = fc
+# Sent
+# Wait for a while...
+# Sending (10/20): data = b6
+# Sent
+# Wait for a while...
+# Sending (11/20): data = 1a
+# Sent
+# Wait for a while...
+# Sending (12/20): data = 84
+# Sent
+# Wait for a while...
+# Sending (13/20): data = b9
+# Sent
+# Wait for a while...
+# Sending (14/20): data = 90
+# Sent
+# Wait for a while...
+# Sending (15/20): data = db
+# Sent
+# Sending (16/20): data = b9
+# Sent
+# Wait for a while...
+# Sending (17/20): data = 6f
+# Sent
+# Wait for a while...
+# Sending (18/20): data = b5
+# Sent
+# Wait for a while...
+# Sending (19/20): data = 8e
+# Sent
+# Wait for a while...
+# ** Note: $stop    : ../peripheral/uart/uart_tx_test.sv(58)
+#    Time: 10525133 ns  Iteration: 0  Instance: /uart_tx_test
+# Break in Module uart_tx_test at ../peripheral/uart/uart_tx_test.sv line 58
 # 0 ns
-# 4720 ns
-# End time: 22:25:38 on Sep 09,2026, Elapsed time: 0:00:31
-# Errors: 0, Warnings: 1
+# 11051390 ns
+add wave -position end sim:/uart_tx_test/uart_tx_inst/*
+
+restart
+# invalid command name "restart"
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.uart_pkg(fast)
+# Loading work.uart_tx_test_sv_unit(fast)
+# Loading work.uart_tx_test(fast)
+# Loading work.reset_sync(fast)
+# Loading work.uart_tx(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (13) does not match connection size (32) for port 'clk_div_i'. The port definition is at: ../peripheral/uart/uart_tx.sv(15).
+#    Time: 0 ns  Iteration: 0  Instance: /uart_tx_test/uart_tx_inst File: ../peripheral/uart/uart_tx_test.sv Line: 66
+rerun -all
+# invalid command name "rerun"
+run -all
+# Sending (0/20): data = 7a
+# Sent
+# Wait for a while...
+# Sending (1/20): data = 4e
+# Sent
+# Wait for a while...
+# Sending (2/20): data = d9
+# Sent
+# Wait for a while...
+# Sending (3/20): data = 9b
+# Sent
+# Sending (4/20): data = f3
+# Sent
+# Wait for a while...
+# Sending (5/20): data = 80
+# Sent
+# Wait for a while...
+# Sending (6/20): data = 88
+# Sent
+# Wait for a while...
+# Sending (7/20): data = f3
+# Sent
+# Sending (8/20): data = e2
+# Sent
+# Wait for a while...
+# Sending (9/20): data = fc
+# Sent
+# Wait for a while...
+# Sending (10/20): data = b6
+# Sent
+# Wait for a while...
+# Break key hit
+# Break in Module uart_tx_test at ../peripheral/uart/uart_tx_test.sv line 38
+# Causality operation skipped due to absence of debug database file
+# End time: 02:41:45 on Sep 13,2026, Elapsed time: 0:06:05
+# Errors: 0, Warnings: 2

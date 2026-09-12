@@ -146,7 +146,7 @@ reset_sync reset_sync_inst (
 );
 
 parameter CLK_DIV = calc_uart_clk_div(UART_BAUD, CLK_FREQ);
-uart_rx #(.CLK_DIV(CLK_DIV)) uart_rx_inst (
+uart_rx #(.CLK_DIV_INIT(CLK_DIV)) uart_rx_inst (
     .CLK_sys,
     .RST_n(RST_sync_n),
     .uart_RX,
@@ -154,7 +154,8 @@ uart_rx #(.CLK_DIV(CLK_DIV)) uart_rx_inst (
     .valid_o(valid),
     .ready_i(ready),
     .err_clr_i(err_clr),
-    .err_o(err)
+    .err_o(err),
+    .clk_div_i(CLK_DIV)
 );
 
 endmodule
